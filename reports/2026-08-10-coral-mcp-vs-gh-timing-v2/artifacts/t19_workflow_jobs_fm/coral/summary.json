@@ -1,0 +1,23 @@
+{
+  "init": {
+    "min": 3.86,
+    "median": 4.3,
+    "max": 5.99
+  },
+  "sql": {
+    "min": 13.38,
+    "median": 15.43,
+    "max": 15.7
+  },
+  "total": {
+    "min": 19.38,
+    "median": 19.56,
+    "max": 19.73
+  },
+  "rows": {
+    "min": 0,
+    "median": 0,
+    "max": 0
+  },
+  "runs": 3
+}

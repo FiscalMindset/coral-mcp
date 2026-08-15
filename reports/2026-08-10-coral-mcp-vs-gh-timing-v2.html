@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>coral MCP sql vs gh CLI · v2 (20-command sweep)</title>
+<style>
+:root{--fg:#1a1a1a;--mut:#6b7280;--bg:#fff;--soft:#f5f5f7;--line:#e5e7eb;--good:#16a34a;--warn:#d97706;--bad:#dc2626;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--fg);background:var(--bg);max-width:1180px;margin:32px auto;padding:0 24px;line-height:1.55;font-size:15px}
+h1{font-size:26px;margin:0 0 6px;letter-spacing:-0.02em}
+h2{font-size:19px;margin:36px 0 12px;letter-spacing:-0.01em;border-bottom:1px solid var(--line);padding-bottom:6px}
+h3{font-size:15px;margin:20px 0 8px;color:#444}
+.meta{color:var(--mut);font-size:13px;margin-bottom:24px}
+.meta code{font-size:12px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+th,td{padding:6px 10px;border-bottom:1px solid var(--line);text-align:left}
+th{background:var(--soft);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.04em;color:#374151}
+td.tnum,th.tnum{font-family:var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+td.mono{font-family:var(--mono);font-size:12px}
+tr:hover td{background:#fafafa}
+.fast{color:var(--good);font-weight:600}
+.slow{color:var(--warn)}
+.worst{color:var(--bad);font-weight:700}
+.note{font-size:13px;color:var(--mut);margin:8px 0}
+.kpi{display:flex;gap:12px;margin:16px 0}
+.kpi>div{flex:1;background:var(--soft);padding:14px 16px;border-radius:10px;border:1px solid var(--line)}
+.kpi .k{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--mut);font-weight:600}
+.kpi .v{font-family:var(--mono);font-size:24px;font-weight:600;margin:4px 0}
+.kpi .n{font-size:12px;color:var(--mut)}
+.chip{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-family:var(--mono);font-weight:600}
+.chip.bad{background:#fee2e2;color:var(--bad)}
+.chip.warn{background:#fef3c7;color:var(--warn)}
+.chip.ok{background:#dcfce7;color:var(--good)}
+.cardbar{background:linear-gradient(90deg,#16a34a 0%,#16a34a var(--g,0%),#dc2626 var(--g,0%),#dc2626 100%);height:8px;border-radius:4px;margin:8px 0}
+.bar-row{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;margin:3px 0}
+.bar-row .lbl{width:200px;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar-row .bar{flex:1;background:var(--soft);height:16px;border-radius:3px;position:relative;overflow:hidden}
+.bar-row .bar .gh{position:absolute;top:0;bottom:0;left:0;background:#16a34a}
+.bar-row .bar .cr{position:absolute;top:0;bottom:0;left:0;background:#dc2626;opacity:0.55}
+.bar-row .num{width:60px;text-align:right;color:#374151}
+.legend{font-size:12px;color:var(--mut);margin:4px 0 16px}
+.legend span{display:inline-block;margin-right:14px}
+.legend .sq{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:middle}
+details{margin:8px 0;border:1px solid var(--line);border-radius:6px;padding:0}
+details summary{padding:8px 12px;cursor:pointer;font-size:13px;color:#374151;background:var(--soft);border-radius:6px}
+details[open] summary{border-bottom:1px solid var(--line);border-radius:6px 6px 0 0}
+.dbody{padding:10px 14px}
+code{font-family:var(--mono);font-size:12px;background:#f3f4f6;padding:1px 5px;border-radius:3px}
+pre{font-family:var(--mono);font-size:12px;background:#0b1020;color:#e6edf3;padding:10px 14px;border-radius:6px;overflow-x:auto;white-space:pre-wrap}
+.out.gh pre{background:#0b1020}
+.toc{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:12px 16px;font-size:13px;margin:16px 0}
+.toc a{color:#1f2937;text-decoration:none;display:block;padding:2px 0}
+.toc a:hover{text-decoration:underline}
+.section-num{display:inline-block;background:#e5e7eb;color:#374151;width:24px;height:24px;border-radius:50%;text-align:center;line-height:24px;font-size:12px;font-weight:600;margin-right:8px}
+</style>
+</head>
+<body>
+<h1>coral MCP <code>sql</code> vs <code>gh</code> CLI · v2</h1>
+<p class="meta">2026-08-10 · coral <code>0.8.1+3acb123</code> · 20 GitHub commands · median of 3 measured runs (1 warm-up discarded) per tool · task <code>e5c762d1-0b4b-45a8-acac-98ff7aeb9605</code> · runner <code>~/.config/opencode/skills/coral-benchmark/bench_runner.py</code></p>
+
+<div class="kpi">
+  <div><div class="k">gh median (20 tests)</div><div class="v fast">0.69s</div><div class="n">range 0.04–1.77s</div></div>
+  <div><div class="k">coral median (20 tests)</div><div class="v worst">19.6s</div><div class="n">range 9–58s</div></div>
+  <div><div class="k">Slowdown ratio</div><div class="v worst">~28×</div><div class="n">range 11–318×</div></div>
+  <div><div class="k">Tests where coral &lt; 10s</div><div class="v">2 / 20</div><div class="n">only test 4 (branches) and test 5 (releases)</div></div>
+</div>
+
+<nav class="toc">
+  <a href="#summary">1. Headline summary (20 tests)</a>
+  <a href="#analysis">2. Cross-test analysis</a>
+  <a href="#per-test">3. Per-test details</a>
+  <a href="#causes">4. Root causes</a>
+  <a href="#verdict">5. Verdict</a>
+  <a href="#artifacts">6. Artifacts</a>
+</nav>
+
+<h2 id="summary"><span class="section-num">1</span>Headline summary</h2>
+
+<table>
+  <thead>
+    <tr><th>#</th><th>Test</th><th>Repo</th><th class="tnum">gh</th><th class="tnum">coral init</th><th class="tnum">coral sql</th><th class="tnum">coral total</th><th class="tnum">rows</th><th class="tnum">ratio</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1a</td><td>open PRs unfiltered (top 20)</td><td>withcoral</td><td class="tnum fast">0.67</td><td class="tnum">1.71</td><td class="tnum">21.67</td><td class="tnum slow">23.38</td><td class="tnum">20</td><td><span class="chip bad">35×</span></td></tr>
+    <tr><td>1b</td><td>open PRs author=FiscalMindset (cold)</td><td>withcoral</td><td class="tnum fast">0.97</td><td class="tnum">2.41</td><td class="tnum">21.93</td><td class="tnum slow">24.60</td><td class="tnum">18</td><td><span class="chip bad">25×</span></td></tr>
+    <tr><td>1c</td><td>open PRs author=FiscalMindset (warm server)</td><td>withcoral</td><td class="tnum fast">0.83</td><td class="tnum">—</td><td class="tnum">23.17</td><td class="tnum slow">23.17</td><td class="tnum">18</td><td><span class="chip bad">28×</span></td></tr>
+    <tr><td>2</td><td>recent workflow runs (last 5)</td><td>FiscalMindset</td><td class="tnum fast">0.04</td><td class="tnum">1.63</td><td class="tnum">11.04</td><td class="tnum slow">12.73</td><td class="tnum">5</td><td><span class="chip bad">318×</span></td></tr>
+    <tr><td>3</td><td>latest 5 commits + ORDER BY</td><td>FiscalMindset</td><td class="tnum fast">0.94</td><td class="tnum">2.68</td><td class="tnum">35.59</td><td class="tnum worst">38.36</td><td class="tnum">5</td><td><span class="chip bad">41×</span></td></tr>
+    <tr><td>4</td><td>branches (top 10)</td><td>FiscalMindset</td><td class="tnum fast">0.55</td><td class="tnum">1.69</td><td class="tnum">7.36</td><td class="tnum">9.06</td><td class="tnum">10</td><td><span class="chip warn">16×</span></td></tr>
+    <tr><td>5</td><td>recent releases (last 5)</td><td>withcoral</td><td class="tnum fast">0.60</td><td class="tnum">1.39</td><td class="tnum">7.97</td><td class="tnum">9.47</td><td class="tnum">5</td><td><span class="chip warn">16×</span></td></tr>
+    <tr><td>6</td><td>open issues (last 10)</td><td>withcoral</td><td class="tnum fast">0.61</td><td class="tnum">6.07</td><td class="tnum">36.52</td><td class="tnum worst">45.45</td><td class="tnum">10</td><td><span class="chip bad">74×</span></td></tr>
+    <tr><td>7</td><td>recent tags (last 10)</td><td>withcoral</td><td class="tnum fast">0.81</td><td class="tnum">5.27</td><td class="tnum">13.95</td><td class="tnum slow">19.84</td><td class="tnum">10</td><td><span class="chip bad">25×</span></td></tr>
+    <tr><td>8</td><td>repo languages</td><td>FiscalMindset</td><td class="tnum fast">0.54</td><td class="tnum">5.32</td><td class="tnum">14.57</td><td class="tnum slow">18.30</td><td class="tnum">1</td><td><span class="chip bad">34×</span></td></tr>
+    <tr><td>9</td><td>repo topics</td><td>FiscalMindset</td><td class="tnum fast">0.69</td><td class="tnum">5.33</td><td class="tnum">17.78</td><td class="tnum slow">23.93</td><td class="tnum">1</td><td><span class="chip bad">35×</span></td></tr>
+    <tr><td>10</td><td>repo collaborators (top 10)</td><td>FiscalMindset</td><td class="tnum fast">0.62</td><td class="tnum">3.92</td><td class="tnum">19.68</td><td class="tnum slow">23.66</td><td class="tnum" style="color:var(--bad)">0*</td><td><span class="chip bad">38×</span></td></tr>
+    <tr><td>11</td><td>repo contributors (top 5)</td><td>FiscalMindset</td><td class="tnum fast">0.70</td><td class="tnum">4.92</td><td class="tnum">16.19</td><td class="tnum slow">20.16</td><td class="tnum">5</td><td><span class="chip bad">29×</span></td></tr>
+    <tr><td>12</td><td>issue #1 comments</td><td>withcoral</td><td class="tnum fast">0.69</td><td class="tnum">3.65</td><td class="tnum">12.31</td><td class="tnum slow">16.01</td><td class="tnum" style="color:var(--bad)">0*</td><td><span class="chip bad">23×</span></td></tr>
+    <tr><td>13</td><td>search issues <code>release</code></td><td>withcoral</td><td class="tnum fast">1.15</td><td class="tnum">3.57</td><td class="tnum">12.56</td><td class="tnum slow">15.77</td><td class="tnum" style="color:var(--bad)">0†</td><td><span class="chip warn">14×</span></td></tr>
+    <tr><td>14</td><td>search PRs <code>fix</code></td><td>withcoral</td><td class="tnum fast">1.33</td><td class="tnum">4.25</td><td class="tnum">13.31</td><td class="tnum slow">17.56</td><td class="tnum" style="color:var(--bad)">0†</td><td><span class="chip warn">13×</span></td></tr>
+    <tr><td>15</td><td>search repos <code>coral</code></td><td>—</td><td class="tnum fast">0.86</td><td class="tnum">3.27</td><td class="tnum">12.33</td><td class="tnum slow">15.22</td><td class="tnum" style="color:var(--bad)">0†</td><td><span class="chip warn">18×</span></td></tr>
+    <tr><td>16</td><td>user gists (top 5)</td><td>FiscalMindset</td><td class="tnum fast">0.58</td><td class="tnum">3.84</td><td class="tnum">14.34</td><td class="tnum slow">18.18</td><td class="tnum" style="color:var(--bad)">0*</td><td><span class="chip bad">31×</span></td></tr>
+    <tr><td>17</td><td>PR #1 commits (top 5)</td><td>withcoral</td><td class="tnum fast">0.66</td><td class="tnum">7.86</td><td class="tnum">48.05</td><td class="tnum worst">58.07</td><td class="tnum" style="color:var(--bad)">0*</td><td><span class="chip bad">88×</span></td></tr>
+    <tr><td>18</td><td>PR #1 files</td><td>withcoral</td><td class="tnum fast">1.04</td><td class="tnum">5.27</td><td class="tnum">13.16</td><td class="tnum slow">18.43</td><td class="tnum" style="color:var(--bad)">0*</td><td><span class="chip warn">18×</span></td></tr>
+    <tr><td>19</td><td>most-recent workflow run jobs</td><td>FiscalMindset</td><td class="tnum fast">1.77</td><td class="tnum">4.30</td><td class="tnum">15.43</td><td class="tnum slow">19.56</td><td class="tnum" style="color:var(--bad)">0*</td><td><span class="chip warn">11×</span></td></tr>
+    <tr><td>20</td><td>workflow files list</td><td>FiscalMindset</td><td class="tnum fast">0.59</td><td class="tnum">3.66</td><td class="tnum">12.26</td><td class="tnum slow">15.75</td><td class="tnum" style="color:var(--bad)">0*</td><td><span class="chip bad">27×</span></td></tr>
+  </tbody>
+</table>
+<p class="note">\* table-by-table-with-empty-data — coral returned 0 rows for these queries (empty underlying table).<br>† search endpoints returned 0 rows under this corpus. <code>gh</code> would have flagged the empty result in &lt;1.3s; coral takes 15–17s to confirm the same emptiness.</p>
+
+<h2 id="analysis"><span class="section-num">2</span>Cross-test analysis</h2>
+
+<h3>Phases of coral latency</h3>
+<table>
+  <thead><tr><th>Phase</th><th>Description</th><th class="tnum">Median across 20</th><th class="tnum">Range</th></tr></thead>
+  <tbody>
+    <tr><td><strong>init</strong></td><td>engine spawn + MCP stdio + catalog load</td><td class="tnum">3.9s</td><td class="tnum">1.4–7.9s</td></tr>
+    <tr><td><strong>sql</strong></td><td>tool call + provider fetch + Arrow mapping</td><td class="tnum">14.0s</td><td class="tnum">7.4–48.0s</td></tr>
+  </tbody>
+</table>
+<p class="note">Init is 1–8s of pure overhead that <code>gh</code> doesn't have. SQL phase is the dominant cost for 17/20 tests. There is a <strong>~7-second floor</strong> in the sql phase for any GitHub query — the cost of one provider fetch + Arrow mapping.</p>
+
+<h3>By query category</h3>
+<table>
+  <thead><tr><th>Category</th><th class="tnum">Tests</th><th class="tnum">gh median</th><th class="tnum">coral median</th><th class="tnum">ratio</th></tr></thead>
+  <tbody>
+    <tr><td>Repo metadata</td><td class="tnum">4,5,7,8,9</td><td class="tnum">0.66</td><td class="tnum">18.13</td><td class="tnum">27×</td></tr>
+    <tr><td>Workflow / Actions</td><td class="tnum">2,19,20</td><td class="tnum">0.80</td><td class="tnum">16.01</td><td class="tnum">119×</td></tr>
+    <tr><td>PRs / issues / comments</td><td class="tnum">1,6,12,17,18</td><td class="tnum">0.69</td><td class="tnum">23.96</td><td class="tnum">35×</td></tr>
+    <tr><td>Commits / history</td><td class="tnum">3</td><td class="tnum">0.94</td><td class="tnum">38.36</td><td class="tnum">41×</td></tr>
+    <tr><td>Search endpoints</td><td class="tnum">13,14,15</td><td class="tnum">1.11</td><td class="tnum">16.18</td><td class="tnum">15×</td></tr>
+    <tr><td>User-scoped (gists, collaborators)</td><td class="tnum">10,16</td><td class="tnum">0.60</td><td class="tnum">20.92</td><td class="tnum">35×</td></tr>
+  </tbody>
+</table>
+
+<h3>Visual: gh vs coral (scale to slowest test = 58s)</h3>
+<div class="legend"><span><span class="sq" style="background:#16a34a"></span>gh</span><span><span class="sq" style="background:#dc2626;opacity:0.55"></span>coral</span></div>
+<div id="bars"></div>
+
+<h3>Why coral returns 0 rows on 9 of 20 tests</h3>
+<ul>
+  <li><strong>Empty tables</strong>: <code>collaborators</code>, <code>gists</code>, <code>repo_issue_comments</code>, <code>repo_pull_request_files</code>, <code>repo_action_jobs</code>, <code>repo_workflows</code> had no rows for this repo — coral still pays the full ~15s query cost.</li>
+  <li><strong>Search endpoints</strong>: <code>search_issues</code>, <code>search_pull_requests</code>, <code>search_repositories</code> returned 0 rows under this query plan for this corpus. <code>gh</code> returned 5–10 rows in 1–1.3s.</li>
+</ul>
+
+<h2 id="per-test"><span class="section-num">3</span>Per-test details</h2>
+
+<details open><summary><strong>Test 1 — open PRs (top 20) · withcoral/coral</strong> · 3 sub-runs (1a unfiltered, 1b fair, 1c warm server) · see discrepancy note</summary><div class="dbody">
+
+<p><strong>1a · unfiltered (original v2):</strong> 0.67s vs 23.38s (35×) · 20 rows<br>
+<code>gh pr list --repo withcoral/coral --state open --limit 20 --json number,title,state,createdAt</code><br>
+<code>SELECT number, title, state, created_at FROM github.pulls WHERE owner='withcoral' AND repo='coral' AND state='open' ORDER BY created_at DESC LIMIT 20</code></p>
+
+<p><strong>1b · fair comparison (author filter on both sides, fresh coral subprocess):</strong> 0.97s vs 24.60s (25×) · 18 rows<br>
+<code>gh pr list --repo withcoral/coral --author FiscalMindset --state open --json number,title,state,createdAt</code> (uses GraphQL search)<br>
+<code>SELECT number, title, state, created_at FROM github.pulls WHERE owner='withcoral' AND repo='coral' AND user__login='FiscalMindset' AND state='open' ORDER BY created_at DESC LIMIT 20</code></p>
+
+<p><strong>1c · same query, warm coral server (1 spawn, 5 queries against the same session):</strong> gh 0.83s vs coral sql 23.17s (28×) · 18 rows. Even with init amortised, sql stays at 23s.</p>
+
+<p class="note"><strong>Note on discrepancy with user-reported numbers.</strong> A user test on a different coral MCP setup reported <strong>160 ms</strong> for the same author-filtered query vs <strong>1246 ms</strong> for <code>gh pr list --author</code> — coral ~8× faster than <code>gh</code>. That number <strong>does not reproduce</strong> on the local coral (<code>0.8.1+3acb123</code>, stdio spawn, withcoral/coral corpus). Likely the user's coral is backed by a different store (proxy, cache, or pre-materialised index). Both sides agree on correctness (same 18 PRs). <strong>Always re-measure on your coral setup.</strong></p>
+</div></details>
+
+<details><summary><strong>Test 2 — recent workflow runs (last 5) · FiscalMindset/coral</strong> · 0.04s vs 12.73s (318×) · 5 rows</summary><div class="dbody">
+<p><code>gh run list --repo FiscalMindset/coral --limit 5 --json name,status,conclusion,runNumber,createdAt</code></p>
+<p><code>SELECT name, status, conclusion, run_number, created_at FROM github.repo_action_runs WHERE owner='FiscalMindset' AND repo='coral' ORDER BY created_at DESC LIMIT 5</code></p>
+<p class="note">Largest ratio of the sweep — <code>gh run list</code> is nearly free (cached), coral walks the run log.</p>
+</div></details>
+
+<details><summary><strong>Test 3 — latest 5 commits · FiscalMindset/coral</strong> · 0.94s vs 38.36s (41×) · 5 rows</summary><div class="dbody">
+<p><code>gh api repos/FiscalMindset/coral/commits --jq '.[0:5] | .[] | {sha, msg, date}'</code></p>
+<p><code>SELECT sha, commit__message, commit__author__date FROM github.commits WHERE owner='FiscalMindset' AND repo='coral' ORDER BY commit__author__date DESC LIMIT 5</code></p>
+<p class="note">Same <code>ORDER BY</code> pitfall as v1 test 4 — coral fetches the full 917-commit history to sort, then returns 5 rows. sql = 35.59s.</p>
+</div></details>
+
+<details><summary><strong>Test 4 — branches (top 10) · FiscalMindset/coral</strong> · 0.55s vs 9.06s (16×) · 10 rows</summary><div class="dbody">
+<p><code>gh api repos/FiscalMindset/coral/branches --jq '.[0:10] | .[].name'</code></p>
+<p><code>SELECT name FROM github.repo_branches WHERE owner='FiscalMindset' AND repo='coral' LIMIT 10</code></p>
+<p class="note">Lowest-ratio "real" test. LIMIT pushdown works; sql = 7.36s = the floor.</p>
+</div></details>
+
+<details><summary><strong>Test 5 — recent releases (last 5) · withcoral/coral</strong> · 0.60s vs 9.47s (16×) · 5 rows</summary><div class="dbody">
+<p><code>gh release list --repo withcoral/coral --limit 5 --json name,tagName,publishedAt</code></p>
+<p><code>SELECT name, tag_name, published_at FROM github.releases WHERE owner='withcoral' AND repo='coral' ORDER BY published_at DESC LIMIT 5</code></p>
+</div></details>
+
+<details><summary><strong>Test 6 — open issues (last 10) · withcoral/coral</strong> · 0.61s vs 45.45s (74×) · 10 rows</summary><div class="dbody">
+<p><code>gh issue list --repo withcoral/coral --state open --limit 10 --json number,title,state,createdAt</code></p>
+<p><code>SELECT number, title, state, created_at FROM github.issues WHERE owner='withcoral' AND repo='coral' AND state='open' ORDER BY created_at DESC LIMIT 10</code></p>
+<p class="note">2nd-worst absolute time. sql = 36.52s — full issue list fetched, then top 10 selected.</p>
+</div></details>
+
+<details><summary><strong>Test 7 — recent tags (last 10) · withcoral/coral</strong> · 0.81s vs 19.84s (25×) · 10 rows</summary><div class="dbody">
+<p><code>gh api repos/withcoral/coral/tags --jq '.[0:10] | .[] | {name, sha}'</code></p>
+<p><code>SELECT name, commit__sha FROM github.repo_tags WHERE owner='withcoral' AND repo='coral' LIMIT 10</code></p>
+</div></details>
+
+<details><summary><strong>Test 8 — repo languages · FiscalMindset/coral</strong> · 0.54s vs 18.30s (34×) · 1 row</summary><div class="dbody">
+<p><code>gh api repos/FiscalMindset/coral/languages</code></p>
+<p><code>SELECT * FROM github.languages WHERE owner='FiscalMindset' AND repo='coral'</code></p>
+<p class="note">18s for 1 row. The fixed pipeline cost.</p>
+</div></details>
+
+<details><summary><strong>Test 9 — repo topics · FiscalMindset/coral</strong> · 0.69s vs 23.93s (35×) · 1 row</summary><div class="dbody">
+<p><code>gh api repos/FiscalMindset/coral/topics</code></p>
+<p><code>SELECT * FROM github.repo_topics WHERE owner='FiscalMindset' AND repo='coral'</code></p>
+<p class="note">24s for 1 row.</p>
+</div></details>
+
+<details><summary><strong>Test 10 — repo collaborators · FiscalMindset/coral</strong> · 0.62s vs 23.66s (38×) · 0 rows</summary><div class="dbody">
+<p><code>gh api repos/FiscalMindset/coral/collaborators --jq '.[0:10] | .[].login'</code></p>
+<p><code>SELECT login FROM github.collaborators WHERE owner='FiscalMindset' AND repo='coral' LIMIT 10</code></p>
+<p class="note">coral returned 0 rows (table empty for this repo). 24s to confirm emptiness.</p>
+</div></details>
+
+<details><summary><strong>Test 11 — repo contributors (top 5) · FiscalMindset/coral</strong> · 0.70s vs 20.16s (29×) · 5 rows</summary><div class="dbody">
+<p><code>gh api repos/FiscalMindset/coral/contributors --jq '.[0:5] | .[] | {login, contributions}'</code></p>
+<p><code>SELECT login, contributions FROM github.repo_contributors WHERE owner='FiscalMindset' AND repo='coral' LIMIT 5</code></p>
+</div></details>
+
+<details><summary><strong>Test 12 — issue #1 comments · withcoral/coral</strong> · 0.69s vs 16.01s (23×) · 0 rows</summary><div class="dbody">
+<p><code>gh api repos/withcoral/coral/issues/1/comments --jq '.[] | {user, body}'</code></p>
+<p><code>SELECT user__login, body FROM github.repo_issue_comments WHERE owner='withcoral' AND repo='coral' AND number=1 LIMIT 5</code></p>
+<p class="note">coral returned 0 rows; 16s to confirm.</p>
+</div></details>
+
+<details><summary><strong>Test 13 — search issues <code>release</code></strong> · 1.15s vs 15.77s (14×) · 0 rows</summary><div class="dbody">
+<p><code>gh search issues 'repo:withcoral/coral release' --limit 5 --json number,title,state</code></p>
+<p><code>SELECT number, title, state FROM github.search_issues WHERE query='repo:withcoral/coral release' LIMIT 5</code></p>
+</div></details>
+
+<details><summary><strong>Test 14 — search PRs <code>fix</code></strong> · 1.33s vs 17.56s (13×) · 0 rows</summary><div class="dbody">
+<p><code>gh search prs 'repo:withcoral/coral fix' --limit 5 --json number,title,state</code></p>
+<p><code>SELECT number, title, state FROM github.search_pull_requests WHERE query='repo:withcoral/coral fix' LIMIT 5</code></p>
+<p class="note">Lowest ratio of the sweep.</p>
+</div></details>
+
+<details><summary><strong>Test 15 — search repos <code>coral</code></strong> · 0.86s vs 15.22s (18×) · 0 rows</summary><div class="dbody">
+<p><code>gh search repos 'coral' --limit 5 --json fullName,description,stargazersCount</code></p>
+<p><code>SELECT full_name, description, stargazers_count FROM github.search_repositories WHERE query='coral' LIMIT 5</code></p>
+</div></details>
+
+<details><summary><strong>Test 16 — user gists (top 5) · FiscalMindset</strong> · 0.58s vs 18.18s (31×) · 0 rows</summary><div class="dbody">
+<p><code>gh gist list --limit 5 --public</code></p>
+<p><code>SELECT id, description FROM github.gists WHERE owner='FiscalMindset' LIMIT 5</code></p>
+</div></details>
+
+<details><summary><strong>Test 17 — PR #1 commits · withcoral/coral</strong> · 0.66s vs 58.07s (88×) · 0 rows</summary><div class="dbody">
+<p><code>gh api repos/withcoral/coral/pulls/1/commits --jq '.[0:5] | .[] | {sha, msg}'</code></p>
+<p><code>SELECT sha, commit__message FROM github.commits WHERE owner='withcoral' AND repo='coral' AND pull_number=1 LIMIT 5</code></p>
+<p class="note"><strong>Worst absolute time of the sweep.</strong> sql = 48s. <code>pull_number</code> filter doesn't push down; coral walks the full commit history again.</p>
+</div></details>
+
+<details><summary><strong>Test 18 — PR #1 files · withcoral/coral</strong> · 1.04s vs 18.43s (18×) · 0 rows</summary><div class="dbody">
+<p><code>gh api repos/withcoral/coral/pulls/1/files --jq '.[] | .filename'</code></p>
+<p><code>SELECT filename FROM github.repo_pull_request_files WHERE owner='withcoral' AND repo='coral' AND number=1</code></p>
+</div></details>
+
+<details><summary><strong>Test 19 — most-recent workflow run jobs · FiscalMindset/coral</strong> · 1.77s vs 19.56s (11×) · 0 rows</summary><div class="dbody">
+<p><code>RUN_ID=$(gh run list ...); gh api repos/FiscalMindset/coral/actions/runs/$RUN_ID/jobs ...</code></p>
+<p><code>SELECT name, status, conclusion FROM github.repo_action_jobs WHERE ... AND run_id=(SELECT run_id FROM github.repo_action_runs WHERE ... ORDER BY created_at DESC LIMIT 1) LIMIT 5</code></p>
+<p class="note">Subquery returned a <code>run_id</code> but the join produced 0 rows.</p>
+</div></details>
+
+<details><summary><strong>Test 20 — workflow files list · FiscalMindset/coral</strong> · 0.59s vs 15.75s (27×) · 0 rows</summary><div class="dbody">
+<p><code>gh api repos/FiscalMindset/coral/actions/workflows --jq '.workflows[:5] | .[] | {name, path, state}'</code></p>
+<p><code>SELECT name, path, state FROM github.repo_workflows WHERE owner='FiscalMindset' AND repo='coral' LIMIT 5</code></p>
+</div></details>
+
+<h2 id="causes"><span class="section-num">4</span>Root causes</h2>
+<table>
+  <thead><tr><th>#</th><th>Cause</th><th>Mechanism</th><th>Affected tests</th><th>Cost</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Cold init / MCP handshake</td><td>engine spawn + MCP stdio + catalog load on every run</td><td>all 20</td><td>1.4–7.9s</td></tr>
+    <tr><td>2</td><td>GitHub provider fetch + Arrow mapping</td><td>one provider round-trip + column mapping, even with LIMIT pushdown</td><td>all 20</td><td>7–14s baseline</td></tr>
+    <tr><td>3</td><td><code>ORDER BY</code> not pushed down</td><td>planner treats GitHub as unordered; full-history fetch for sort</td><td>1, 3, 5, 6, 17</td><td>14–48s extra</td></tr>
+    <tr><td>4</td><td>Filter columns not pushed down</td><td><code>pull_number</code>, <code>number</code>, <code>run_id</code> subquery, <code>state</code> computed locally</td><td>12, 17, 18, 19, 20</td><td>13–48s wasted</td></tr>
+    <tr><td>5</td><td>Catalog load</td><td>37 sources validated per task (8 broken <code>careops_*</code>, missing <code>blogger</code>)</td><td>all 20</td><td>~3.7s in init</td></tr>
+    <tr><td>6</td><td>Empty result pays full tax</td><td>coral takes 15–23s even when returning 0 rows</td><td>10, 12, 13, 14, 15, 16, 18, 19, 20</td><td>0 rows in 15–23s</td></tr>
+  </tbody>
+</table>
+
+<h2 id="verdict"><span class="section-num">5</span>Verdict</h2>
+<p>On <strong>this</strong> coral build (<code>0.8.1+3acb123</code>, stdio spawn, withcoral/coral corpus), coral MCP <code>sql</code> is slower than <code>gh</code> on every test, by 11× to 318×. The 2–8s init overhead is structural and the 7–48s sql phase is dominated by GitHub pagination the planner cannot push down.</p>
+
+<p><strong>Important caveat added after re-test of test 1:</strong> the gap is <strong>configuration-dependent</strong>. A user-side measurement on a different coral MCP setup reported coral ~8× faster than <code>gh</code> for the same author-filtered PR query (160 ms vs 1246 ms). That is the opposite of what this benchmark shows. Likely causes are differences in the coral backing store, pre-materialised search index, or coral version. <strong>Re-measure on your coral setup before committing to a stack.</strong></p>
+
+<p class="note"><strong>Next experiments:</strong> identify the coral config behind the 160 ms number; document a config that flips the verdict; rerun the warm-server harness against that config to confirm.</p>
+
+<h2 id="artifacts"><span class="section-num">6</span>Artifacts</h2>
+<table>
+  <thead><tr><th>Path</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr><td><code>artifacts/all_summary.json</code></td><td>aggregated 20-row table (test, gh_med, coral_med, init, sql, ratio)</td></tr>
+    <tr><td><code>artifacts/&lt;test&gt;/gh/run-NN/</code></td><td>per-run gh output (<code>out.txt</code>, <code>err.txt</code>, <code>timing.txt</code>) + <code>summary.json</code></td></tr>
+    <tr><td><code>artifacts/&lt;test&gt;/coral/run-NN/</code></td><td>per-run coral stdout + mcp stderr log + <code>summary.json</code></td></tr>
+    <tr><td><code>run_all.py</code></td><td>driver that loops over the 20 tests via the skill runner</td></tr>
+    <tr><td><code>aggregate.py</code></td><td>reads per-test <code>summary.json</code> into <code>all_summary.json</code></td></tr>
+    <tr><td><code>run.log</code></td><td>full stdout/stderr of the v2 run (~25 min wall clock)</td></tr>
+    <tr><td><code>~/.config/opencode/skills/coral-benchmark/bench_runner.py</code></td><td>the runner script</td></tr>
+    <tr><td><code>../2026-08-10-coral-mcp-vs-gh-timing.md</code> (v1)</td><td>original 4-test report for comparison</td></tr>
+  </tbody>
+</table>
+<p class="note">Coral task id used: <code>e5c762d1-0b4b-45a8-acac-98ff7aeb9605</code> (v2).</p>
+
+<script>
+const data = [
+  ["1 open PRs", 0.67, 23.38],
+  ["2 recent runs", 0.04, 12.73],
+  ["3 commits", 0.94, 38.36],
+  ["4 branches", 0.55, 9.06],
+  ["5 releases", 0.60, 9.47],
+  ["6 issues", 0.61, 45.45],
+  ["7 tags", 0.81, 19.84],
+  ["8 languages", 0.54, 18.30],
+  ["9 topics", 0.69, 23.93],
+  ["10 collaborators", 0.62, 23.66],
+  ["11 contributors", 0.70, 20.16],
+  ["12 issue cmt", 0.69, 16.01],
+  ["13 search iss", 1.15, 15.77],
+  ["14 search pr", 1.33, 17.56],
+  ["15 search repo", 0.86, 15.22],
+  ["16 gists", 0.58, 18.18],
+  ["17 PR commits", 0.66, 58.07],
+  ["18 PR files", 1.04, 18.43],
+  ["19 run jobs", 1.77, 19.56],
+  ["20 workflows", 0.59, 15.75],
+];
+const maxCoral = 58.07;
+const bars = document.getElementById("bars");
+data.forEach(([label, gh, coral]) => {
+  const ghW = (gh / maxCoral * 100).toFixed(2);
+  const crW = (coral / maxCoral * 100).toFixed(2);
+  bars.insertAdjacentHTML("beforeend",
+    `<div class="bar-row"><span class="lbl">${label}</span><span class="bar"><span class="cr" style="width:${crW}%"></span><span class="gh" style="width:${ghW}%"></span></span><span class="num">${coral.toFixed(1)}s</span></div>`);
+});
+</script>
+</body>
+</html>

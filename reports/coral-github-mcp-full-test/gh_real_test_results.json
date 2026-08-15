@@ -1,0 +1,731 @@
+[
+  {
+    "table": "accepted_assignments",
+    "orig_url": "https://api.github.com/",
+    "real_url": "https://api.github.com/",
+    "result": "200",
+    "body": ""
+  },
+  {
+    "table": "activity_list_repos_watched_by_user",
+    "orig_url": "https://api.github.com/users/FiscalMindset/subscriptions",
+    "real_url": "https://api.github.com/users/FiscalMindset/subscriptions",
+    "result": "200",
+    "body": ""
+  },
+  {
+    "table": "alerts",
+    "orig_url": "https://api.github.com/orgs/withcoral/dependabot/alerts",
+    "real_url": "https://api.github.com/orgs/withcoral/dependabot/alerts",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "approvals",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/actions/runs/0/approvals",
+    "real_url": "https://api.github.com/repos/withcoral/coral/actions/runs/None/approvals",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "apps",
+    "orig_url": "https://api.github.com/apps/github",
+    "real_url": "https://api.github.com/apps/github-actions",
+    "result": "200",
+    "body": ""
+  },
+  {
+    "table": "assignments",
+    "orig_url": "https://api.github.com/assignments/0",
+    "real_url": "https://api.github.com/assignments/None",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "attempts",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/actions/runs/0/attempts/1",
+    "real_url": "https://api.github.com/repos/withcoral/coral/actions/runs/None/attempts/1",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "attestations",
+    "orig_url": "https://api.github.com/users/FiscalMindset/attestations/sha256:000000000000000000000000000000000000000000",
+    "real_url": "https://api.github.com/users/FiscalMindset/attestations/sha256:000000000000000000000000000000000000000000",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "authors",
+    "orig_url": "https://api.github.com/",
+    "real_url": "https://api.github.com/",
+    "result": "200",
+    "body": ""
+  },
+  {
+    "table": "autofix",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/code-scanning/alerts/1/autofix",
+    "real_url": "https://api.github.com/repos/withcoral/coral/code-scanning/alerts/1/autofix",
+    "result": "err",
+    "body": "gh: You are not authorized to read code scanning alerts. (HTTP 403)\ngh: This API operation needs the \"admin:repo_hook\" scope. To request it, run:  gh auth refresh -h github.com -s admin:repo_hook\n"
+  },
+  {
+    "table": "billing",
+    "orig_url": "https://api.github.com/orgs/withcoral/copilot/bi",
+    "real_url": "https://api.github.com/orgs/withcoral/copilot/bi",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "blobs",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/git/blobs/0",
+    "real_url": "https://api.github.com/repos/withcoral/coral/git/blobs/3acb123da2f8c6e2d093bd2a71b84bc194f9d28e",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "budgets",
+    "orig_url": "https://api.github.com/organizations/withcoral/settings/billing/budgets",
+    "real_url": "https://api.github.com/organizations/withcoral/settings/billing/budgets",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org\n"
+  },
+  {
+    "table": "builds",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/pages/builds",
+    "real_url": "https://api.github.com/repos/withcoral/coral/pages/builds",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "campaigns",
+    "orig_url": "https://api.github.com/orgs/withcoral/campaigns",
+    "real_url": "https://api.github.com/orgs/withcoral/campaigns",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "codespaces",
+    "orig_url": "https://api.github.com/orgs/withcoral/codespaces",
+    "real_url": "https://api.github.com/orgs/withcoral/codespaces",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org\n"
+  },
+  {
+    "table": "config",
+    "orig_url": "https://api.github.com/orgs/withcoral/hooks/0/config",
+    "real_url": "https://api.github.com/orgs/withcoral/hooks/None/config",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org_hook\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org_hook\n"
+  },
+  {
+    "table": "conflicts",
+    "orig_url": null,
+    "real_url": null,
+    "result": "no_url"
+  },
+  {
+    "table": "copilot",
+    "orig_url": "https://api.github.com/orgs/withcoral/members/FiscalMindset/cop",
+    "real_url": "https://api.github.com/orgs/withcoral/members/FiscalMindset/cop",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "deliveries",
+    "orig_url": "https://api.github.com/orgs/withcoral/hooks/0/deliveries",
+    "real_url": "https://api.github.com/orgs/withcoral/hooks/None/deliveries",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org_hook\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org_hook\n"
+  },
+  {
+    "table": "deployment_branch_policies",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/environments/production/deployment-br",
+    "real_url": "https://api.github.com/repos/withcoral/coral/environments/production/deployment-br",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "deployment_protection_rules",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/environments/",
+    "real_url": "https://api.github.com/repos/withcoral/coral/environments/",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "deployment_records",
+    "orig_url": "https://api.github.com/orgs/withcoral/artifacts/sha256:0000000000000000000000000000000",
+    "real_url": "https://api.github.com/orgs/withcoral/artifacts/sha256:0000000000000000000000000000000",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "enterprise_1_day",
+    "orig_url": "https://api.github.com/enterprises/withcoral/copilot/metrics/reports/enterprise-1-day",
+    "real_url": "https://api.github.com/enterprises/withcoral/copilot/metrics/reports/enterprise-1-day",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "enterprise_team_memberships",
+    "orig_url": null,
+    "real_url": null,
+    "result": "no_url"
+  },
+  {
+    "table": "enterprise_teams",
+    "orig_url": "https://api.github.com/enterprises/withcoral/teams",
+    "real_url": "https://api.github.com/enterprises/withcoral/teams",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:enterprise\" scope. To request it, run:  gh auth refresh -h github.com -s admin:enterprise\n"
+  },
+  {
+    "table": "exports",
+    "orig_url": "https://api.github.com/user/codespaces/test-codespace/exports/0",
+    "real_url": "https://api.github.com/user/codespaces/test-codespace/exports/0",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"codespace\" scope. To request it, run:  gh auth refresh -h github.com -s codespace\n"
+  },
+  {
+    "table": "fields",
+    "orig_url": "https://api.github.com/orgs/withcoral/projectsV2/0/fields",
+    "real_url": "https://api.github.com/orgs/withcoral/projectsV2/0/fields",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "gist",
+    "orig_url": "https://api.github.com/gists/0/0",
+    "real_url": "https://api.github.com/gists/0/0",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "grades",
+    "orig_url": "https://api.github.com/assignments/0/grades",
+    "real_url": "https://api.github.com/assignments/None/grades",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "history",
+    "orig_url": "https://api.github.com/orgs/withcoral/rulesets/0/history",
+    "real_url": "https://api.github.com/orgs/withcoral/rulesets/0/history",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org\n"
+  },
+  {
+    "table": "import",
+    "orig_url": "https://api.github.com/",
+    "real_url": "https://api.github.com/",
+    "result": "200",
+    "body": ""
+  },
+  {
+    "table": "instances",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/code-scanning/alerts/1/instances",
+    "real_url": "https://api.github.com/repos/withcoral/coral/code-scanning/alerts/1/instances",
+    "result": "err",
+    "body": "gh: You are not authorized to read code scanning alerts. (HTTP 403)\ngh: This API operation needs the \"admin:repo_hook\" scope. To request it, run:  gh auth refresh -h github.com -s admin:repo_hook\n"
+  },
+  {
+    "table": "issue_fields",
+    "orig_url": "https://api.github.com/orgs/withcoral/issue-fields",
+    "real_url": "https://api.github.com/orgs/withcoral/issue-fields",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org\n"
+  },
+  {
+    "table": "issue_types",
+    "orig_url": "https://api.github.com/orgs/withcoral/issue-types",
+    "real_url": "https://api.github.com/orgs/withcoral/issue-types",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org\n"
+  },
+  {
+    "table": "items",
+    "orig_url": "https://api.github.com/orgs/withcoral/projectsV2/0/items",
+    "real_url": "https://api.github.com/orgs/withcoral/projectsV2/0/items",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "jobs",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/actions/runs/0/jobs",
+    "real_url": "https://api.github.com/repos/withcoral/coral/actions/runs/None/jobs",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "large_files",
+    "orig_url": "https://api.github.com/",
+    "real_url": "https://api.github.com/",
+    "result": "200",
+    "body": ""
+  },
+  {
+    "table": "memberships",
+    "orig_url": "https://api.github.com/teams/0/memberships/FiscalMindset",
+    "real_url": "https://api.github.com/teams/0/memberships/FiscalMindset",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "metrics",
+    "orig_url": "https://api.github.com/orgs/withcoral/copilot/metrics",
+    "real_url": "https://api.github.com/orgs/withcoral/copilot/metrics",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "org_attestation_repositories",
+    "orig_url": "https://api.github.com/orgs/withcoral/attestations/repositories",
+    "real_url": "https://api.github.com/orgs/withcoral/attestations/repositories",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "org_attestations",
+    "orig_url": "https://api.github.com/orgs/withcoral/attestations/sha256:000000000000000000000000000000000000000000000000",
+    "real_url": "https://api.github.com/orgs/withcoral/attestations/sha256:000000000000000000000000000000000000000000000000",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "org_blocks",
+    "orig_url": "https://api.github.com/orgs/withcoral/blocks",
+    "real_url": "https://api.github.com/orgs/withcoral/blocks",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org\n"
+  },
+  {
+    "table": "org_code_scanning_alerts",
+    "orig_url": "https://api.github.com/orgs/withcoral/code-scanning/alerts",
+    "real_url": "https://api.github.com/orgs/withcoral/code-scanning/alerts",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "org_copilot_coding_agent_permission_repositories",
+    "orig_url": "https://api.github.com/orgs/withc",
+    "real_url": "https://api.github.com/orgs/withc",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org\n"
+  },
+  {
+    "table": "org_copilot_coding_agent_permissions",
+    "orig_url": "https://api.github.com/orgs/withcoral/copilot/",
+    "real_url": "https://api.github.com/orgs/withcoral/copilot/",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "org_hooks",
+    "orig_url": "https://api.github.com/orgs/withcoral/hooks",
+    "real_url": "https://api.github.com/orgs/withcoral/hooks",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org_hook\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org_hook\n"
+  },
+  {
+    "table": "org_insight_summary_stat_users",
+    "orig_url": "https://api.github.com/orgs/withcoral/insights/api/summary-stats/users/0",
+    "real_url": "https://api.github.com/orgs/withcoral/insights/api/summary-stats/users/0",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "org_insight_summary_stats",
+    "orig_url": "https://api.github.com/orgs/withcoral/insights/api/summary-stats",
+    "real_url": "https://api.github.com/orgs/withcoral/insights/api/summary-stats",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "org_insight_time_stat_users",
+    "orig_url": "https://api.github.com/orgs/withcoral/insights/api/time-stats/users/0",
+    "real_url": "https://api.github.com/orgs/withcoral/insights/api/time-stats/users/0",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "org_insight_time_stats",
+    "orig_url": "https://api.github.com/orgs/withcoral/insights/api/time-stats",
+    "real_url": "https://api.github.com/orgs/withcoral/insights/api/time-stats",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "org_insights_summary_stat",
+    "orig_url": "https://api.github.com/orgs/withcoral/insights/api/summary-stats/User/0",
+    "real_url": "https://api.github.com/orgs/withcoral/insights/api/summary-stats/User/0",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "org_insights_time_stat",
+    "orig_url": "https://api.github.com/orgs/withcoral/insights/api/time-stats/User/0",
+    "real_url": "https://api.github.com/orgs/withcoral/insights/api/time-stats/User/0",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "org_organization_role_teams",
+    "orig_url": "https://api.github.com/orgs/withcoral/organization-roles/0/teams",
+    "real_url": "https://api.github.com/orgs/withcoral/organization-roles/0/teams",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "org_organization_role_users",
+    "orig_url": "https://api.github.com/orgs/withcoral/organization-roles/0/users",
+    "real_url": "https://api.github.com/orgs/withcoral/organization-roles/0/users",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "org_property_values",
+    "orig_url": "https://api.github.com/orgs/withcoral/properties/values",
+    "real_url": "https://api.github.com/orgs/withcoral/properties/values",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org\n"
+  },
+  {
+    "table": "org_secret_scanning_alerts",
+    "orig_url": "https://api.github.com/orgs/withcoral/secret-scanning/alerts",
+    "real_url": "https://api.github.com/orgs/withcoral/secret-scanning/alerts",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "org_setting_immutable_release_repositories",
+    "orig_url": "https://api.github.com/orgs/withcoral/settings/immutable-releases/repo",
+    "real_url": "https://api.github.com/orgs/withcoral/settings/immutable-releases/repo",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "org_setting_immutable_releases",
+    "orig_url": "https://api.github.com/orgs/withcoral/settings/immutable-releases",
+    "real_url": "https://api.github.com/orgs/withcoral/settings/immutable-releases",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org\n"
+  },
+  {
+    "table": "organization_roles",
+    "orig_url": "https://api.github.com/orgs/withcoral/organization-roles",
+    "real_url": "https://api.github.com/orgs/withcoral/organization-roles",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org\n"
+  },
+  {
+    "table": "organization_setting_billing_usage",
+    "orig_url": "https://api.github.com/organizations/withcoral/settings/billing/usage",
+    "real_url": "https://api.github.com/organizations/withcoral/settings/billing/usage",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org\n"
+  },
+  {
+    "table": "pages",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/pages",
+    "real_url": "https://api.github.com/repos/withcoral/coral/pages",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "parent",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/issues/1/parent",
+    "real_url": "https://api.github.com/repos/withcoral/coral/issues/1/parent",
+    "result": "err",
+    "body": "gh: No parent issue found (HTTP 404)\n"
+  },
+  {
+    "table": "pending_deployments",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/actions/runs/0/pending_deploymen",
+    "real_url": "https://api.github.com/repos/withcoral/coral/actions/runs/None/pending_deploymen",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "personal_access_token_requests",
+    "orig_url": "https://api.github.com/org",
+    "real_url": "https://api.github.com/org",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "personal_access_tokens",
+    "orig_url": "https://api.github.com/orgs/withcor",
+    "real_url": "https://api.github.com/orgs/withcor",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org\n"
+  },
+  {
+    "table": "projects_v2",
+    "orig_url": "https://api.github.com/orgs/withcoral/projectsV2",
+    "real_url": "https://api.github.com/orgs/withcoral/projectsV2",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "ref",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/git/ref/main",
+    "real_url": "https://api.github.com/repos/withcoral/coral/git/ref/main",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "repo_action_jobs",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/actions/jobs/0",
+    "real_url": "https://api.github.com/repos/withcoral/coral/actions/jobs/0",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "repo_action_run_artifacts",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/actions/runs/0/artifacts",
+    "real_url": "https://api.github.com/repos/withcoral/coral/actions/runs/None/artifacts",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "repo_action_run_timing",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/actions/runs/0/timing",
+    "real_url": "https://api.github.com/repos/withcoral/coral/actions/runs/None/timing",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "repo_action_workflow_runs",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/actions/workflows/0/runs",
+    "real_url": "https://api.github.com/repos/withcoral/coral/actions/workflows/285087402/runs",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "repo_action_workflow_timing",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/actions/workflows/0/timing",
+    "real_url": "https://api.github.com/repos/withcoral/coral/actions/workflows/0/timing",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "repo_code_scanning_codeql_variant_analyse_repos",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/code-scanning/codeql/variant-analyses/0/repos/0/0",
+    "real_url": "https://api.github.com/repos/withcoral/coral/code-scanning/codeql/variant-analyses/0/repos/0/0",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "repo_environment_secret_public_key",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/environments/production/secrets/public-key",
+    "real_url": "https://api.github.com/repos/withcoral/coral/environments/production/secrets/public-key",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "repo_environment_secrets",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/environments/production/secrets",
+    "real_url": "https://api.github.com/repos/withcoral/coral/environments/production/secrets",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "repo_environment_variables",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/environments/production/variables",
+    "real_url": "https://api.github.com/repos/withcoral/coral/environments/production/variables",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "repo_git_tags",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/git/tags/0",
+    "real_url": "https://api.github.com/repos/withcoral/coral/git/tags/0",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "repo_page_build_latest",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/pages/builds/latest",
+    "real_url": "https://api.github.com/repos/withcoral/coral/pages/builds/latest",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "repo_page_deployments",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/pages/deployments/0",
+    "real_url": "https://api.github.com/repos/withcoral/coral/pages/deployments/0",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "repo_pull_review_comments",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/pulls/1/reviews/0/comments",
+    "real_url": "https://api.github.com/repos/withcoral/coral/pulls/1/reviews/0/comments",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "repos",
+    "orig_url": "https://api.github.com/teams/0/repos/withcoral/coral",
+    "real_url": "https://api.github.com/teams/0/repos/withcoral/coral",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "repository_access",
+    "orig_url": "https://api.github.com/organizations/withcoral/dependabot/repository-access",
+    "real_url": "https://api.github.com/organizations/withcoral/dependabot/repository-access",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "retention_limit",
+    "orig_url": null,
+    "real_url": null,
+    "result": "no_url"
+  },
+  {
+    "table": "route_stats",
+    "orig_url": "https://api.github.com/orgs/withcoral/insights/api/route-stats/User/0",
+    "real_url": "https://api.github.com/orgs/withcoral/insights/api/route-stats/User/0",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "rule_suites",
+    "orig_url": "https://api.github.com/orgs/withcoral/rulesets/rule-suites",
+    "real_url": "https://api.github.com/orgs/withcoral/rulesets/rule-suites",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org\n"
+  },
+  {
+    "table": "rulesets",
+    "orig_url": "https://api.github.com/orgs/withcoral/rulesets",
+    "real_url": "https://api.github.com/orgs/withcoral/rulesets",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org\n"
+  },
+  {
+    "table": "schema",
+    "orig_url": "https://api.github.com/orgs/withcoral/properties/schema",
+    "real_url": "https://api.github.com/orgs/withcoral/properties/schema",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org\n"
+  },
+  {
+    "table": "seats",
+    "orig_url": "https://api.github.com/orgs/withcoral/copilot/billing/se",
+    "real_url": "https://api.github.com/orgs/withcoral/copilot/billing/se",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "security_advisories",
+    "orig_url": "https://api.github.com/orgs/withcoral/securi",
+    "real_url": "https://api.github.com/orgs/withcoral/securi",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "security_managers",
+    "orig_url": "https://api.github.com/orgs/withcoral/security-managers",
+    "real_url": "https://api.github.com/orgs/withcoral/security-managers",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org\n"
+  },
+  {
+    "table": "storage_limit",
+    "orig_url": null,
+    "real_url": null,
+    "result": "no_url"
+  },
+  {
+    "table": "storage_records",
+    "orig_url": "https://api.github.com/orgs/withcoral/artifacts/sha256:0000000000000000000000000000000000",
+    "real_url": "https://api.github.com/orgs/withcoral/artifacts/sha256:0000000000000000000000000000000000",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "subject_stats",
+    "orig_url": "https://api.github.com/orgs/withcoral/insights/api/subject-stats",
+    "real_url": "https://api.github.com/orgs/withcoral/insights/api/subject-stats",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "summary",
+    "orig_url": "https://api.github.com/organizations/withcoral/settings/billing/usage/summary",
+    "real_url": "https://api.github.com/organizations/withcoral/settings/billing/usage/summary",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"admin:org\" scope. To request it, run:  gh auth refresh -h github.com -s admin:org\n"
+  },
+  {
+    "table": "team",
+    "orig_url": "https://api.github.com/teams/0",
+    "real_url": "https://api.github.com/teams/0",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "usage",
+    "orig_url": "https://api.github.com/organizations/withcoral/settings/billing/pre",
+    "real_url": "https://api.github.com/organizations/withcoral/settings/billing/pre",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "user_codespace_machines",
+    "orig_url": "https://api.github.com/user/codespaces/test-codespace/machines",
+    "real_url": "https://api.github.com/user/codespaces/test-codespace/machines",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\ngh: This API operation needs the \"codespace\" scope. To request it, run:  gh auth refresh -h github.com -s codespace\n"
+  },
+  {
+    "table": "user_docker_conflicts",
+    "orig_url": null,
+    "real_url": null,
+    "result": "no_url"
+  },
+  {
+    "table": "user_installation_repositories",
+    "orig_url": "https://api.github.com/user/installations/0/repositories",
+    "real_url": "https://api.github.com/user/installations/0/repositories",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "user_packages",
+    "orig_url": "https://api.github.com/user/packages/npm/left-pad",
+    "real_url": "https://api.github.com/user/packages/npm/left-pad",
+    "result": "err",
+    "body": "gh: Package not found. (HTTP 404)\n"
+  },
+  {
+    "table": "user_stats",
+    "orig_url": "https://api.github.com/orgs/withcoral/insights/api/user-stats/0",
+    "real_url": "https://api.github.com/orgs/withcoral/insights/api/user-stats/0",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "users_1_day",
+    "orig_url": "https://api.github.com/enterprises/withcoral/copilot/metrics/reports/users-1-day",
+    "real_url": "https://api.github.com/enterprises/withcoral/copilot/metrics/reports/users-1-day",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "variant_analyses",
+    "orig_url": "https://api.github.com/repos/withcoral/coral/code-sc",
+    "real_url": "https://api.github.com/repos/withcoral/coral/code-sc",
+    "result": "err",
+    "body": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "table": "versions",
+    "orig_url": null,
+    "real_url": null,
+    "result": "no_url"
+  }
+]

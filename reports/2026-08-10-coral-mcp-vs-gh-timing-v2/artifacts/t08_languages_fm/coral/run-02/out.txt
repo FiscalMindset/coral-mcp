@@ -1,0 +1,3 @@
+init: 3.73s | sql: 14.57s | TOTAL: 18.30s
+isError: False | rows_returned: 1
+ROW: {"json": "{\"Rust\":6342012,\"TypeScript\":1564149,\"MDX\":159602,\"Python\":39268,\"JavaScript\":16405,\"CSS\":15478,\"Makefile\":7445,\"Jinja\":4470,\"Shell\":4420,\"HTML\":720}"

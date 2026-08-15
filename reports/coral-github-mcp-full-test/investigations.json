@@ -1,0 +1,527 @@
+[
+  {
+    "table": "accepted_assignments",
+    "url": "https://api.github.com/",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "activity_list_repos_watched_by_user",
+    "url": "https://api.github.com/users/FiscalMindset/subscriptions",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source response decode failed\n  Detail: source API response decoding failed: EOF whi"
+  },
+  {
+    "table": "alerts",
+    "url": "https://api.github.com/orgs/withcoral/dependabot/alerts",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "approvals",
+    "url": "https://api.github.com/repos/withcoral/coral/actions/runs/0/approvals",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "apps",
+    "url": "https://api.github.com/apps/github",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "assignments",
+    "url": "https://api.github.com/assignments/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "attempts",
+    "url": "https://api.github.com/repos/withcoral/coral/actions/runs/0/attempts/1",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "attestations",
+    "url": "https://api.github.com/users/FiscalMindset/attestations/sha256:000000000000000000000000000000000000000000",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "authors",
+    "url": "https://api.github.com/",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"This endpoint has been dep"
+  },
+  {
+    "table": "autofix",
+    "url": "https://api.github.com/repos/withcoral/coral/code-scanning/alerts/1/autofix",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2994s [G"
+  },
+  {
+    "table": "billing",
+    "url": "https://api.github.com/orgs/withcoral/copilot/bi",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "blobs",
+    "url": "https://api.github.com/repos/withcoral/coral/git/blobs/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source request failed (422)\n  Detail: {\"message\":\"The sha parameter must be exactly "
+  },
+  {
+    "table": "budgets",
+    "url": "https://api.github.com/organizations/withcoral/settings/billing/budgets",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "builds",
+    "url": "https://api.github.com/repos/withcoral/coral/pages/builds",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "campaigns",
+    "url": "https://api.github.com/orgs/withcoral/campaigns",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "codespaces",
+    "url": "https://api.github.com/orgs/withcoral/codespaces",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "config",
+    "url": "https://api.github.com/orgs/withcoral/hooks/0/config",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "conflicts",
+    "url": null,
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rejected the request (400)\n  Detail: {\"message\":\"Package migration for docker"
+  },
+  {
+    "table": "copilot",
+    "url": "https://api.github.com/orgs/withcoral/members/FiscalMindset/cop",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "deliveries",
+    "url": "https://api.github.com/orgs/withcoral/hooks/0/deliveries",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "deployment_branch_policies",
+    "url": "https://api.github.com/repos/withcoral/coral/environments/production/deployment-br",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "deployment_protection_rules",
+    "url": "https://api.github.com/repos/withcoral/coral/environments/",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "deployment_records",
+    "url": "https://api.github.com/orgs/withcoral/artifacts/sha256:0000000000000000000000000000000",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "enterprise_1_day",
+    "url": "https://api.github.com/enterprises/withcoral/copilot/metrics/reports/enterprise-1-day",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "enterprise_team_memberships",
+    "url": null,
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: No column named `team`\n  Detail: No column `team` is in scope. Valid columns include"
+  },
+  {
+    "table": "enterprise_teams",
+    "url": "https://api.github.com/enterprises/withcoral/teams",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "exports",
+    "url": "https://api.github.com/user/codespaces/test-codespace/exports/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "fields",
+    "url": "https://api.github.com/orgs/withcoral/projectsV2/0/fields",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "gist",
+    "url": "https://api.github.com/gists/0/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "grades",
+    "url": "https://api.github.com/assignments/0/grades",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "history",
+    "url": "https://api.github.com/orgs/withcoral/rulesets/0/history",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "import",
+    "url": "https://api.github.com/",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"This endpoint has been dep"
+  },
+  {
+    "table": "instances",
+    "url": "https://api.github.com/repos/withcoral/coral/code-scanning/alerts/1/instances",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1853s [G"
+  },
+  {
+    "table": "issue_fields",
+    "url": "https://api.github.com/orgs/withcoral/issue-fields",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "issue_types",
+    "url": "https://api.github.com/orgs/withcoral/issue-types",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "items",
+    "url": "https://api.github.com/orgs/withcoral/projectsV2/0/items",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "jobs",
+    "url": "https://api.github.com/repos/withcoral/coral/actions/runs/0/jobs",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "large_files",
+    "url": "https://api.github.com/",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"This endpoint has been dep"
+  },
+  {
+    "table": "memberships",
+    "url": "https://api.github.com/teams/0/memberships/FiscalMindset",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "metrics",
+    "url": "https://api.github.com/orgs/withcoral/copilot/metrics",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\r\n  \"message\": \"Not Found\",\r\n  \"docum"
+  },
+  {
+    "table": "org_attestation_repositories",
+    "url": "https://api.github.com/orgs/withcoral/attestations/repositories",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "org_attestations",
+    "url": "https://api.github.com/orgs/withcoral/attestations/sha256:000000000000000000000000000000000000000000000000",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "org_blocks",
+    "url": "https://api.github.com/orgs/withcoral/blocks",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "org_code_scanning_alerts",
+    "url": "https://api.github.com/orgs/withcoral/code-scanning/alerts",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "org_copilot_coding_agent_permission_repositories",
+    "url": "https://api.github.com/orgs/withc",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "org_copilot_coding_agent_permissions",
+    "url": "https://api.github.com/orgs/withcoral/copilot/",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "org_hooks",
+    "url": "https://api.github.com/orgs/withcoral/hooks",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "org_insight_summary_stat_users",
+    "url": "https://api.github.com/orgs/withcoral/insights/api/summary-stats/users/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "org_insight_summary_stats",
+    "url": "https://api.github.com/orgs/withcoral/insights/api/summary-stats",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "org_insight_time_stat_users",
+    "url": "https://api.github.com/orgs/withcoral/insights/api/time-stats/users/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "org_insight_time_stats",
+    "url": "https://api.github.com/orgs/withcoral/insights/api/time-stats",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "org_insights_summary_stat",
+    "url": "https://api.github.com/orgs/withcoral/insights/api/summary-stats/User/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "org_insights_time_stat",
+    "url": "https://api.github.com/orgs/withcoral/insights/api/time-stats/User/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "org_organization_role_teams",
+    "url": "https://api.github.com/orgs/withcoral/organization-roles/0/teams",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "org_organization_role_users",
+    "url": "https://api.github.com/orgs/withcoral/organization-roles/0/users",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "org_property_values",
+    "url": "https://api.github.com/orgs/withcoral/properties/values",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "org_secret_scanning_alerts",
+    "url": "https://api.github.com/orgs/withcoral/secret-scanning/alerts",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "org_setting_immutable_release_repositories",
+    "url": "https://api.github.com/orgs/withcoral/settings/immutable-releases/repo",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "org_setting_immutable_releases",
+    "url": "https://api.github.com/orgs/withcoral/settings/immutable-releases",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "organization_roles",
+    "url": "https://api.github.com/orgs/withcoral/organization-roles",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "organization_setting_billing_usage",
+    "url": "https://api.github.com/organizations/withcoral/settings/billing/usage",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "pages",
+    "url": "https://api.github.com/repos/withcoral/coral/pages",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "parent",
+    "url": "https://api.github.com/repos/withcoral/coral/issues/1/parent",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"No parent issue found\",\"do"
+  },
+  {
+    "table": "pending_deployments",
+    "url": "https://api.github.com/repos/withcoral/coral/actions/runs/0/pending_deploymen",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "personal_access_token_requests",
+    "url": "https://api.github.com/org",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "personal_access_tokens",
+    "url": "https://api.github.com/orgs/withcor",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "projects_v2",
+    "url": "https://api.github.com/orgs/withcoral/projectsV2",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "ref",
+    "url": "https://api.github.com/repos/withcoral/coral/git/ref/main",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "repo_action_jobs",
+    "url": "https://api.github.com/repos/withcoral/coral/actions/jobs/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "repo_action_run_artifacts",
+    "url": "https://api.github.com/repos/withcoral/coral/actions/runs/0/artifacts",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "repo_action_run_timing",
+    "url": "https://api.github.com/repos/withcoral/coral/actions/runs/0/timing",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "repo_action_workflow_runs",
+    "url": "https://api.github.com/repos/withcoral/coral/actions/workflows/0/runs",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "repo_action_workflow_timing",
+    "url": "https://api.github.com/repos/withcoral/coral/actions/workflows/0/timing",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "repo_code_scanning_codeql_variant_analyse_repos",
+    "url": "https://api.github.com/repos/withcoral/coral/code-scanning/codeql/variant-analyses/0/repos/0/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "repo_environment_secret_public_key",
+    "url": "https://api.github.com/repos/withcoral/coral/environments/production/secrets/public-key",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "repo_environment_secrets",
+    "url": "https://api.github.com/repos/withcoral/coral/environments/production/secrets",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "repo_environment_variables",
+    "url": "https://api.github.com/repos/withcoral/coral/environments/production/variables",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "repo_git_tags",
+    "url": "https://api.github.com/repos/withcoral/coral/git/tags/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "repo_page_build_latest",
+    "url": "https://api.github.com/repos/withcoral/coral/pages/builds/latest",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "repo_page_deployments",
+    "url": "https://api.github.com/repos/withcoral/coral/pages/deployments/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "repo_pull_review_comments",
+    "url": "https://api.github.com/repos/withcoral/coral/pulls/1/reviews/0/comments",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "repos",
+    "url": "https://api.github.com/teams/0/repos/withcoral/coral",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "repository_access",
+    "url": "https://api.github.com/organizations/withcoral/dependabot/repository-access",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "retention_limit",
+    "url": null,
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source request failed (402)\n  Detail: {\"message\":\"Please ensure your account has a v"
+  },
+  {
+    "table": "route_stats",
+    "url": "https://api.github.com/orgs/withcoral/insights/api/route-stats/User/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "rule_suites",
+    "url": "https://api.github.com/orgs/withcoral/rulesets/rule-suites",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "rulesets",
+    "url": "https://api.github.com/orgs/withcoral/rulesets",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "schema",
+    "url": "https://api.github.com/orgs/withcoral/properties/schema",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "seats",
+    "url": "https://api.github.com/orgs/withcoral/copilot/billing/se",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "security_advisories",
+    "url": "https://api.github.com/orgs/withcoral/securi",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "security_managers",
+    "url": "https://api.github.com/orgs/withcoral/security-managers",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "storage_limit",
+    "url": null,
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source request failed (402)\n  Detail: {\"message\":\"Please ensure your account has a v"
+  },
+  {
+    "table": "storage_records",
+    "url": "https://api.github.com/orgs/withcoral/artifacts/sha256:0000000000000000000000000000000000",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "subject_stats",
+    "url": "https://api.github.com/orgs/withcoral/insights/api/subject-stats",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "summary",
+    "url": "https://api.github.com/organizations/withcoral/settings/billing/usage/summary",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "team",
+    "url": "https://api.github.com/teams/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "usage",
+    "url": "https://api.github.com/organizations/withcoral/settings/billing/pre",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "user_codespace_machines",
+    "url": "https://api.github.com/user/codespaces/test-codespace/machines",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "user_docker_conflicts",
+    "url": null,
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rejected the request (400)\n  Detail: {\"message\":\"Package migration for docker"
+  },
+  {
+    "table": "user_installation_repositories",
+    "url": "https://api.github.com/user/installations/0/repositories",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "user_packages",
+    "url": "https://api.github.com/user/packages/npm/left-pad",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Package not found.\",\"docum"
+  },
+  {
+    "table": "user_stats",
+    "url": "https://api.github.com/orgs/withcoral/insights/api/user-stats/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "users_1_day",
+    "url": "https://api.github.com/enterprises/withcoral/copilot/metrics/reports/users-1-day",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_"
+  },
+  {
+    "table": "variant_analyses",
+    "url": "https://api.github.com/repos/withcoral/coral/code-sc",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Variant analysis not found"
+  },
+  {
+    "table": "versions",
+    "url": null,
+    "err_excerpt": ""
+  }
+]

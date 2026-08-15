@@ -1,0 +1,5 @@
+init: 2.50s | sql: 8.69s | TOTAL: 11.18s
+isError: False
+columns: []
+rows_returned: 1
+ROW: {"name": "Build Timings", "head_branch": "main", "status": "queued", "conclusion": null, "created_at": "2026-08-09T06:56:58Z", "updated_at": "2026-08-09T06:56:58Z", "run_number": "73"}

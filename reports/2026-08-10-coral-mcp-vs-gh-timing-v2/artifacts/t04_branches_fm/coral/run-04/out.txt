@@ -1,0 +1,5 @@
+init: 1.51s | sql: 7.22s | TOTAL: 8.73s
+isError: False | rows_returned: 10
+ROW: {"name": "add-agentmail-source"}
+ROW: {"name": "add-assemblyai-source"}
+ROW: {"name": "add-azure-source"}

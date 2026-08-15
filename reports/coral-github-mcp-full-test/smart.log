@@ -1,0 +1,216 @@
+to re-probe with smarter IDs: 121
+[1/121] accepted_assignments                               ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[2/121] activity_list_repos_watched_by_user                ❌ other_error err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[3/121] alerts                                             ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[4/121] annotations                                        NO_FIX
+[5/121] approvals                                          NO_FIX
+[6/121] apps                                               ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[7/121] assignments                                        ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[8/121] attempts                                           NO_FIX
+[9/121] attestations                                       ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[10/121] authors                                            ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[11/121] autofix                                            NO_FIX
+[12/121] billing                                            ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[13/121] blobs                                              ❌ bad_request err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[14/121] branches_where_head                                NO_FIX
+[15/121] budgets                                            ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[16/121] builds                                             ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[17/121] campaigns                                          ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[18/121] codespaces                                         ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[19/121] config                                             ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[20/121] conflicts                                          ❌ bad_request err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[21/121] copilot                                            ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[22/121] deliveries                                         ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[23/121] deployment_branch_policies                         ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[24/121] deployment_protection_rules                        ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[25/121] deployment_records                                 ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[26/121] enterprise_1_day                                   ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[27/121] enterprise_team_memberships                        ❌ other_error err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[28/121] enterprise_teams                                   ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[29/121] exports                                            NO_FIX
+[30/121] fields                                             NO_FIX
+[31/121] gist                                               NO_FIX
+[32/121] gist_comments                                      ∅ empty t=4.5s
+[33/121] gist_commits                                       ✅ data t=4.9s
+[34/121] gist_forks                                         ∅ empty t=4.8s
+[35/121] grades                                             ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[36/121] history                                            NO_FIX
+[37/121] import                                             ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[38/121] instances                                          NO_FIX
+[39/121] issue_fields                                       ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[40/121] issue_types                                        ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[41/121] items                                              NO_FIX
+[42/121] jobs                                               NO_FIX
+[43/121] large_files                                        ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[44/121] locations                                          NO_FIX
+[45/121] memberships                                        ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[46/121] metrics                                            ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[47/121] notification_thread_subscription                   NO_FIX
+[48/121] org_attestation_repositories                       ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[49/121] org_attestations                                   ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[50/121] org_blocks                                         ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[51/121] org_code_scanning_alerts                           ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[52/121] org_copilot_coding_agent_permission_repositories   ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[53/121] org_copilot_coding_agent_permissions               ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[54/121] org_hooks                                          ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[55/121] org_insight_summary_stat_users                     ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[56/121] org_insight_summary_stats                          ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[57/121] org_insight_time_stat_users                        ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[58/121] org_insight_time_stats                             ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[59/121] org_insights_summary_stat                          ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[60/121] org_insights_time_stat                             ❌ other_error err=timeout
+[61/121] org_installations                                  💥 CRASH
+[62/121] org_organization_role_teams                        ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[63/121] org_organization_role_users                        ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[64/121] org_property_values                                ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[65/121] org_secret_scanning_alerts                         ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[66/121] org_setting_immutable_release_repositories         ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[67/121] org_setting_immutable_releases                     ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[68/121] organization_roles                                 ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[69/121] organization_setting_billing_usage                 ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[70/121] pages                                              ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[71/121] parent                                             ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[72/121] pending_deployments                                NO_FIX
+[73/121] personal_access_token_requests                     ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[74/121] personal_access_tokens                             ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[75/121] projects_v2                                        ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[76/121] reactions                                          ∅ empty t=8.4s
+[77/121] ref                                                ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[78/121] repo_action_jobs                                   NO_FIX
+[79/121] repo_action_run_artifacts                          NO_FIX
+[80/121] repo_action_run_timing                             NO_FIX
+[81/121] repo_action_workflow_runs                          ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[82/121] repo_action_workflow_timing                        ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[83/121] repo_check_runs                                    NO_FIX
+[84/121] repo_check_suites                                  NO_FIX
+[85/121] repo_code_scanning_codeql_variant_analyse_repos    NO_FIX
+[86/121] repo_deployment_statuses                           ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[87/121] repo_environment_secret_public_key                 ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[88/121] repo_environment_secrets                           ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[89/121] repo_environment_variables                         ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[90/121] repo_git_commits                                   NO_FIX
+[91/121] repo_git_tags                                      NO_FIX
+[92/121] repo_page_build_latest                             ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[93/121] repo_page_deployments                              ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[94/121] repo_pull_review_comments                          NO_FIX
+[95/121] repo_release_assets                                NO_FIX
+[96/121] repos                                              ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[97/121] repository_access                                  ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[98/121] retention_limit                                    ❌ other_error err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[99/121] route_stats                                        ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[100/121] rule_suites                                        ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[101/121] rulesets                                           ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[102/121] schema                                             ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[103/121] seats                                              ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[104/121] security_advisories                                ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[105/121] security_managers                                  ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[106/121] storage_limit                                      ❌ other_error err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[107/121] storage_records                                    ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[108/121] subject_stats                                      ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[109/121] summary                                            ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[110/121] team                                               ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[111/121] threads                                            NO_FIX
+[112/121] trees                                              NO_FIX
+[113/121] usage                                              ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[114/121] user_codespace_machines                            NO_FIX
+[115/121] user_docker_conflicts                              ❌ bad_request err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[116/121] user_installation_repositories                     ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[117/121] user_packages                                      ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[118/121] user_stats                                         ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[119/121] users_1_day                                        ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[120/121] variant_analyses                                   NO_FIX
+[121/121] versions                                           ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+
+DONE.
+  fixed: 4
+  rate_limited: 0
+  auth_required: 0
+  bad_request: 87
+  no_fix: 29
+  crash: 1

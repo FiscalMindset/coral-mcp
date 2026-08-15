@@ -1,0 +1,1 @@
+[{"name":"v0.9.0","publishedAt":"2026-07-31T08:26:03Z","tagName":"v0.9.0"},{"name":"v0.8.3","publishedAt":"2026-07-30T14:33:06Z","tagName":"v0.8.3"},{"name":"v0.8.2","publishedAt":"2026-07-30T10:08:08Z","tagName":"v0.8.2"},{"name":"v0.8.1","publishedAt":"2026-07-28T16:02:59Z","tagName":"v0.8.1"},{"name":"v0.8.0","publishedAt":"2026-07-28T15:28:16Z","tagName":"v0.8.0"}]

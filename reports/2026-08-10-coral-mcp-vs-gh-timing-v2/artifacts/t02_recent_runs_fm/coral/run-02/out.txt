@@ -1,0 +1,5 @@
+init: 1.69s | sql: 11.04s | TOTAL: 12.73s
+isError: False | rows_returned: 5
+ROW: {"name": "Build Timings", "status": "completed", "conclusion": "cancelled", "run_number": "73", "created_at": "2026-08-09T06:56:58Z"}
+ROW: {"name": "Build Timings", "status": "completed", "conclusion": "cancelled", "run_number": "72", "created_at": "2026-08-08T06:53:38Z"}
+ROW: {"name": "Build Timings", "status": "completed", "conclusion": "cancelled", "run_number": "71", "created_at": "2026-08-07T07:16:04Z"}

@@ -1,0 +1,182 @@
+[
+  {
+    "test": "t01_open_prs_withcoral",
+    "rows": 20,
+    "gh_med": 0.67,
+    "coral_med": 23.38,
+    "coral_init_med": 1.71,
+    "coral_sql_med": 21.67,
+    "ratio": 34.9
+  },
+  {
+    "test": "t02_recent_runs_fm",
+    "rows": 5,
+    "gh_med": 0.04,
+    "coral_med": 12.73,
+    "coral_init_med": 1.63,
+    "coral_sql_med": 11.04,
+    "ratio": 318.2
+  },
+  {
+    "test": "t03_commits_fm",
+    "rows": 5,
+    "gh_med": 0.94,
+    "coral_med": 38.36,
+    "coral_init_med": 2.68,
+    "coral_sql_med": 35.59,
+    "ratio": 40.8
+  },
+  {
+    "test": "t04_branches_fm",
+    "rows": 10,
+    "gh_med": 0.55,
+    "coral_med": 9.06,
+    "coral_init_med": 1.69,
+    "coral_sql_med": 7.36,
+    "ratio": 16.5
+  },
+  {
+    "test": "t05_releases_withcoral",
+    "rows": 5,
+    "gh_med": 0.6,
+    "coral_med": 9.47,
+    "coral_init_med": 1.39,
+    "coral_sql_med": 7.97,
+    "ratio": 15.8
+  },
+  {
+    "test": "t06_open_issues_withcoral",
+    "rows": 10,
+    "gh_med": 0.61,
+    "coral_med": 45.45,
+    "coral_init_med": 6.07,
+    "coral_sql_med": 36.52,
+    "ratio": 74.5
+  },
+  {
+    "test": "t07_tags_withcoral",
+    "rows": 10,
+    "gh_med": 0.81,
+    "coral_med": 19.84,
+    "coral_init_med": 5.27,
+    "coral_sql_med": 13.95,
+    "ratio": 24.5
+  },
+  {
+    "test": "t08_languages_fm",
+    "rows": 1,
+    "gh_med": 0.54,
+    "coral_med": 18.3,
+    "coral_init_med": 5.32,
+    "coral_sql_med": 14.57,
+    "ratio": 33.9
+  },
+  {
+    "test": "t09_topics_fm",
+    "rows": 1,
+    "gh_med": 0.69,
+    "coral_med": 23.93,
+    "coral_init_med": 5.33,
+    "coral_sql_med": 17.78,
+    "ratio": 34.7
+  },
+  {
+    "test": "t10_collaborators_fm",
+    "rows": 0,
+    "gh_med": 0.62,
+    "coral_med": 23.66,
+    "coral_init_med": 3.92,
+    "coral_sql_med": 19.68,
+    "ratio": 38.2
+  },
+  {
+    "test": "t11_contributors_fm",
+    "rows": 5,
+    "gh_med": 0.7,
+    "coral_med": 20.16,
+    "coral_init_med": 4.92,
+    "coral_sql_med": 16.19,
+    "ratio": 28.8
+  },
+  {
+    "test": "t12_issue_comments_withcoral",
+    "rows": 0,
+    "gh_med": 0.69,
+    "coral_med": 16.01,
+    "coral_init_med": 3.65,
+    "coral_sql_med": 12.31,
+    "ratio": 23.2
+  },
+  {
+    "test": "t13_search_issues_withcoral",
+    "rows": 0,
+    "gh_med": 1.15,
+    "coral_med": 15.77,
+    "coral_init_med": 3.57,
+    "coral_sql_med": 12.56,
+    "ratio": 13.7
+  },
+  {
+    "test": "t14_search_prs_withcoral",
+    "rows": 0,
+    "gh_med": 1.33,
+    "coral_med": 17.56,
+    "coral_init_med": 4.25,
+    "coral_sql_med": 13.31,
+    "ratio": 13.2
+  },
+  {
+    "test": "t15_search_repos_coral",
+    "rows": 0,
+    "gh_med": 0.86,
+    "coral_med": 15.22,
+    "coral_init_med": 3.27,
+    "coral_sql_med": 12.33,
+    "ratio": 17.7
+  },
+  {
+    "test": "t16_gists_fm",
+    "rows": 0,
+    "gh_med": 0.58,
+    "coral_med": 18.18,
+    "coral_init_med": 3.84,
+    "coral_sql_med": 14.34,
+    "ratio": 31.3
+  },
+  {
+    "test": "t17_pr_commits_withcoral",
+    "rows": 0,
+    "gh_med": 0.66,
+    "coral_med": 58.07,
+    "coral_init_med": 7.86,
+    "coral_sql_med": 48.05,
+    "ratio": 88.0
+  },
+  {
+    "test": "t18_pr_files_withcoral",
+    "rows": 0,
+    "gh_med": 1.04,
+    "coral_med": 18.43,
+    "coral_init_med": 5.27,
+    "coral_sql_med": 13.16,
+    "ratio": 17.7
+  },
+  {
+    "test": "t19_workflow_jobs_fm",
+    "rows": 0,
+    "gh_med": 1.77,
+    "coral_med": 19.56,
+    "coral_init_med": 4.3,
+    "coral_sql_med": 15.43,
+    "ratio": 11.1
+  },
+  {
+    "test": "t20_actions_workflows_fm",
+    "rows": 0,
+    "gh_med": 0.59,
+    "coral_med": 15.75,
+    "coral_init_med": 3.66,
+    "coral_sql_med": 12.26,
+    "ratio": 26.7
+  }
+]

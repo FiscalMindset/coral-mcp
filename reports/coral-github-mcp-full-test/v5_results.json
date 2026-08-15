@@ -1,0 +1,381 @@
+{
+  "fixed": [],
+  "rate_limited": [],
+  "auth_required": [],
+  "bad_request": [
+    [
+      "activity_list_repos_watched_by_user",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source response decode failed\n  Detail: source API response decoding failed: EOF while parsing a value at line 1 column 0 [GET] https://api.github.com/users/FiscalMindset/subscriptions\n  Hint: The upstream API returned a response that does not match the source manifest."
+    ],
+    [
+      "alerts",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/dependabot/alerts#list-dependabot-alerts-for-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/dependabot/alerts\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "approvals",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/actions/workflow-runs#get-the-review-history-for-a-workflow-run\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/actions/runs/31300020216/approvals\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "apps",
+      "timeout"
+    ],
+    [
+      "attestations",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/users/attestations#list-attestations\",\"status\":\"404\"} [GET] https://api.github.com/users/FiscalMindset/attestations/sha256:0000000000000000000000000000000000000000000000000000000000000000\n  Hint: Verify the identifier or filter values you passed; the upstream resou"
+    ],
+    [
+      "authors",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"This endpoint has been deprecated. To import a repository, please use the GitHub Importer tool at https://github.com/new/import.\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/import/authors\n  Hint: Verify the identifier or filter values you passed; the "
+    ],
+    [
+      "billing",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/copilot/copilot-user-management#get-copilot-seat-information-and-settings-for-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/copilot/billing\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found"
+    ],
+    [
+      "blobs",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source request failed (422)\n  Detail: {\"message\":\"The sha parameter must be exactly 40 characters and contain only [0-9a-f].\",\"documentation_url\":\"https://docs.github.com/rest/git/blobs#get-a-blob\",\"status\":\"422\"} [GET] https://api.github.com/repos/withcoral/coral/git/blobs/0"
+    ],
+    [
+      "budgets",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/billing/budgets#get-all-budgets-for-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/organizations/withcoral/settings/billing/budgets\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "builds",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/pages/pages#list-apiname-pages-builds\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/pages/builds\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "campaigns",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/campaigns/campaigns#list-campaigns-for-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/campaigns\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "codespaces",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/codespaces/organizations#list-codespaces-for-the-organization\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/codespaces\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "conflicts",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rejected the request (400)\n  Detail: {\"message\":\"Package migration for docker is no longer supported. Please contact support for assistance.\",\"documentation_url\":\"https://docs.github.com/rest/packages/packages#get-list-of-conflicting-packages-during-docker-migration-for-organization\",\"status\":\"400\"} [GET] https://api.github.com/orgs/withcoral/docker/conflicts\n  Hint: Adjust "
+    ],
+    [
+      "copilot",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/copilot/copilot-user-management#get-copilot-seat-assignment-details-for-a-user\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/members/FiscalMindset/copilot\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "deployment_branch_policies",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/deployments/branch-policies#list-deployment-branch-policies\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/environments/production/deployment-branch-policies\n  Hint: Verify the identifier or filter values you passed; the upstream resource was n"
+    ],
+    [
+      "deployment_protection_rules",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/deployments/protection-rules#get-all-deployment-protection-rules-for-an-environment\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/environments/production/deployment_protection_rules\n  Hint: Verify the identifier or filter values you passed; th"
+    ],
+    [
+      "deployment_records",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/artifact-metadata#list-artifact-deployment-records\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/artifacts/sha256:0000000000000000000000000000000000000000000000000000000000000000/metadata/deployment-records\n  Hint: Verify the identifier or filte"
+    ],
+    [
+      "enterprise_1_day",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"404\"} [GET] https://api.github.com/enterprises/FiscalMindset/copilot/metrics/reports/enterprise-1-day\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "enterprise_teams",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/enterprise-teams/enterprise-teams#list-enterprise-teams\",\"status\":\"404\"} [GET] https://api.github.com/enterprises/FiscalMindset/teams\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "fields",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/projects/fields#list-project-fields-for-organization\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/projectsV2/0/fields\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "history",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/rules#get-organization-ruleset-history\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/rulesets/0/history\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "import",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"This endpoint has been deprecated. To import a repository, please use the GitHub Importer tool at https://github.com/new/import.\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/import\n  Hint: Verify the identifier or filter values you passed; the upstream"
+    ],
+    [
+      "issue_fields",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/issue-fields#list-issue-fields-for-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/issue-fields\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "issue_types",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/issue-types#list-issue-types-for-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/issue-types\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "items",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/projects/items#list-items-for-an-organization-owned-project\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/projectsV2/0/items\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "large_files",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"This endpoint has been deprecated. To import a repository, please use the GitHub Importer tool at https://github.com/new/import.\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/import/large_files\n  Hint: Verify the identifier or filter values you passed; "
+    ],
+    [
+      "memberships",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/teams/members#get-team-membership-for-a-user-legacy\",\"status\":\"404\"} [GET] https://api.github.com/teams/0/memberships/FiscalMindset\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "metrics",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\r\n  \"message\": \"Not Found\",\r\n  \"documentation_url\": \"https://docs.github.com/rest\",\r\n  \"status\": \"404\"\r\n} [GET] https://api.github.com/orgs/withcoral/copilot/metrics\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "org_attestation_repositories",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/attestations#list-attestation-repositories\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/attestations/repositories\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "org_attestations",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/attestations#list-attestations\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/attestations/sha256:0000000000000000000000000000000000000000000000000000000000000000\n  Hint: Verify the identifier or filter values you passed; the upstream resource wa"
+    ],
+    [
+      "org_blocks",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/blocking#list-users-blocked-by-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/blocks\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "org_code_scanning_alerts",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/code-scanning/code-scanning#list-code-scanning-alerts-for-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/code-scanning/alerts\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "org_copilot_coding_agent_permission_repositories",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/copilot/copilot-coding-agent-management#list-repositories-enabled-for-copilot-cloud-agent-in-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/copilot/coding-agent/permissions/repositories\n  Hint: Verify the identifier or filter values yo"
+    ],
+    [
+      "org_copilot_coding_agent_permissions",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/copilot/copilot-coding-agent-management#get-copilot-cloud-agent-permissions-for-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/copilot/coding-agent/permissions\n  Hint: Verify the identifier or filter values you passed; the upstream res"
+    ],
+    [
+      "org_hooks",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/webhooks#list-organization-webhooks\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/hooks\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "org_insight_summary_stat_users",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/api-insights#get-summary-stats-by-user\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/insights/api/summary-stats/users/0\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "org_insight_summary_stats",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/api-insights#get-summary-stats\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/insights/api/summary-stats\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "org_insight_time_stat_users",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/api-insights#get-time-stats-by-user\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/insights/api/time-stats/users/0\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "org_insight_time_stats",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/api-insights#get-time-stats\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/insights/api/time-stats\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "org_insights_summary_stat",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/api-insights#get-summary-stats-by-actor\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/insights/api/summary-stats/User/0\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "org_insights_time_stat",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/api-insights#get-time-stats-by-actor\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/insights/api/time-stats/User/0\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "org_organization_role_teams",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/organization-roles#list-teams-that-are-assigned-to-an-organization-role\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/organization-roles/0/teams\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "org_organization_role_users",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/organization-roles#list-users-that-are-assigned-to-an-organization-role\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/organization-roles/0/users\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "org_property_values",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/custom-properties#list-custom-property-values-for-organization-repositories\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/properties/values\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "org_secret_scanning_alerts",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/secret-scanning/secret-scanning#list-secret-scanning-alerts-for-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/secret-scanning/alerts\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "org_setting_immutable_release_repositories",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/orgs#list-selected-repositories-for-immutable-releases-enforcement\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/settings/immutable-releases/repositories\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not fo"
+    ],
+    [
+      "org_setting_immutable_releases",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/orgs#get-immutable-releases-settings-for-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/settings/immutable-releases\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "organization_roles",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/organization-roles#get-all-organization-roles-for-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/organization-roles\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "organization_setting_billing_usage",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/billing/usage#get-billing-usage-report-for-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/organizations/withcoral/settings/billing/usage\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "pages",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/pages/pages#get-a-apiname-pages-site\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/pages\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "parent",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"No parent issue found\",\"documentation_url\":\"https://docs.github.com/rest/issues/sub-issues#get-parent-issue\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/issues/2180/parent\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "pending_deployments",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/actions/workflow-runs#get-pending-deployments-for-a-workflow-run\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/actions/runs/31300020216/pending_deployments\n  Hint: Verify the identifier or filter values you passed; the upstream resource was no"
+    ],
+    [
+      "personal_access_token_requests",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/personal-access-tokens#list-requests-to-access-organization-resources-with-fine-grained-personal-access-tokens\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/personal-access-token-requests\n  Hint: Verify the identifier or filter values you passed"
+    ],
+    [
+      "personal_access_tokens",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/personal-access-tokens#list-fine-grained-personal-access-tokens-with-access-to-organization-resources\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/personal-access-tokens\n  Hint: Verify the identifier or filter values you passed; the upstream re"
+    ],
+    [
+      "projects_v2",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/projects/projects#list-projects-for-organization\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/projectsV2\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "ref",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/git/refs#get-a-reference\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/git/ref/add-agentmail-source\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "repo_action_run_artifacts",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/actions/artifacts#list-workflow-run-artifacts\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/actions/runs/31300020216/artifacts\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "repo_action_run_timing",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/actions/workflow-runs#get-workflow-run-usage\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/actions/runs/31300020216/timing\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "repo_action_workflow_runs",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/actions/workflow-runs#list-workflow-runs-for-a-workflow\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/actions/workflows/285087402/runs\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "repo_action_workflow_timing",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/actions/workflows#get-workflow-usage\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/actions/workflows/285087402/timing\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "repo_environment_secret_public_key",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/reference/actions#get-an-environment-public-key\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/environments/production/secrets/public-key\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "repo_environment_secrets",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/reference/actions#list-environment-secrets\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/environments/production/secrets\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "repo_environment_variables",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/actions/variables#list-environment-variables\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/environments/production/variables\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "repo_page_build_latest",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/pages/pages#get-latest-pages-build\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/pages/builds/latest\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "repo_pull_review_comments",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/pulls/reviews#list-comments-for-a-pull-request-review\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/pulls/2180/reviews/4896315178/comments\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "repos",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/teams/teams#check-team-permissions-for-a-repository-legacy\",\"status\":\"404\"} [GET] https://api.github.com/teams/0/repos/withcoral/coral\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "repository_access",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"404\"} [GET] https://api.github.com/organizations/withcoral/dependabot/repository-access\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "retention_limit",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source request failed (402)\n  Detail: {\"message\":\"Please ensure your account has a valid payment method on file to access this service.\",\"documentation_url\":\"https://docs.github.com/rest/actions/cache#get-github-actions-cache-retention-limit-for-an-enterprise\",\"status\":\"402\"} [GET] https://api.github.com/enterprises/FiscalMindset/actions/cache/retention-limit"
+    ],
+    [
+      "route_stats",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/api-insights#get-route-stats-by-actor\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/insights/api/route-stats/User/0\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "rule_suites",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/rule-suites#list-organization-rule-suites\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/rulesets/rule-suites\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "rulesets",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/rules#get-all-organization-repository-rulesets\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/rulesets\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "schema",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/custom-properties#get-all-custom-properties-for-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/properties/schema\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "seats",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/copilot/copilot-user-management#list-all-copilot-seat-assignments-for-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/copilot/billing/seats\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "security_advisories",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/security-advisories/repository-advisories#list-repository-security-advisories-for-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/security-advisories\n  Hint: Verify the identifier or filter values you passed; the upstream resource was n"
+    ],
+    [
+      "security_managers",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/security-managers#list-security-manager-teams\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/security-managers\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "storage_limit",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source request failed (402)\n  Detail: {\"message\":\"Please ensure your account has a valid payment method on file to access this service.\",\"documentation_url\":\"https://docs.github.com/rest/actions/cache#get-github-actions-cache-storage-limit-for-an-enterprise\",\"status\":\"402\"} [GET] https://api.github.com/enterprises/FiscalMindset/actions/cache/storage-limit"
+    ],
+    [
+      "storage_records",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/artifact-metadata#list-artifact-storage-records\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/artifacts/sha256:0000000000000000000000000000000000000000000000000000000000000000/metadata/storage-records\n  Hint: Verify the identifier or filter valu"
+    ],
+    [
+      "subject_stats",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/api-insights#get-subject-stats\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/insights/api/subject-stats\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "summary",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/billing/usage#get-billing-usage-summary-for-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/organizations/withcoral/settings/billing/usage/summary\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "team",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/teams/teams#get-a-team-legacy\",\"status\":\"404\"} [GET] https://api.github.com/teams/0\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "usage",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/billing/usage#get-billing-premium-request-usage-report-for-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/organizations/withcoral/settings/billing/premium_request/usage\n  Hint: Verify the identifier or filter values you passed; the upstream resource "
+    ],
+    [
+      "user_docker_conflicts",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rejected the request (400)\n  Detail: {\"message\":\"Package migration for docker is no longer supported. Please contact support for assistance.\",\"documentation_url\":\"https://docs.github.com/rest/packages/packages#get-list-of-conflicting-packages-during-docker-migration-for-authenticated-user\",\"status\":\"400\"} [GET] https://api.github.com/user/docker/conflicts\n  Hint: Adjust the "
+    ],
+    [
+      "user_installation_repositories",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/apps/installations#list-repositories-accessible-to-the-user-access-token\",\"status\":\"404\"} [GET] https://api.github.com/user/installations/0/repositories\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "user_packages",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Package not found.\",\"documentation_url\":\"https://docs.github.com/rest/packages/packages#get-a-package-for-the-authenticated-user\",\"status\":\"404\"} [GET] https://api.github.com/user/packages/npm/react\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "user_stats",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/api-insights#get-user-stats\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/insights/api/user-stats/0\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "users_1_day",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"404\"} [GET] https://api.github.com/enterprises/FiscalMindset/copilot/metrics/reports/users-1-day\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "versions",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Package not found.\",\"documentation_url\":\"https://docs.github.com/rest/packages/packages#list-package-versions-for-a-package-owned-by-the-authenticated-user\",\"status\":\"404\"} [GET] https://api.github.com/user/packages/npm/react/versions\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not fo"
+    ]
+  ],
+  "no_fix": [
+    "accepted_assignments",
+    "assignments",
+    "attempts",
+    "autofix",
+    "config",
+    "deliveries",
+    "exports",
+    "gist",
+    "grades",
+    "instances",
+    "jobs",
+    "repo_action_jobs",
+    "repo_code_scanning_codeql_variant_analyse_repos",
+    "repo_git_tags",
+    "repo_page_deployments",
+    "user_codespace_machines",
+    "variant_analyses"
+  ],
+  "crash": [],
+  "no_column": [
+    [
+      "enterprise_team_memberships",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: No column named `team`\n  Detail: No column `team` is in scope. Valid columns include: github.enterprise_team_memberships.avatar_url, github.enterprise_team_memberships.email, github.enterprise_team_memberships.enterprise, github.enterprise_team_memberships.enterprise-team, github.enterprise_team_memberships.events_url, github.enterprise_team_memberships.followers_url, github.enterp"
+    ]
+  ]
+}

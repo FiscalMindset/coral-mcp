@@ -1,0 +1,5 @@
+{"name":"Build Timings","path":".github/workflows/build-timings.yml","state":"disabled_manually"}
+{"name":"Chromatic","path":".github/workflows/chromatic.yml","state":"disabled_manually"}
+{"name":"Desktop macOS package","path":".github/workflows/desktop-package.yml","state":"disabled_manually"}
+{"name":"Lint PR Title","path":".github/workflows/pr-title.yml","state":"disabled_manually"}
+{"name":"release-please","path":".github/workflows/release-please.yml","state":"disabled_manually"}

@@ -1,0 +1,5 @@
+{"date":"2026-07-28T16:02:42Z","msg":"chore(main): release 0.8.1 (#1987)","sha":"3acb123"}
+{"date":"2026-07-28T15:51:34Z","msg":"feat(mcp): gate SQL on required guide delivery (#1965)","sha":"9fbb80b"}
+{"date":"2026-07-28T15:36:55Z","msg":"feat(reef): show saved function bodies (#1984)","sha":"180c4fd"}
+{"date":"2026-07-28T15:27:47Z","msg":"chore(main): release 0.8.0 (#1906)","sha":"5360ad6"}
+{"date":"2026-07-28T15:14:52Z","msg":"fix(desktop): manage MCP client workspace access (#1957)","sha":"96007ac"}

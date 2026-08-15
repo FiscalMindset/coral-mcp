@@ -1,0 +1,2 @@
+Invalid search query "( repo:\"withcoral/coral fix\" ) type:pr".
+The listed users and repositories cannot be searched either because the resources do not exist or you do not have permission to view them.

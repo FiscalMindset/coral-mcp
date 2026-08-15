@@ -1,0 +1,5 @@
+init: 4.92s | sql: 14.21s | TOTAL: 19.12s
+isError: False | rows_returned: 5
+ROW: {"login": "jsummerfield", "contributions": "185"}
+ROW: {"login": "simonwhitaker", "contributions": "111"}
+ROW: {"login": "AlbertQM", "contributions": "97"}

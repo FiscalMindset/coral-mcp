@@ -1,0 +1,33 @@
+{
+  "gh": {
+    "real": {
+      "min": 0.6,
+      "median": 0.62,
+      "max": 0.85
+    },
+    "runs": 3
+  },
+  "coral": {
+    "init": {
+      "min": 3.53,
+      "median": 3.92,
+      "max": 3.98
+    },
+    "sql": {
+      "min": 13.22,
+      "median": 19.68,
+      "max": 25.91
+    },
+    "total": {
+      "min": 16.75,
+      "median": 23.66,
+      "max": 29.83
+    },
+    "rows": {
+      "min": 0,
+      "median": 0,
+      "max": 0
+    },
+    "runs": 3
+  }
+}

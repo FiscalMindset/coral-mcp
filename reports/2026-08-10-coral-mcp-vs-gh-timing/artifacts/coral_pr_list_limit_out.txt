@@ -1,0 +1,22 @@
+init: 2.37s | sql: 18.37s | TOTAL: 20.74s
+isError: False
+columns: []
+rows_returned: 18
+ROW: {"number": "2109", "title": "feat(sources/community/zerops): add Zerops community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/2109"}
+ROW: {"number": "1777", "title": "feat(sources/community/claude_code_sessions): add Claude Code session context sharing community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/1777"}
+ROW: {"number": "1711", "title": "feat(sources/community/azure): add Azure Resource Manager community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/1711"}
+ROW: {"number": "1700", "title": "feat(sources/community/serper): add Serper community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/1700"}
+ROW: {"number": "1696", "title": "feat(sources/community/google_sheets): add Google Sheets community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/1696"}
+ROW: {"number": "1694", "title": "feat(sources/community/twilio): add Twilio community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/1694"}
+ROW: {"number": "1689", "title": "feat(sources/community/render): add Render community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/1689"}
+ROW: {"number": "1686", "title": "feat(sources/community/rclone): add rclone community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/1686"}
+ROW: {"number": "1610", "title": "feat(sources/community/assemblyai): add AssemblyAI community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/1610"}
+ROW: {"number": "1539", "title": "feat(sources/community/agentmail): add AgentMail community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/1539"}
+ROW: {"number": "1476", "title": "feat(sources/community/web_scraper): add local web scraper community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/1476"}
+ROW: {"number": "1416", "title": "feat(sources/community/exa): add Exa community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/1416"}
+ROW: {"number": "1260", "title": "feat(sources/community/pdf): add PDF community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/1260"}
+ROW: {"number": "1230", "title": "feat(sources/community): add Stream Video source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/1230"}
+ROW: {"number": "1223", "title": "feat(sources/community/blogger): add Blogger community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/1223"}
+ROW: {"number": "1175", "title": "feat(sources/community/elevenlabs): add ElevenLabs community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/1175"}
+ROW: {"number": "1173", "title": "feat(sources/community/paypal): add PayPal community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/1173"}
+ROW: {"number": "958", "title": "feat(sources/community/nvidia_nim): add NVIDIA NIM community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/958"}

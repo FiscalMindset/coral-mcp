@@ -1,0 +1,994 @@
+{
+  "accepted_assignments": {
+    "url": "https://api.github.com/",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://classroom.github.com/api-docs\",\"url\":\"https://classroom-api.service.iad.github.net/api"
+  },
+  "access": {
+    "url": "https://api.github.com/repos/withcoral/coral/actions/permissions/access",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 3545s [GET] https://api.github.com/repos/withcoral/coral/actions/permissions/access\n  Hint: The upstream API"
+  },
+  "accounts": {
+    "url": "https://api.github.com/marketplace_listing/stubbed/plans/0/accounts",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source authentication failed (401)\n  Detail: {\"message\":\"A JSON web token could not be decoded\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"401\"} [GET] https://api.git"
+  },
+  "activity_list_repos_watched_by_user": {
+    "url": "https://api.github.com/users/FiscalMindset/subscriptions",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source response decode failed\n  Detail: source API response decoding failed: EOF while parsing a value at line 1 column 0 [GET] https://api.github.com/users/FiscalMindset/subscriptions"
+  },
+  "alerts": {
+    "url": "https://api.github.com/orgs/withcoral/dependabot/alerts",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/dependabot/alerts#list-dependabot-alerts-for-an-organization\",\"st"
+  },
+  "analyses": {
+    "url": "https://api.github.com/repos/withcoral/coral/code-scanning/analyses",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 3395s [GET] https://api.github.com/repos/withcoral/coral/code-scanning/analyses\n  Hint: The upstream API is "
+  },
+  "annotations": {
+    "url": "https://api.github.com/repos/withcoral/coral/check-runs/0/annotations",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/checks/runs#list-check-run-annotations\",\"status\":\"404\"} [GET] htt"
+  },
+  "app": {
+    "url": "https://api.github.com/app",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source authentication failed (401)\n  Detail: {\"message\":\"A JSON web token could not be decoded\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"401\"} [GET] https://api.git"
+  },
+  "app_hook_config": {
+    "url": "https://api.github.com/app/hook/config",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source authentication failed (401)\n  Detail: {\"message\":\"A JSON web token could not be decoded\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"401\"} [GET] https://api.git"
+  },
+  "app_hook_deliveries": {
+    "url": "https://api.github.com/app/hook/deliveries",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source authentication failed (401)\n  Detail: {\"message\":\"A JSON web token could not be decoded\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"401\"} [GET] https://api.git"
+  },
+  "app_installations": {
+    "url": "https://api.github.com/app/installations",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source authentication failed (401)\n  Detail: {\"message\":\"A JSON web token could not be decoded\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"401\"} [GET] https://api.git"
+  },
+  "approvals": {
+    "url": "https://api.github.com/repos/withcoral/coral/actions/runs/0/approvals",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/actions/workflow-runs#get-the-review-history-for-a-workflow-run\","
+  },
+  "apps": {
+    "url": "https://api.github.com/apps/github",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/apps/apps#get-an-app\",\"status\":\"404\"} [GET] https://api.github.co"
+  },
+  "artifact_and_log_retention": {
+    "url": "https://api.github.com/orgs/withcoral/actions/permissions/artifact-and-log-retention",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 3189s [GET] https://api.github.com/orgs/withcoral/actions/permissions/artifact-and-log-retention\n  Hint: The"
+  },
+  "assignments": {
+    "url": "https://api.github.com/assignments/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://classroom.github.com/api-docs\",\"url\":\"https://classroom-api.service.iad.github.net/api"
+  },
+  "attempts": {
+    "url": "https://api.github.com/repos/withcoral/coral/actions/runs/0/attempts/1",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/actions/workflow-runs#get-a-workflow-run-attempt\",\"status\":\"404\"}"
+  },
+  "attestations": {
+    "url": "https://api.github.com/users/FiscalMindset/attestations/sha256:000000000000000000000000000000000000000000",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/users/attestations#list-attestations\",\"status\":\"404\"} [GET] https"
+  },
+  "authors": {
+    "url": "https://api.github.com/",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"This endpoint has been deprecated. To import a repository, please use the GitHub Importer tool at https://github.com/new/impor"
+  },
+  "autofix": {
+    "url": "https://api.github.com/repos/withcoral/coral/code-scanning/alerts/1/autofix",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2994s [GET] https://api.github.com/repos/withcoral/coral/code-scanning/alerts/1/autofix\n  Hint: The upstream"
+  },
+  "autolinks": {
+    "url": "https://api.github.com/repos/withcoral/coral/autolinks",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2974s [GET] https://api.github.com/repos/withcoral/coral/autolinks\n  Hint: The upstream API is rate-limiting"
+  },
+  "automated_security_fixes": {
+    "url": "https://api.github.com/repos/withcoral/coral/automated-security-fixes",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1259s [GET] https://api.github.com/repos/withcoral/coral/automated-security-fixes\n  Hint: The upstream API i"
+  },
+  "billing": {
+    "url": "https://api.github.com/orgs/withcoral/copilot/bi",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/copilot/copilot-user-management#get-copilot-seat-information-and-"
+  },
+  "blobs": {
+    "url": "https://api.github.com/repos/withcoral/coral/git/blobs/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source request failed (422)\n  Detail: {\"message\":\"The sha parameter must be exactly 40 characters and contain only [0-9a-f].\",\"documentation_url\":\"https://docs.github.com/rest/git/blob"
+  },
+  "branches_where_head": {
+    "url": "https://api.github.com/repos/withcoral/coral/commits/0/branches-where-head",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source request failed (422)\n  Detail: {\"message\":\"No commit found for SHA: 0\",\"documentation_url\":\"https://docs.github.com/rest/commits/commits#list-branches-for-head-commit\",\"status\":"
+  },
+  "budgets": {
+    "url": "https://api.github.com/organizations/withcoral/settings/billing/budgets",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/billing/budgets#get-all-budgets-for-an-organization\",\"status\":\"40"
+  },
+  "builds": {
+    "url": "https://api.github.com/repos/withcoral/coral/pages/builds",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/pages/pages#list-apiname-pages-builds\",\"status\":\"404\"} [GET] http"
+  },
+  "campaigns": {
+    "url": "https://api.github.com/orgs/withcoral/campaigns",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/campaigns/campaigns#list-campaigns-for-an-organization\",\"status\":"
+  },
+  "clones": {
+    "url": "https://api.github.com/repos/withcoral/coral/traffic/clones",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2519s [GET] https://api.github.com/repos/withcoral/coral/traffic/clones\n  Hint: The upstream API is rate-lim"
+  },
+  "code_security_configuration": {
+    "url": "https://api.github.com/repos/withcoral/coral/code-security-configuration",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2464s [GET] https://api.github.com/repos/withcoral/coral/code-security-configuration\n  Hint: The upstream AP"
+  },
+  "codespaces": {
+    "url": "https://api.github.com/orgs/withcoral/codespaces",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/codespaces/organizations#list-codespaces-for-the-organization\",\"s"
+  },
+  "collaborators": {
+    "url": "https://api.github.com/repos/withcoral/coral/collaborators",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 625s [GET] https://api.github.com/repos/withcoral/coral/collaborators\n  Hint: The upstream API is rate-limit"
+  },
+  "config": {
+    "url": "https://api.github.com/orgs/withcoral/hooks/0/config",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/webhooks#get-a-webhook-configuration-for-an-organization\",\"s"
+  },
+  "configurations": {
+    "url": "https://api.github.com/enterprises/withcoral/code-security/configurations",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2211s [GET] https://api.github.com/enterprises/withcoral/code-security/configurations\n  Hint: The upstream A"
+  },
+  "conflicts": {
+    "url": null,
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rejected the request (400)\n  Detail: {\"message\":\"Package migration for docker is no longer supported. Please contact support for assistance.\",\"documentation_url\":\"https://docs.g"
+  },
+  "content_exclusion": {
+    "url": "https://api.github.com/orgs/withcoral/copilot/content_exclusion",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2188s [GET] https://api.github.com/orgs/withcoral/copilot/content_exclusion\n  Hint: The upstream API is rate"
+  },
+  "contexts": {
+    "url": "https://api.github.com/repos/withcoral/coral/branches/main/protection/required_status_checks/contexts",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 475s [GET] https://api.github.com/repos/withcoral/coral/branches/main/protection/required_status_checks/cont"
+  },
+  "copilot": {
+    "url": "https://api.github.com/orgs/withcoral/members/FiscalMindset/cop",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/copilot/copilot-user-management#get-copilot-seat-assignment-detai"
+  },
+  "custom": {
+    "url": "https://api.github.com/orgs/withcoral/actions/hosted-runners/images/custom",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2155s [GET] https://api.github.com/orgs/withcoral/actions/hosted-runners/images/custom\n  Hint: The upstream "
+  },
+  "default_setup": {
+    "url": "https://api.github.com/repos/withcoral/coral/code-scanning/default-setup",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2137s [GET] https://api.github.com/repos/withcoral/coral/code-scanning/default-setup\n  Hint: The upstream AP"
+  },
+  "defaults": {
+    "url": "https://api.github.com/enterprises/withcoral/code-security/configurations/defaults",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2130s [GET] https://api.github.com/enterprises/withcoral/code-security/configurations/defaults\n  Hint: The u"
+  },
+  "deliveries": {
+    "url": "https://api.github.com/orgs/withcoral/hooks/0/deliveries",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/webhooks#list-deliveries-for-an-organization-webhook\",\"statu"
+  },
+  "deployment_branch_policies": {
+    "url": "https://api.github.com/repos/withcoral/coral/environments/production/deployment-br",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/deployments/branch-policies#list-deployment-branch-policies\",\"sta"
+  },
+  "deployment_protection_rules": {
+    "url": "https://api.github.com/repos/withcoral/coral/environments/",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/deployments/protection-rules#get-all-deployment-protection-rules-"
+  },
+  "deployment_records": {
+    "url": "https://api.github.com/orgs/withcoral/artifacts/sha256:0000000000000000000000000000000",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/artifact-metadata#list-artifact-deployment-records\",\"status\""
+  },
+  "downloads": {
+    "url": "https://api.github.com/orgs/withcoral/actions/runners/downloads",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2062s [GET] https://api.github.com/orgs/withcoral/actions/runners/downloads\n  Hint: The upstream API is rate"
+  },
+  "enforce_admins": {
+    "url": "https://api.github.com/repos/withcoral/coral/branches/main/protection/enforce_admins",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 341s [GET] https://api.github.com/repos/withcoral/coral/branches/main/protection/enforce_admins\n  Hint: The "
+  },
+  "enterprise_1_day": {
+    "url": "https://api.github.com/enterprises/withcoral/copilot/metrics/reports/enterprise-1-day",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"404\"} [GET] https://api.github.com/enterprises/withcor"
+  },
+  "enterprise_code_security_configuration_repositories": {
+    "url": "https://api.github.com/enterprises/withcoral/code-security/configurations/0/repositories",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2017s [GET] https://api.github.com/enterprises/withcoral/code-security/configurations/0/repositories\n  Hint:"
+  },
+  "enterprise_copilot_metric_report_enterprise_28_day_latest": {
+    "url": "https://api.github.com/enterprises/withcoral/copilot/metrics/reports/enterprise-28-day/latest",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2009s [GET] https://api.github.com/enterprises/withcoral/copilot/metrics/reports/enterprise-28-day/latest\n  "
+  },
+  "enterprise_team_memberships": {
+    "url": null,
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: No column named `team`\n  Detail: No column `team` is in scope. Valid columns include: github.enterprise_team_memberships.avatar_url, github.enterprise_team_memberships.email, github.en"
+  },
+  "enterprise_teams": {
+    "url": "https://api.github.com/enterprises/withcoral/teams",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/enterprise-teams/enterprise-teams#list-enterprise-teams\",\"status\""
+  },
+  "exports": {
+    "url": "https://api.github.com/user/codespaces/test-codespace/exports/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/codespaces/codespaces#get-details-about-a-codespace-export\",\"stat"
+  },
+  "failed_invitations": {
+    "url": "https://api.github.com/orgs/withcoral/failed_invitations",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 261s [GET] https://api.github.com/orgs/withcoral/failed_invitations\n  Hint: The upstream API is rate-limitin"
+  },
+  "fields": {
+    "url": "https://api.github.com/orgs/withcoral/projectsV2/0/fields",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/projects/fields#list-project-fields-for-organization\",\"status\":\"4"
+  },
+  "fork_pr_contributor_approval": {
+    "url": "https://api.github.com/orgs/withcoral/actions/permissions/fork-pr-contributor-approval",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1924s [GET] https://api.github.com/orgs/withcoral/actions/permissions/fork-pr-contributor-approval\n  Hint: T"
+  },
+  "fork_pr_workflows_private_repos": {
+    "url": "https://api.github.com/orgs/withcoral/actions/permissions/fork-pr-workflows-private-repos",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1918s [GET] https://api.github.com/orgs/withcoral/actions/permissions/fork-pr-workflows-private-repos\n  Hint"
+  },
+  "gist": {
+    "url": "https://api.github.com/gists/0/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/gists/gists#get-a-gist-revision\",\"status\":\"404\"} [GET] https://ap"
+  },
+  "gist_comments": {
+    "url": "https://api.github.com/gists/0/comments",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/gists/comments#list-gist-comments\",\"status\":\"404\"} [GET] https://"
+  },
+  "gist_commits": {
+    "url": "https://api.github.com/gists/0/commits",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/gists/gists#list-gist-commits\",\"status\":\"404\"} [GET] https://api."
+  },
+  "gist_forks": {
+    "url": "https://api.github.com/gists/0/forks",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/gists/gists#list-gist-forks\",\"status\":\"404\"} [GET] https://api.gi"
+  },
+  "github_owned": {
+    "url": "https://api.github.com/orgs/withcoral/actions/hosted-runners/images/github-owned",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1887s [GET] https://api.github.com/orgs/withcoral/actions/hosted-runners/images/github-owned\n  Hint: The ups"
+  },
+  "grades": {
+    "url": "https://api.github.com/assignments/0/grades",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://classroom.github.com/api-docs\",\"url\":\"https://classroom-api.service.iad.github.net/api"
+  },
+  "health": {
+    "url": "https://api.github.com/repos/withcoral/coral/pages/health",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1878s [GET] https://api.github.com/repos/withcoral/coral/pages/health\n  Hint: The upstream API is rate-limit"
+  },
+  "history": {
+    "url": "https://api.github.com/orgs/withcoral/rulesets/0/history",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/rules#get-organization-ruleset-history\",\"status\":\"404\"} [GET"
+  },
+  "hovercard": {
+    "url": "https://api.github.com/users/FiscalMindset/hovercard",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1870s [GET] https://api.github.com/users/FiscalMindset/hovercard\n  Hint: The upstream API is rate-limiting r"
+  },
+  "import": {
+    "url": "https://api.github.com/",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"This endpoint has been deprecated. To import a repository, please use the GitHub Importer tool at https://github.com/new/impor"
+  },
+  "installation": {
+    "url": "https://api.github.com/orgs/withcoral/installation",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source authentication failed (401)\n  Detail: {\"message\":\"A JSON web token could not be decoded\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"401\"} [GET] https://api.git"
+  },
+  "installation_repositories": {
+    "url": "https://api.github.com/installation/repositories",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 164s [GET] https://api.github.com/installation/repositories\n  Hint: The upstream API is rate-limiting reques"
+  },
+  "installation_requests": {
+    "url": "https://api.github.com/app/installation-requests",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source authentication failed (401)\n  Detail: {\"message\":\"A JSON web token could not be decoded\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"401\"} [GET] https://api.git"
+  },
+  "instances": {
+    "url": "https://api.github.com/repos/withcoral/coral/code-scanning/alerts/1/instances",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1853s [GET] https://api.github.com/repos/withcoral/coral/code-scanning/alerts/1/instances\n  Hint: The upstre"
+  },
+  "interaction_limits": {
+    "url": "https://api.github.com/orgs/withcoral/interaction-limits",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1850s [GET] https://api.github.com/orgs/withcoral/interaction-limits\n  Hint: The upstream API is rate-limiti"
+  },
+  "invitations": {
+    "url": "https://api.github.com/orgs/withcoral/invitations",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 150s [GET] https://api.github.com/orgs/withcoral/invitations\n  Hint: The upstream API is rate-limiting reque"
+  },
+  "issue_fields": {
+    "url": "https://api.github.com/orgs/withcoral/issue-fields",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/issue-fields#list-issue-fields-for-an-organization\",\"status\""
+  },
+  "issue_types": {
+    "url": "https://api.github.com/orgs/withcoral/issue-types",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/issue-types#list-issue-types-for-an-organization\",\"status\":\""
+  },
+  "items": {
+    "url": "https://api.github.com/orgs/withcoral/projectsV2/0/items",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/projects/items#list-items-for-an-organization-owned-project\",\"sta"
+  },
+  "jobs": {
+    "url": "https://api.github.com/repos/withcoral/coral/actions/runs/0/jobs",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/actions/workflow-jobs#list-jobs-for-a-workflow-run\",\"status\":\"404"
+  },
+  "labels": {
+    "url": "https://api.github.com/orgs/withcoral/actions/runners/0/labels",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1812s [GET] https://api.github.com/orgs/withcoral/actions/runners/0/labels\n  Hint: The upstream API is rate-"
+  },
+  "large_files": {
+    "url": "https://api.github.com/",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"This endpoint has been deprecated. To import a repository, please use the GitHub Importer tool at https://github.com/new/impor"
+  },
+  "latest": {
+    "url": "https://api.github.com/enterprises/withcoral/copilot/metrics/reports/users-28-day/latest",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1803s [GET] https://api.github.com/enterprises/withcoral/copilot/metrics/reports/users-28-day/latest\n  Hint:"
+  },
+  "limits": {
+    "url": "https://api.github.com/orgs/withcoral/actions/hosted-runners/limits",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1794s [GET] https://api.github.com/orgs/withcoral/actions/hosted-runners/limits\n  Hint: The upstream API is "
+  },
+  "locations": {
+    "url": "https://api.github.com/repos/withcoral/coral/secret-scanning/alerts/1/locations",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1791s [GET] https://api.github.com/repos/withcoral/coral/secret-scanning/alerts/1/locations\n  Hint: The upst"
+  },
+  "machine_sizes": {
+    "url": "https://api.github.com/orgs/withcoral/actions/hosted-runners/machine-sizes",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1788s [GET] https://api.github.com/orgs/withcoral/actions/hosted-runners/machine-sizes\n  Hint: The upstream "
+  },
+  "marketplace_listing_accounts": {
+    "url": "https://api.github.com/marketplace_listing/stubbed/accounts/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source authentication failed (401)\n  Detail: {\"message\":\"A JSON web token could not be decoded\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"401\"} [GET] https://api.git"
+  },
+  "marketplace_listing_plans": {
+    "url": "https://api.github.com/marketplace_listing/plans",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source authentication failed (401)\n  Detail: {\"message\":\"A JSON web token could not be decoded\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"401\"} [GET] https://api.git"
+  },
+  "marketplace_listing_stubbed_plans": {
+    "url": "https://api.github.com/marketplace_listing/stubbed/plans",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source authentication failed (401)\n  Detail: {\"message\":\"A JSON web token could not be decoded\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"401\"} [GET] https://api.git"
+  },
+  "memberships": {
+    "url": "https://api.github.com/teams/0/memberships/FiscalMindset",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/teams/members#get-team-membership-for-a-user-legacy\",\"status\":\"40"
+  },
+  "metrics": {
+    "url": "https://api.github.com/orgs/withcoral/copilot/metrics",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\r\n  \"message\": \"Not Found\",\r\n  \"documentation_url\": \"https://docs.github.com/rest\",\r\n  \"status\": \"404\"\r\n} [GET] https://api.github.com/or"
+  },
+  "network_configurations": {
+    "url": "https://api.github.com/orgs/withcoral/settings/network-configurations",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1748s [GET] https://api.github.com/orgs/withcoral/settings/network-configurations\n  Hint: The upstream API i"
+  },
+  "network_settings": {
+    "url": "https://api.github.com/orgs/withcoral/settings/network-settings/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1745s [GET] https://api.github.com/orgs/withcoral/settings/network-settings/0\n  Hint: The upstream API is ra"
+  },
+  "new": {
+    "url": "https://api.github.com/repos/withcoral/coral/codespaces/new",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2950s [GET] https://api.github.com/repos/withcoral/coral/codespaces/new\n  Hint: The upstream API is rate-lim"
+  },
+  "notification_thread_subscription": {
+    "url": "https://api.github.com/notifications/threads/0/subscription",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/activity/notifications#get-a-thread-subscription-for-the-authenti"
+  },
+  "notifications": {
+    "url": "https://api.github.com/notifications",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 39s [GET] https://api.github.com/notifications\n  Hint: The upstream API is rate-limiting requests. Wait brie"
+  },
+  "org_action_cache_usage": {
+    "url": "https://api.github.com/orgs/withcoral/actions/cache/usage",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1732s [GET] https://api.github.com/orgs/withcoral/actions/cache/usage\n  Hint: The upstream API is rate-limit"
+  },
+  "org_action_hosted_runner_image_custom_versions": {
+    "url": "https://api.github.com/orgs/withcoral/actions/hosted-runners/images/custom/0/versions",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1729s [GET] https://api.github.com/orgs/withcoral/actions/hosted-runners/images/custom/0/versions\n  Hint: Th"
+  },
+  "org_action_hosted_runners": {
+    "url": "https://api.github.com/orgs/withcoral/actions/hosted-runners",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1726s [GET] https://api.github.com/orgs/withcoral/actions/hosted-runners\n  Hint: The upstream API is rate-li"
+  },
+  "org_action_oidc_customization_sub": {
+    "url": "https://api.github.com/orgs/withcoral/actions/oidc/customization/sub",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1723s [GET] https://api.github.com/orgs/withcoral/actions/oidc/customization/sub\n  Hint: The upstream API is"
+  },
+  "org_action_permission_repositories": {
+    "url": "https://api.github.com/orgs/withcoral/actions/permissions/repositories",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1720s [GET] https://api.github.com/orgs/withcoral/actions/permissions/repositories\n  Hint: The upstream API "
+  },
+  "org_action_permission_self_hosted_runner_repositories": {
+    "url": "https://api.github.com/orgs/withcoral/actions/permissions/self-hosted-runners/repositories",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1716s [GET] https://api.github.com/orgs/withcoral/actions/permissions/self-hosted-runners/repositories\n  Hin"
+  },
+  "org_action_permissions": {
+    "url": "https://api.github.com/orgs/withcoral/actions/permissions",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1712s [GET] https://api.github.com/orgs/withcoral/actions/permissions\n  Hint: The upstream API is rate-limit"
+  },
+  "org_action_runner_group_hosted_runners": {
+    "url": "https://api.github.com/orgs/withcoral/actions/runner-groups/0/hosted-runners",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1708s [GET] https://api.github.com/orgs/withcoral/actions/runner-groups/0/hosted-runners\n  Hint: The upstrea"
+  },
+  "org_action_runner_group_runners": {
+    "url": "https://api.github.com/orgs/withcoral/actions/runner-groups/0/runners",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1705s [GET] https://api.github.com/orgs/withcoral/actions/runner-groups/0/runners\n  Hint: The upstream API i"
+  },
+  "org_action_secret_public_key": {
+    "url": "https://api.github.com/orgs/withcoral/actions/secrets/public-key",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1700s [GET] https://api.github.com/orgs/withcoral/actions/secrets/public-key\n  Hint: The upstream API is rat"
+  },
+  "org_action_secrets": {
+    "url": "https://api.github.com/orgs/withcoral/actions/secrets",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1697s [GET] https://api.github.com/orgs/withcoral/actions/secrets\n  Hint: The upstream API is rate-limiting "
+  },
+  "org_action_variables": {
+    "url": "https://api.github.com/orgs/withcoral/actions/variables",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1693s [GET] https://api.github.com/orgs/withcoral/actions/variables\n  Hint: The upstream API is rate-limitin"
+  },
+  "org_attestation_repositories": {
+    "url": "https://api.github.com/orgs/withcoral/attestations/repositories",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/attestations#list-attestation-repositories\",\"status\":\"404\"} "
+  },
+  "org_attestations": {
+    "url": "https://api.github.com/orgs/withcoral/attestations/sha256:000000000000000000000000000000000000000000000000",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/attestations#list-attestations\",\"status\":\"404\"} [GET] https:"
+  },
+  "org_blocks": {
+    "url": "https://api.github.com/orgs/withcoral/blocks",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/blocking#list-users-blocked-by-an-organization\",\"status\":\"40"
+  },
+  "org_code_scanning_alerts": {
+    "url": "https://api.github.com/orgs/withcoral/code-scanning/alerts",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/code-scanning/code-scanning#list-code-scanning-alerts-for-an-orga"
+  },
+  "org_codespace_secrets": {
+    "url": "https://api.github.com/orgs/withcoral/codespaces/secrets",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2884s [GET] https://api.github.com/orgs/withcoral/codespaces/secrets\n  Hint: The upstream API is rate-limiti"
+  },
+  "org_copilot_coding_agent_permission_repositories": {
+    "url": "https://api.github.com/orgs/withc",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/copilot/copilot-coding-agent-management#list-repositories-enabled"
+  },
+  "org_copilot_coding_agent_permissions": {
+    "url": "https://api.github.com/orgs/withcoral/copilot/",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/copilot/copilot-coding-agent-management#get-copilot-cloud-agent-p"
+  },
+  "org_copilot_metric_report_organization_28_day_latest": {
+    "url": "https://api.github.com/orgs/withcoral/copilot/metrics/reports/organization-28-day/latest",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1666s [GET] https://api.github.com/orgs/withcoral/copilot/metrics/reports/organization-28-day/latest\n  Hint:"
+  },
+  "org_dependabot_secret_public_key": {
+    "url": "https://api.github.com/orgs/withcoral/dependabot/secrets/public-key",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1662s [GET] https://api.github.com/orgs/withcoral/dependabot/secrets/public-key\n  Hint: The upstream API is "
+  },
+  "org_dependabot_secrets": {
+    "url": "https://api.github.com/orgs/withcoral/dependabot/secrets",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1659s [GET] https://api.github.com/orgs/withcoral/dependabot/secrets\n  Hint: The upstream API is rate-limiti"
+  },
+  "org_hooks": {
+    "url": "https://api.github.com/orgs/withcoral/hooks",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/webhooks#list-organization-webhooks\",\"status\":\"404\"} [GET] h"
+  },
+  "org_insight_summary_stat_users": {
+    "url": "https://api.github.com/orgs/withcoral/insights/api/summary-stats/users/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/api-insights#get-summary-stats-by-user\",\"status\":\"404\"} [GET"
+  },
+  "org_insight_summary_stats": {
+    "url": "https://api.github.com/orgs/withcoral/insights/api/summary-stats",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/api-insights#get-summary-stats\",\"status\":\"404\"} [GET] https:"
+  },
+  "org_insight_time_stat_users": {
+    "url": "https://api.github.com/orgs/withcoral/insights/api/time-stats/users/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/api-insights#get-time-stats-by-user\",\"status\":\"404\"} [GET] h"
+  },
+  "org_insight_time_stats": {
+    "url": "https://api.github.com/orgs/withcoral/insights/api/time-stats",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/api-insights#get-time-stats\",\"status\":\"404\"} [GET] https://a"
+  },
+  "org_insights_summary_stat": {
+    "url": "https://api.github.com/orgs/withcoral/insights/api/summary-stats/User/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/api-insights#get-summary-stats-by-actor\",\"status\":\"404\"} [GE"
+  },
+  "org_insights_time_stat": {
+    "url": "https://api.github.com/orgs/withcoral/insights/api/time-stats/User/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/api-insights#get-time-stats-by-actor\",\"status\":\"404\"} [GET] "
+  },
+  "org_installations": {
+    "url": "https://api.github.com/orgs/withcoral/installations",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/orgs#list-app-installations-for-an-organization\",\"status\":\"4"
+  },
+  "org_memberships": {
+    "url": "https://api.github.com/orgs/withcoral/memberships/FiscalMindset",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 3533s [GET] https://api.github.com/orgs/withcoral/memberships/FiscalMindset\n  Hint: The upstream API is rate"
+  },
+  "org_migrations": {
+    "url": "https://api.github.com/orgs/withcoral/migrations",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1621s [GET] https://api.github.com/orgs/withcoral/migrations\n  Hint: The upstream API is rate-limiting reque"
+  },
+  "org_organization_role_teams": {
+    "url": "https://api.github.com/orgs/withcoral/organization-roles/0/teams",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/organization-roles#list-teams-that-are-assigned-to-an-organi"
+  },
+  "org_organization_role_users": {
+    "url": "https://api.github.com/orgs/withcoral/organization-roles/0/users",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/organization-roles#list-users-that-are-assigned-to-an-organi"
+  },
+  "org_private_registry_public_key": {
+    "url": "https://api.github.com/orgs/withcoral/private-registries/public-key",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1607s [GET] https://api.github.com/orgs/withcoral/private-registries/public-key\n  Hint: The upstream API is "
+  },
+  "org_property_values": {
+    "url": "https://api.github.com/orgs/withcoral/properties/values",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/custom-properties#list-custom-property-values-for-organizati"
+  },
+  "org_secret_scanning_alerts": {
+    "url": "https://api.github.com/orgs/withcoral/secret-scanning/alerts",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/secret-scanning/secret-scanning#list-secret-scanning-alerts-for-a"
+  },
+  "org_setting_immutable_release_repositories": {
+    "url": "https://api.github.com/orgs/withcoral/settings/immutable-releases/repo",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/orgs#list-selected-repositories-for-immutable-releases-enfor"
+  },
+  "org_setting_immutable_releases": {
+    "url": "https://api.github.com/orgs/withcoral/settings/immutable-releases",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/orgs#get-immutable-releases-settings-for-an-organization\",\"s"
+  },
+  "organization_1_day": {
+    "url": "https://api.github.com/orgs/withcoral/copilot/metrics/reports/organization-1-day",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1581s [GET] https://api.github.com/orgs/withcoral/copilot/metrics/reports/organization-1-day\n  Hint: The ups"
+  },
+  "organization_roles": {
+    "url": "https://api.github.com/orgs/withcoral/organization-roles",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/organization-roles#get-all-organization-roles-for-an-organiz"
+  },
+  "organization_secrets": {
+    "url": "https://api.github.com/repos/withcoral/coral/actions/organization-secrets",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1576s [GET] https://api.github.com/repos/withcoral/coral/actions/organization-secrets\n  Hint: The upstream A"
+  },
+  "organization_setting_billing_usage": {
+    "url": "https://api.github.com/organizations/withcoral/settings/billing/usage",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/billing/usage#get-billing-usage-report-for-an-organization\",\"stat"
+  },
+  "organization_variables": {
+    "url": "https://api.github.com/repos/withcoral/coral/actions/organization-variables",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1570s [GET] https://api.github.com/repos/withcoral/coral/actions/organization-variables\n  Hint: The upstream"
+  },
+  "outside_collaborators": {
+    "url": "https://api.github.com/orgs/withcoral/outside_collaborators",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1559s [GET] https://api.github.com/orgs/withcoral/outside_collaborators\n  Hint: The upstream API is rate-lim"
+  },
+  "packages": {
+    "url": "https://api.github.com/orgs/withcoral/packages",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1556s [GET] https://api.github.com/orgs/withcoral/packages\n  Hint: The upstream API is rate-limiting request"
+  },
+  "packages_list_packages_for_authenticated_user": {
+    "url": "https://api.github.com/user/packages",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1552s [GET] https://api.github.com/user/packages\n  Hint: The upstream API is rate-limiting requests. Wait br"
+  },
+  "pages": {
+    "url": "https://api.github.com/repos/withcoral/coral/pages",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/pages/pages#get-a-apiname-pages-site\",\"status\":\"404\"} [GET] https"
+  },
+  "parent": {
+    "url": "https://api.github.com/repos/withcoral/coral/issues/1/parent",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"No parent issue found\",\"documentation_url\":\"https://docs.github.com/rest/issues/sub-issues#get-parent-issue\",\"status\":\"404\"} ["
+  },
+  "partner": {
+    "url": "https://api.github.com/orgs/withcoral/actions/hosted-runners/images/partner",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1536s [GET] https://api.github.com/orgs/withcoral/actions/hosted-runners/images/partner\n  Hint: The upstream"
+  },
+  "paths": {
+    "url": "https://api.github.com/repos/withcoral/coral/traffic/popular/paths",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1532s [GET] https://api.github.com/repos/withcoral/coral/traffic/popular/paths\n  Hint: The upstream API is r"
+  },
+  "pattern_configurations": {
+    "url": "https://api.github.com/orgs/withcoral/secret-scanning/pattern-configurations",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1529s [GET] https://api.github.com/orgs/withcoral/secret-scanning/pattern-configurations\n  Hint: The upstrea"
+  },
+  "pending_deployments": {
+    "url": "https://api.github.com/repos/withcoral/coral/actions/runs/0/pending_deploymen",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/actions/workflow-runs#get-pending-deployments-for-a-workflow-run\""
+  },
+  "permission": {
+    "url": "https://api.github.com/repos/withcoral/coral/collaborators/FiscalMindset/permission",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 3431s [GET] https://api.github.com/repos/withcoral/coral/collaborators/FiscalMindset/permission\n  Hint: The "
+  },
+  "permissions_check": {
+    "url": "https://api.github.com/repos/withcoral/coral/codespaces/permissions_check",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2727s [GET] https://api.github.com/repos/withcoral/coral/codespaces/permissions_check\n  Hint: The upstream A"
+  },
+  "personal_access_token_requests": {
+    "url": "https://api.github.com/org",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/personal-access-tokens#list-requests-to-access-organization-"
+  },
+  "personal_access_tokens": {
+    "url": "https://api.github.com/orgs/withcor",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/personal-access-tokens#list-fine-grained-personal-access-tok"
+  },
+  "platforms": {
+    "url": "https://api.github.com/orgs/withcoral/actions/hosted-runners/platforms",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1510s [GET] https://api.github.com/orgs/withcoral/actions/hosted-runners/platforms\n  Hint: The upstream API "
+  },
+  "private_registries": {
+    "url": "https://api.github.com/orgs/withcoral/private-registries",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1507s [GET] https://api.github.com/orgs/withcoral/private-registries\n  Hint: The upstream API is rate-limiti"
+  },
+  "projects_v2": {
+    "url": "https://api.github.com/orgs/withcoral/projectsV2",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/projects/projects#list-projects-for-organization\",\"status\":\"404\"}"
+  },
+  "protection": {
+    "url": "https://api.github.com/repos/withcoral/coral/branches/main/protection",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 3400s [GET] https://api.github.com/repos/withcoral/coral/branches/main/protection\n  Hint: The upstream API i"
+  },
+  "public_key": {
+    "url": "https://api.github.com/orgs/withcoral/codespaces/secrets/public-key",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2692s [GET] https://api.github.com/orgs/withcoral/codespaces/secrets/public-key\n  Hint: The upstream API is "
+  },
+  "reactions": {
+    "url": "https://api.github.com/repos/withcoral/coral/issues/comments/0/reactions",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/reactions/reactions#list-reactions-for-an-issue-comment\",\"status\""
+  },
+  "ref": {
+    "url": "https://api.github.com/repos/withcoral/coral/git/ref/main",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/git/refs#get-a-reference\",\"status\":\"404\"} [GET] https://api.githu"
+  },
+  "referrers": {
+    "url": "https://api.github.com/repos/withcoral/coral/traffic/popular/referrers",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1454s [GET] https://api.github.com/repos/withcoral/coral/traffic/popular/referrers\n  Hint: The upstream API "
+  },
+  "repo": {
+    "url": "https://api.github.com/enterprises/withcoral/actions/oidc/customization/properties/repo",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1448s [GET] https://api.github.com/enterprises/withcoral/actions/oidc/customization/properties/repo\n  Hint: "
+  },
+  "repo_action_jobs": {
+    "url": "https://api.github.com/repos/withcoral/coral/actions/jobs/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/actions/workflow-jobs#get-a-job-for-a-workflow-run\",\"status\":\"404"
+  },
+  "repo_action_permissions": {
+    "url": "https://api.github.com/repos/withcoral/coral/actions/permissions",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1430s [GET] https://api.github.com/repos/withcoral/coral/actions/permissions\n  Hint: The upstream API is rat"
+  },
+  "repo_action_run_artifacts": {
+    "url": "https://api.github.com/repos/withcoral/coral/actions/runs/0/artifacts",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/actions/artifacts#list-workflow-run-artifacts\",\"status\":\"404\"} [G"
+  },
+  "repo_action_run_timing": {
+    "url": "https://api.github.com/repos/withcoral/coral/actions/runs/0/timing",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/actions/workflow-runs#get-workflow-run-usage\",\"status\":\"404\"} [GE"
+  },
+  "repo_action_secrets": {
+    "url": "https://api.github.com/repos/withcoral/coral/actions/secrets",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1412s [GET] https://api.github.com/repos/withcoral/coral/actions/secrets\n  Hint: The upstream API is rate-li"
+  },
+  "repo_action_variables": {
+    "url": "https://api.github.com/repos/withcoral/coral/actions/variables",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1407s [GET] https://api.github.com/repos/withcoral/coral/actions/variables\n  Hint: The upstream API is rate-"
+  },
+  "repo_action_workflow_runs": {
+    "url": "https://api.github.com/repos/withcoral/coral/actions/workflows/0/runs",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/actions/workflow-runs#list-workflow-runs-for-a-workflow\",\"status\""
+  },
+  "repo_action_workflow_timing": {
+    "url": "https://api.github.com/repos/withcoral/coral/actions/workflows/0/timing",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/actions/workflows#get-workflow-usage\",\"status\":\"404\"} [GET] https"
+  },
+  "repo_branch_protection_restriction_apps": {
+    "url": "https://api.github.com/repos/withcoral/coral/branches/main/protection/restrictions/apps",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 3298s [GET] https://api.github.com/repos/withcoral/coral/branches/main/protection/restrictions/apps\n  Hint: "
+  },
+  "repo_branch_protection_restriction_teams": {
+    "url": "https://api.github.com/repos/withcoral/coral/branches/main/protection/restrictions/teams",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 3293s [GET] https://api.github.com/repos/withcoral/coral/branches/main/protection/restrictions/teams\n  Hint:"
+  },
+  "repo_branch_protection_restriction_users": {
+    "url": "https://api.github.com/repos/withcoral/coral/branches/main/protection/restrictions/users",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 3288s [GET] https://api.github.com/repos/withcoral/coral/branches/main/protection/restrictions/users\n  Hint:"
+  },
+  "repo_check_runs": {
+    "url": "https://api.github.com/repos/withcoral/coral/check-runs/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/checks/runs#get-a-check-run\",\"status\":\"404\"} [GET] https://api.gi"
+  },
+  "repo_check_suites": {
+    "url": "https://api.github.com/repos/withcoral/coral/check-suites/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/checks/suites#get-a-check-suite\",\"status\":\"404\"} [GET] https://ap"
+  },
+  "repo_code_scanning_alerts": {
+    "url": "https://api.github.com/repos/withcoral/coral/code-scanning/alerts",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1363s [GET] https://api.github.com/repos/withcoral/coral/code-scanning/alerts\n  Hint: The upstream API is ra"
+  },
+  "repo_code_scanning_codeql_variant_analyse_repos": {
+    "url": "https://api.github.com/repos/withcoral/coral/code-scanning/codeql/variant-analyses/0/repos/0/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/cor"
+  },
+  "repo_codespace_secrets": {
+    "url": "https://api.github.com/repos/withcoral/coral/codespaces/secrets",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2554s [GET] https://api.github.com/repos/withcoral/coral/codespaces/secrets\n  Hint: The upstream API is rate"
+  },
+  "repo_dependabot_alerts": {
+    "url": "https://api.github.com/repos/withcoral/coral/dependabot/alerts",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1321s [GET] https://api.github.com/repos/withcoral/coral/dependabot/alerts\n  Hint: The upstream API is rate-"
+  },
+  "repo_dependabot_secrets": {
+    "url": "https://api.github.com/repos/withcoral/coral/dependabot/secrets",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1316s [GET] https://api.github.com/repos/withcoral/coral/dependabot/secrets\n  Hint: The upstream API is rate"
+  },
+  "repo_deployment_statuses": {
+    "url": "https://api.github.com/repos/withcoral/coral/deployments/0/statuses",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/deployments/statuses#list-deployment-statuses\",\"status\":\"404\"} [G"
+  },
+  "repo_environment_deployment_protection_rule_apps": {
+    "url": "https://api.github.com/repos/withcoral/coral/environments/production/deployment_protection_rules/apps",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1290s [GET] https://api.github.com/repos/withcoral/coral/environments/production/deployment_protection_rules"
+  },
+  "repo_environment_secret_public_key": {
+    "url": "https://api.github.com/repos/withcoral/coral/environments/production/secrets/public-key",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/reference/actions#get-an-environment-public-key\",\"status\":\"404\"} "
+  },
+  "repo_environment_secrets": {
+    "url": "https://api.github.com/repos/withcoral/coral/environments/production/secrets",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/reference/actions#list-environment-secrets\",\"status\":\"404\"} [GET]"
+  },
+  "repo_environment_variables": {
+    "url": "https://api.github.com/repos/withcoral/coral/environments/production/variables",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/actions/variables#list-environment-variables\",\"status\":\"404\"} [GE"
+  },
+  "repo_git_commits": {
+    "url": "https://api.github.com/repos/withcoral/coral/git/commits/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/git/commits#get-a-commit-object\",\"status\":\"404\"} [GET] https://ap"
+  },
+  "repo_git_tags": {
+    "url": "https://api.github.com/repos/withcoral/coral/git/tags/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/git/tags#get-a-tag\",\"status\":\"404\"} [GET] https://api.github.com/"
+  },
+  "repo_hooks": {
+    "url": "https://api.github.com/repos/withcoral/coral/hooks",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 60s [GET] https://api.github.com/repos/withcoral/coral/hooks\n  Hint: The upstream API is rate-limiting reque"
+  },
+  "repo_immutable_releases": {
+    "url": "https://api.github.com/repos/withcoral/coral/immutable-releases",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1253s [GET] https://api.github.com/repos/withcoral/coral/immutable-releases\n  Hint: The upstream API is rate"
+  },
+  "repo_invitations": {
+    "url": "https://api.github.com/repos/withcoral/coral/invitations",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 3158s [GET] https://api.github.com/repos/withcoral/coral/invitations\n  Hint: The upstream API is rate-limiti"
+  },
+  "repo_keys": {
+    "url": "https://api.github.com/repos/withcoral/coral/keys",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 3143s [GET] https://api.github.com/repos/withcoral/coral/keys\n  Hint: The upstream API is rate-limiting requ"
+  },
+  "repo_page_build_latest": {
+    "url": "https://api.github.com/repos/withcoral/coral/pages/builds/latest",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/pages/pages#get-latest-pages-build\",\"status\":\"404\"} [GET] https:/"
+  },
+  "repo_page_deployments": {
+    "url": "https://api.github.com/repos/withcoral/coral/pages/deployments/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/pages/pages#get-the-status-of-a-github-pages-deployment\",\"status\""
+  },
+  "repo_pull_review_comments": {
+    "url": "https://api.github.com/repos/withcoral/coral/pulls/1/reviews/0/comments",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/pulls/reviews#list-comments-for-a-pull-request-review\",\"status\":\""
+  },
+  "repo_release_assets": {
+    "url": "https://api.github.com/repos/withcoral/coral/releases/assets/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/releases/assets#get-a-release-asset\",\"status\":\"404\"} [GET] https:"
+  },
+  "repo_release_tags": {
+    "url": "https://api.github.com/repos/withcoral/coral/releases/tags/v1.0.0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/releases/releases#get-a-release-by-tag-name\",\"status\":\"404\"} [GET"
+  },
+  "repo_secret_scanning_alerts": {
+    "url": "https://api.github.com/repos/withcoral/coral/secret-scanning/alerts",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 3087s [GET] https://api.github.com/repos/withcoral/coral/secret-scanning/alerts\n  Hint: The upstream API is "
+  },
+  "repo_subscription": {
+    "url": "https://api.github.com/repos/withcoral/coral/subscription",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 3078s [GET] https://api.github.com/repos/withcoral/coral/subscription\n  Hint: The upstream API is rate-limit"
+  },
+  "repos": {
+    "url": "https://api.github.com/teams/0/repos/withcoral/coral",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/teams/teams#check-team-permissions-for-a-repository-legacy\",\"stat"
+  },
+  "repos_list_release_assets": {
+    "url": "https://api.github.com/repos/withcoral/coral/releases/0/assets",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/releases/assets#list-release-assets\",\"status\":\"404\"} [GET] https:"
+  },
+  "repository_access": {
+    "url": "https://api.github.com/organizations/withcoral/dependabot/repository-access",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"404\"} [GET] https://api.github.com/organizations/withc"
+  },
+  "required_pull_request_reviews": {
+    "url": "https://api.github.com/repos/withcoral/coral/branches/main/protection/required_pull_request_reviews",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 3033s [GET] https://api.github.com/repos/withcoral/coral/branches/main/protection/required_pull_request_revi"
+  },
+  "required_signatures": {
+    "url": "https://api.github.com/repos/withcoral/coral/branches/main/protection/required_signatures",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 3029s [GET] https://api.github.com/repos/withcoral/coral/branches/main/protection/required_signatures\n  Hint"
+  },
+  "required_status_checks": {
+    "url": "https://api.github.com/repos/withcoral/coral/branches/main/protection/required_status_checks",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 3025s [GET] https://api.github.com/repos/withcoral/coral/branches/main/protection/required_status_checks\n  H"
+  },
+  "restrictions": {
+    "url": "https://api.github.com/repos/withcoral/coral/branches/main/protection/restrictions",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 3021s [GET] https://api.github.com/repos/withcoral/coral/branches/main/protection/restrictions\n  Hint: The u"
+  },
+  "retention_limit": {
+    "url": null,
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source request failed (402)\n  Detail: {\"message\":\"Please ensure your account has a valid payment method on file to access this service.\",\"documentation_url\":\"https://docs.github.com/re"
+  },
+  "route_stats": {
+    "url": "https://api.github.com/orgs/withcoral/insights/api/route-stats/User/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/api-insights#get-route-stats-by-actor\",\"status\":\"404\"} [GET]"
+  },
+  "rule_suites": {
+    "url": "https://api.github.com/orgs/withcoral/rulesets/rule-suites",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/rule-suites#list-organization-rule-suites\",\"status\":\"404\"} ["
+  },
+  "rulesets": {
+    "url": "https://api.github.com/orgs/withcoral/rulesets",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/rules#get-all-organization-repository-rulesets\",\"status\":\"40"
+  },
+  "runner_groups": {
+    "url": "https://api.github.com/orgs/withcoral/actions/runner-groups",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1086s [GET] https://api.github.com/orgs/withcoral/actions/runner-groups\n  Hint: The upstream API is rate-lim"
+  },
+  "runners": {
+    "url": "https://api.github.com/orgs/withcoral/actions/runners",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1081s [GET] https://api.github.com/orgs/withcoral/actions/runners\n  Hint: The upstream API is rate-limiting "
+  },
+  "sarifs": {
+    "url": "https://api.github.com/repos/withcoral/coral/code-scanning/sarifs/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1078s [GET] https://api.github.com/repos/withcoral/coral/code-scanning/sarifs/0\n  Hint: The upstream API is "
+  },
+  "scan_history": {
+    "url": "https://api.github.com/repos/withcoral/coral/secret-scanning/scan-history",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1070s [GET] https://api.github.com/repos/withcoral/coral/secret-scanning/scan-history\n  Hint: The upstream A"
+  },
+  "schema": {
+    "url": "https://api.github.com/orgs/withcoral/properties/schema",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/custom-properties#get-all-custom-properties-for-an-organizat"
+  },
+  "seats": {
+    "url": "https://api.github.com/orgs/withcoral/copilot/billing/se",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/copilot/copilot-user-management#list-all-copilot-seat-assignments"
+  },
+  "security_advisories": {
+    "url": "https://api.github.com/orgs/withcoral/securi",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/security-advisories/repository-advisories#list-repository-securit"
+  },
+  "security_managers": {
+    "url": "https://api.github.com/orgs/withcoral/security-managers",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/security-managers#list-security-manager-teams\",\"status\":\"404"
+  },
+  "selected_actions": {
+    "url": "https://api.github.com/orgs/withcoral/actions/permissions/selected-actions",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1054s [GET] https://api.github.com/orgs/withcoral/actions/permissions/selected-actions\n  Hint: The upstream "
+  },
+  "self_hosted_runners": {
+    "url": "https://api.github.com/orgs/withcoral/actions/permissions/self-hosted-runners",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 1050s [GET] https://api.github.com/orgs/withcoral/actions/permissions/self-hosted-runners\n  Hint: The upstre"
+  },
+  "stargazers": {
+    "url": "https://api.github.com/repos/withcoral/coral/stargazers",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2955s [GET] https://api.github.com/repos/withcoral/coral/stargazers\n  Hint: The upstream API is rate-limitin"
+  },
+  "storage_limit": {
+    "url": null,
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source request failed (402)\n  Detail: {\"message\":\"Please ensure your account has a valid payment method on file to access this service.\",\"documentation_url\":\"https://docs.github.com/re"
+  },
+  "storage_records": {
+    "url": "https://api.github.com/orgs/withcoral/artifacts/sha256:0000000000000000000000000000000000",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/artifact-metadata#list-artifact-storage-records\",\"status\":\"4"
+  },
+  "subject_stats": {
+    "url": "https://api.github.com/orgs/withcoral/insights/api/subject-stats",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/api-insights#get-subject-stats\",\"status\":\"404\"} [GET] https:"
+  },
+  "subscribers": {
+    "url": "https://api.github.com/repos/withcoral/coral/subscribers",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2927s [GET] https://api.github.com/repos/withcoral/coral/subscribers\n  Hint: The upstream API is rate-limiti"
+  },
+  "summary": {
+    "url": "https://api.github.com/organizations/withcoral/settings/billing/usage/summary",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/billing/usage#get-billing-usage-summary-for-an-organization\",\"sta"
+  },
+  "team": {
+    "url": "https://api.github.com/teams/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/teams/teams#get-a-team-legacy\",\"status\":\"404\"} [GET] https://api."
+  },
+  "teams": {
+    "url": "https://api.github.com/orgs/withcoral/teams",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2913s [GET] https://api.github.com/orgs/withcoral/teams\n  Hint: The upstream API is rate-limiting requests. "
+  },
+  "threads": {
+    "url": "https://api.github.com/notifications/threads/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/activity/notifications#get-a-thread\",\"status\":\"404\"} [GET] https:"
+  },
+  "trees": {
+    "url": "https://api.github.com/repos/withcoral/coral/git/trees/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"404\"} [GET] https://api.github.co"
+  },
+  "usage": {
+    "url": "https://api.github.com/organizations/withcoral/settings/billing/pre",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/billing/usage#get-billing-premium-request-usage-report-for-an-org"
+  },
+  "usage_by_repository": {
+    "url": "https://api.github.com/orgs/withcoral/actions/cache/usage-by-repository",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 977s [GET] https://api.github.com/orgs/withcoral/actions/cache/usage-by-repository\n  Hint: The upstream API "
+  },
+  "user_blocks": {
+    "url": "https://api.github.com/user/blocks",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 970s [GET] https://api.github.com/user/blocks\n  Hint: The upstream API is rate-limiting requests. Wait brief"
+  },
+  "user_codespace_machines": {
+    "url": "https://api.github.com/user/codespaces/test-codespace/machines",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/codespaces/machines#list-machine-types-for-a-codespace\",\"status\":"
+  },
+  "user_codespace_secret_public_key": {
+    "url": "https://api.github.com/user/codespaces/secrets/public-key",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2171s [GET] https://api.github.com/user/codespaces/secrets/public-key\n  Hint: The upstream API is rate-limit"
+  },
+  "user_codespace_secrets": {
+    "url": "https://api.github.com/user/codespaces/secrets",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2168s [GET] https://api.github.com/user/codespaces/secrets\n  Hint: The upstream API is rate-limiting request"
+  },
+  "user_docker_conflicts": {
+    "url": null,
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rejected the request (400)\n  Detail: {\"message\":\"Package migration for docker is no longer supported. Please contact support for assistance.\",\"documentation_url\":\"https://docs.g"
+  },
+  "user_event_orgs": {
+    "url": "https://api.github.com/users/FiscalMindset/events/orgs/withcoral",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 948s [GET] https://api.github.com/users/FiscalMindset/events/orgs/withcoral\n  Hint: The upstream API is rate"
+  },
+  "user_followers": {
+    "url": "https://api.github.com/user/followers",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2846s [GET] https://api.github.com/user/followers\n  Hint: The upstream API is rate-limiting requests. Wait b"
+  },
+  "user_following": {
+    "url": "https://api.github.com/user/following",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 2841s [GET] https://api.github.com/user/following\n  Hint: The upstream API is rate-limiting requests. Wait b"
+  },
+  "user_gpg_keys": {
+    "url": "https://api.github.com/user/gpg_keys",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 928s [GET] https://api.github.com/user/gpg_keys\n  Hint: The upstream API is rate-limiting requests. Wait bri"
+  },
+  "user_installation_repositories": {
+    "url": "https://api.github.com/user/installations/0/repositories",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/apps/installations#list-repositories-accessible-to-the-user-acces"
+  },
+  "user_interaction_limits": {
+    "url": "https://api.github.com/user/interaction-limits",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 913s [GET] https://api.github.com/user/interaction-limits\n  Hint: The upstream API is rate-limiting requests"
+  },
+  "user_keys": {
+    "url": "https://api.github.com/user/keys",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 829s [GET] https://api.github.com/user/keys\n  Hint: The upstream API is rate-limiting requests. Wait briefly"
+  },
+  "user_migrations": {
+    "url": "https://api.github.com/user/migrations",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 738s [GET] https://api.github.com/user/migrations\n  Hint: The upstream API is rate-limiting requests. Wait b"
+  },
+  "user_packages": {
+    "url": "https://api.github.com/user/packages/npm/left-pad",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Package not found.\",\"documentation_url\":\"https://docs.github.com/rest/packages/packages#get-a-package-for-the-authenticated-us"
+  },
+  "user_setting_billing_usage": {
+    "url": "https://api.github.com/users/FiscalMindset/settings/billing/usage",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 598s [GET] https://api.github.com/users/FiscalMindset/settings/billing/usage\n  Hint: The upstream API is rat"
+  },
+  "user_ssh_signing_keys": {
+    "url": "https://api.github.com/user/ssh_signing_keys",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 558s [GET] https://api.github.com/user/ssh_signing_keys\n  Hint: The upstream API is rate-limiting requests. "
+  },
+  "user_stats": {
+    "url": "https://api.github.com/orgs/withcoral/insights/api/user-stats/0",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/orgs/api-insights#get-user-stats\",\"status\":\"404\"} [GET] https://a"
+  },
+  "users_1_day": {
+    "url": "https://api.github.com/enterprises/withcoral/copilot/metrics/reports/users-1-day",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"404\"} [GET] https://api.github.com/enterprises/withcor"
+  },
+  "variant_analyses": {
+    "url": "https://api.github.com/repos/withcoral/coral/code-sc",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Variant analysis not found\",\"documentation_url\":\"https://docs.github.com/rest/code-scanning/code-scanning#get-the-summary-of-a"
+  },
+  "views": {
+    "url": "https://api.github.com/repos/withcoral/coral/traffic/views",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 165s [GET] https://api.github.com/repos/withcoral/coral/traffic/views\n  Hint: The upstream API is rate-limit"
+  },
+  "workflow": {
+    "url": "https://api.github.com/orgs/withcoral/actions/permissions/workflow",
+    "err_excerpt": "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source rate limit exceeded (429)\n  Detail: rate limit exceeded; retry after 138s [GET] https://api.github.com/orgs/withcoral/actions/permissions/workflow\n  Hint: The upstream API is ra"
+  }
+}

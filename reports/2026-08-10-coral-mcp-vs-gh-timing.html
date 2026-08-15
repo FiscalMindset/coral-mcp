@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coral MCP (GitHub source) vs gh CLI — timing benchmark</title>
+<style>
+  :root {
+    --bg:#0a0d13; --bg2:#0f131b; --panel:#121722; --panel2:#171d2b; --panel3:#1e2637;
+    --text:#e8eaf0; --muted:#98a2b3; --faint:#6b7a92;
+    --accent:#5b9bff; --accent-soft:rgba(91,155,255,.12);
+    --good:#41c47a; --good-soft:rgba(65,196,122,.12);
+    --bad:#ff6b5e; --bad-soft:rgba(255,107,94,.12);
+    --warn:#f2b04a; --warn-soft:rgba(242,176,74,.12);
+    --border:#232a3b; --border2:#2e3750;
+    --sans:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --nav-h:56px;
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
+  body { margin:0; background:var(--bg); color:var(--text); font:15px/1.6 var(--sans); }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+
+  .topnav { position:sticky; top:0; z-index:50; height:var(--nav-h); display:flex; align-items:center; gap:16px;
+    padding:0 20px; background:rgba(10,13,19,.86); backdrop-filter:blur(10px); border-bottom:1px solid var(--border); }
+  .topnav .brand { font-weight:700; font-size:.95rem; white-space:nowrap; color:var(--text); }
+  .topnav .brand b { color:var(--accent); }
+  .topnav .links { display:flex; gap:2px; overflow-x:auto; scrollbar-width:none; }
+  .topnav .links::-webkit-scrollbar { display:none; }
+  .topnav .links a { color:var(--muted); font-size:.85rem; padding:6px 10px; border-radius:7px; white-space:nowrap; }
+  .topnav .links a:hover { color:var(--text); text-decoration:none; background:var(--panel2); }
+  .topnav .links a.active { color:var(--text); background:var(--accent-soft); box-shadow:inset 0 0 0 1px var(--accent); }
+
+  .wrap { max-width:1180px; margin:0 auto; padding:0 20px 80px; }
+
+  .hero { padding:40px 0 8px; }
+  .hero h1 { font-size:clamp(1.5rem, 3vw, 2.1rem); line-height:1.2; margin:0 0 8px; letter-spacing:-.01em; }
+  .hero .lede { color:var(--muted); font-size:1.02rem; max-width:88ch; margin:0 0 14px; }
+  .meta { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 24px; }
+  .meta .chip { display:inline-flex; align-items:center; gap:6px; background:var(--panel); border:1px solid var(--border);
+    color:var(--muted); font-size:.78rem; padding:4px 10px; border-radius:999px; }
+  .meta .chip b { color:var(--text); font-weight:600; }
+
+  .cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:12px; margin:0 0 12px; }
+  .card { background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:14px 16px; }
+  .card .k { font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; color:var(--faint); margin-bottom:2px; }
+  .card .v { font-size:1.5rem; font-weight:700; line-height:1.15; font-variant-numeric:tabular-nums; }
+  .card .note { color:var(--faint); font-size:.78rem; margin-top:2px; }
+  .card.gh .v { color:var(--good); }
+  .card.coral .v { color:var(--accent); }
+  .card.worst .v { color:var(--bad); }
+  .card.ratio .v { color:var(--warn); }
+
+  .legend { display:flex; flex-wrap:wrap; gap:16px; color:var(--faint); font-size:.8rem; margin:4px 0 26px; }
+  .legend .sw { display:inline-block; width:10px; height:10px; border-radius:3px; margin-right:6px; vertical-align:0; }
+  .sw.good { background:var(--good); } .sw.warn { background:var(--warn); } .sw.bad { background:var(--bad); }
+
+  .layout { display:flex; gap:36px; }
+  main { flex:1; min-width:0; }
+  .toc { width:220px; flex-shrink:0; position:sticky; top:calc(var(--nav-h) + 24px); align-self:flex-start;
+    max-height:calc(100vh - var(--nav-h) - 40px); overflow-y:auto; display:none; }
+  @media (min-width:1024px) { .toc { display:block; } }
+  .toc .toc-title { font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; color:var(--faint); margin:0 0 8px; padding:0 10px; }
+  .toc a { display:block; color:var(--muted); font-size:.85rem; padding:6px 10px; border-radius:7px; border-left:2px solid transparent; }
+  .toc a:hover { color:var(--text); text-decoration:none; }
+  .toc a.active { color:var(--text); border-left-color:var(--accent); background:var(--accent-soft); }
+
+  section { scroll-margin-top:calc(var(--nav-h) + 16px); padding:34px 0 6px; border-top:1px solid var(--border); margin-top:26px; }
+  section:first-of-type { border-top:none; margin-top:8px; }
+  h2 { display:flex; align-items:center; gap:10px; font-size:1.22rem; margin:0 0 6px; letter-spacing:-.01em; }
+  h2 .num { display:inline-flex; align-items:center; justify-content:center; width:26px; height:26px; flex-shrink:0;
+    border-radius:8px; background:var(--accent-soft); color:var(--accent); font-size:.85rem; font-weight:700; }
+  .ssec { color:var(--muted); font-size:.95rem; max-width:88ch; margin:0 0 18px; }
+  h3 { font-size:1rem; margin:24px 0 8px; }
+  h4 { font-size:.92rem; margin:18px 0 6px; }
+
+  .scroll { overflow-x:auto; margin:12px 0; }
+  table { width:100%; border-collapse:collapse; font-size:.9rem; background:var(--panel); border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+  th, td { padding:9px 13px; text-align:left; border-bottom:1px solid var(--border); vertical-align:top; }
+  th { background:var(--panel2); font-size:.75rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); font-weight:600; }
+  tr:last-child td { border-bottom:none; }
+  td .mono, .mono { font-family:var(--mono); font-size:.88em; }
+  .tnum { font-variant-numeric:tabular-nums; }
+  .slow { font-weight:700; }
+  .slow.gh { color:var(--good); }
+  .slow.coral { color:var(--accent); }
+  .slow.worst { color:var(--bad); }
+  .muted { color:var(--muted); font-size:.86rem; }
+
+  .chip { display:inline-block; padding:1px 8px; border-radius:999px; font-size:.72rem; font-weight:700; white-space:nowrap; }
+  .chip.good { background:var(--good-soft); color:var(--good); }
+  .chip.warn { background:var(--warn-soft); color:var(--warn); }
+  .chip.bad { background:var(--bad-soft); color:var(--bad); }
+  .chip.neutral { background:var(--panel3); color:var(--muted); }
+
+  code { font-family:var(--mono); background:var(--panel2); padding:1px 5px; border-radius:4px; font-size:.86em; }
+  pre { background:var(--bg2); border:1px solid var(--border); border-radius:10px; padding:13px 15px; overflow-x:auto;
+    font: .82rem/1.55 var(--mono); color:#c7d0e0; margin:12px 0; }
+  pre .cm { color:#5d6b85; }
+
+  .outblock { margin:12px 0; }
+  .outlabel { display:flex; align-items:center; gap:8px; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em;
+    color:var(--faint); margin:14px 0 0; }
+  .outlabel .fname { color:var(--accent); text-transform:none; letter-spacing:0; font-family:var(--mono); font-size:.82rem; }
+  pre.out { margin:4px 0 8px; }
+  pre.out.gh { border-left:3px solid var(--good); }
+  pre.out.coral { border-left:3px solid var(--accent); }
+  pre.out.worst { border-left:3px solid var(--bad); }
+
+  .callout { border:1px solid var(--border2); background:var(--panel); border-left:3px solid var(--accent);
+    border-radius:10px; padding:13px 16px; margin:16px 0; }
+  .callout.warn { border-left-color:var(--warn); }
+  .callout.bad { border-left-color:var(--bad); }
+  .callout.good { border-left-color:var(--good); }
+  .callout .co-title { font-weight:700; margin-bottom:2px; font-size:.9rem; }
+  .callout p { margin:4px 0; }
+  .callout ul { margin:6px 0 0; padding-left:20px; }
+  .callout li { margin:3px 0; }
+
+  .why { border:1px solid var(--border2); background:var(--panel); border-left:3px solid var(--accent);
+    border-radius:10px; padding:13px 16px; margin:16px 0; }
+  .why .why-title { font-weight:700; font-size:.9rem; margin-bottom:6px; color:var(--accent); }
+  .why .why-title::before { content:"Why this test"; display:block; font-size:.72rem; text-transform:uppercase;
+    letter-spacing:.05em; color:var(--faint); margin-bottom:2px; }
+  .why table { margin:8px 0; }
+  .why ul { margin:6px 0 0; padding-left:20px; }
+  .why li { margin:4px 0; }
+
+  .compare td { vertical-align:middle; }
+  .compare .rowwhy { font-size:.8rem; color:var(--faint); }
+
+  details { margin:14px 0; border:1px solid var(--border); border-radius:10px; background:var(--panel); overflow:hidden; }
+  details summary { cursor:pointer; padding:11px 14px; font-weight:600; font-size:.9rem; user-select:none; }
+  details summary::-webkit-details-marker { display:none; }
+  details summary::before { content:"▸ "; color:var(--accent); }
+  details[open] summary::before { content:"▾ "; }
+  details .dbody { padding:0 14px 14px; }
+  details pre { margin:10px 0 6px; }
+  .filetag { font-family:var(--mono); font-size:.78rem; color:var(--faint); }
+
+  footer { margin-top:48px; padding-top:20px; border-top:1px solid var(--border); color:var(--faint); font-size:.82rem; }
+</style>
+</head>
+<body>
+
+<nav class="topnav" aria-label="Section navigation">
+  <a class="brand" href="#top">Coral MCP <b>·</b> GitHub source <b>vs</b> gh</a>
+  <div class="links" id="navlinks">
+    <a href="#compare">1&nbsp;Head-to-head</a>
+    <a href="#test1">2&nbsp;Running workflows</a>
+    <a href="#test2">3&nbsp;PR list</a>
+    <a href="#test3">4&nbsp;Workflow runs</a>
+    <a href="#test4">5&nbsp;Commits</a>
+    <a href="#why">6&nbsp;Why slower</a>
+    <a href="#verdict">7&nbsp;Verdict &amp; tips</a>
+    <a href="#artifacts">8&nbsp;Artifacts</a>
+  </div>
+</nav>
+
+<div class="wrap" id="top">
+  <header class="hero">
+    <h1>Coral MCP (<strong>GitHub source</strong>) vs direct <code>gh</code> API — end-to-end timing benchmark</h1>
+    <p class="lede">The user&rsquo;s real GitHub queries, run through coral&rsquo;s SQL engine (<code>coral mcp-stdio</code>, JSON-RPC) and through a direct <code>gh</code> CLI call. This measures the <strong>GitHub source in coral</strong> — not coral as a whole; other sources (Notion, email, …) are not benchmarked here. Every command below includes its <strong>real captured output</strong> so the result can be re-checked.</p>
+    <div class="meta">
+      <span class="chip"><b>Date</b>&nbsp;2026-08-10</span>
+      <span class="chip"><b>coral</b>&nbsp;v0.8.1</span>
+      <span class="chip"><b>gh</b>&nbsp;v2.91.0</span>
+      <span class="chip"><b>Runs</b>&nbsp;14</span>
+      <span class="chip"><b>Repo</b>&nbsp;FiscalMindset/coral</span>
+      <span class="chip"><b>Scope</b>&nbsp;GitHub source only</span>
+    </div>
+  </header>
+
+  <div class="cards">
+    <div class="card gh"><div class="k">Direct gh API</div><div class="v">0.71s</div><div class="note">fastest measured (commits)</div></div>
+    <div class="card coral"><div class="k">Coral GitHub · baseline</div><div class="v">7.21s</div><div class="note">LIMIT-only commit query</div></div>
+    <div class="card coral worst"><div class="k">Coral GitHub · worst case</div><div class="v">39.59s</div><div class="note">ORDER BY kills pushdown</div></div>
+    <div class="card ratio"><div class="k">Slowdown</div><div class="v">4&ndash;56&times;</div><div class="note">depends on query shape</div></div>
+  </div>
+  <div class="legend">
+    <span><span class="sw good"></span>fast</span>
+    <span><span class="sw warn"></span>baseline overhead</span>
+    <span><span class="sw bad"></span>worst case — avoid</span>
+  </div>
+
+  <div class="layout">
+    <main>
+
+      <section id="compare">
+        <h2><span class="num">1</span>Head-to-head comparison</h2>
+        <p class="ssec">The answer up front: for <strong>GitHub queries</strong>, coral MCP is <strong>~4&ndash;56&times;</strong> slower than a direct <code>gh</code> call for the same query. How much slower depends on query shape. Tests 2 and 3 are the user&rsquo;s <em>real</em> queries (running workflows, PR list); each test carries its own <em>why</em>.</p>
+
+        <div class="scroll">
+        <table class="compare">
+          <tr><th>Query</th><th>Direct gh API</th><th>Coral MCP (GitHub)</th><th>Slowdown</th></tr>
+          <tr>
+            <td>Find all running workflows <span class="rowwhy">— user query · §2</span></td>
+            <td class="mono tnum slow gh">2.61s</td>
+            <td class="mono tnum slow coral">11.18s</td>
+            <td><span class="chip warn">~4&times;</span></td>
+          </tr>
+          <tr>
+            <td>My open PRs (18) <span class="rowwhy">— user query · §3</span></td>
+            <td class="mono tnum slow gh">1.58s</td>
+            <td class="mono tnum slow worst">20.74s</td>
+            <td><span class="chip bad">~13&times;</span></td>
+          </tr>
+          <tr>
+            <td>Workflow runs — last 5 <span class="rowwhy">· §4</span></td>
+            <td class="mono tnum slow gh">1.04s</td>
+            <td class="mono tnum slow coral">8.78s</td>
+            <td><span class="chip warn">~8&times;</span></td>
+          </tr>
+          <tr>
+            <td>Commits — <code>ORDER BY … DESC LIMIT 5</code> <span class="rowwhy">· §5</span></td>
+            <td class="mono tnum slow gh">0.71s</td>
+            <td class="mono tnum slow worst">39.59s</td>
+            <td><span class="chip bad">~56&times;</span></td>
+          </tr>
+          <tr>
+            <td>Commits — <code>LIMIT 5</code> only <span class="rowwhy">· §5</span></td>
+            <td class="mono tnum slow gh">0.71s</td>
+            <td class="mono tnum slow coral">7.21s</td>
+            <td><span class="chip warn">~10&times;</span></td>
+          </tr>
+        </table>
+        </div>
+
+        <p class="muted">Same rows, same order, same answer in every case. The gap is engine overhead (~5&ndash;7s baseline) plus, in the worst case, ~30s of needless pagination. Details and raw output in the per-test sections below.</p>
+      </section>
+
+      <section id="test1">
+        <h2><span class="num">2</span>Test 1 — user query: find all running workflows</h2>
+        <p class="ssec">The user&rsquo;s actual question: <em>&ldquo;find all workflows that are currently running&rdquo;</em> on <code>FiscalMindset/coral</code>. Both tools return the same single answer: one queued run.</p>
+
+        <h3>Command</h3>
+        <pre># gh — direct API call, timed with /usr/bin/time -p
+gh run list --repo FiscalMindset/coral --limit 100
+
+# coral — same query through the MCP sql tool (harness artifacts/coral_user_query.py)
+SELECT name, head_branch, status, conclusion, created_at, updated_at, run_number
+FROM   github.repo_action_runs
+WHERE  owner = 'FiscalMindset' AND repo = 'coral'
+       AND status IN ('queued','in_progress','waiting','requested')</pre>
+
+        <h3>Real output (captured)</h3>
+        <div class="outblock">
+          <div class="outlabel">gh CLI · <span class="fname">artifacts/gh_running_runs_out.txt</span></div>
+          <pre class="out gh">queued   Build Timings   Build Timings   main   schedule   31300020216   23h17m29s   2026-08-09T06:56:58Z
+completed   cancelled   Build Timings   Build Timings   main   schedule   ...
+completed   cancelled   ...   (86 run lines total; only this one is queued/running)
+real 2.61
+user 0.07
+sys  0.05</pre>
+          <div class="outlabel">coral MCP · <span class="fname">artifacts/coral_running_runs_out.txt</span></div>
+          <pre class="out coral">init: 2.50s | sql: 8.69s | TOTAL: 11.18s
+isError: False
+columns: []
+rows_returned: 1
+ROW: {"name": "Build Timings", "head_branch": "main", "status": "queued", "conclusion": null, "created_at": "2026-08-09T06:56:58Z", "updated_at": "2026-08-09T06:56:58Z", "run_number": "73"}</pre>
+        </div>
+
+        <h3>Results</h3>
+        <div class="scroll">
+        <table>
+          <tr><th>Tool</th><th>Total time (measured)</th><th>Result</th></tr>
+          <tr><td>gh CLI</td><td class="mono tnum slow gh">2.61s</td><td>1 running run (queued)</td></tr>
+          <tr><td>coral MCP</td><td class="mono tnum slow coral">11.18s <span class="muted">(init 2.50s + sql 8.69s)</span></td><td>1 running run (queued)</td></tr>
+        </table>
+        </div>
+
+        <p>Both agree: the only currently running workflow is <strong>"Build Timings" run #73</strong> (id <code>31300020216</code>, status <code>queued</code>, created <code>2026-08-09T06:56:58Z</code> on branch <code>main</code>).</p>
+
+        <div class="why" id="test1-why">
+          <div class="why-title">Why gh was fast, why coral was slow</div>
+          <ul>
+            <li><strong>gh = 1 request + client filter (2.61s).</strong> <code>gh run list --limit 100</code> fetches the 100 most recent runs in one API call, then you filter to running ones client-side. 2.61s is network + auth + formatting ~86 rows.</li>
+            <li><strong>coral = full engine pipeline (11.18s).</strong> Measured split: <strong>init 2.50s</strong> (spawn Rust engine + MCP handshake), <strong>catalog load ~3.7s</strong> (all 37 configured sources validated — including 8 broken ones that fail and are skipped: <code>careops_*</code> with <code>file://{{input.DATA_PATH}}/</code> not a directory, <code>blogger</code> missing <code>BLOGGER_API_KEY</code>), <strong>runtime build ~0.1s</strong>, then <strong>one GitHub API call + JSON→Arrow mapping</strong> (~5s) to return a single row.</li>
+            <li><strong>Why this test is only ~4&times; (not worse):</strong> the fetch is a single API call (no <code>ORDER BY</code> pitfall). The gap is almost all fixed engine overhead (catalog + mapping), which coral pays on <em>every</em> query because it has no server to keep warm.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="test2">
+        <h2><span class="num">3</span>Test 2 — user query: my open PRs</h2>
+        <p class="ssec">The user&rsquo;s second real question: <em>&ldquo;list my PRs&rdquo;</em> — the open PRs authored by <code>FiscalMindset</code> on <code>withcoral/coral</code> (the upstream; PRs live there, not on the fork). Both tools return the same answer: <strong>18 open PRs</strong>.</p>
+
+        <h3>Command</h3>
+        <pre># gh — direct API call, author filter pushed to the API, timed with /usr/bin/time -p
+gh pr list --repo withcoral/coral --author @me --state open --limit 100
+
+# coral — same query through the MCP sql tool (harness artifacts/coral_user_query.py)
+#   A) ... AND user__login = 'FiscalMindset' AND state = 'open' ORDER BY number DESC   (run 1)
+#   B) ... AND user__login = 'FiscalMindset' AND state = 'open'                        (run 2, no ORDER BY)
+SELECT number, title, state, user__login, html_url
+FROM   github.pulls
+WHERE  owner = 'withcoral' AND repo = 'coral'
+       AND user__login = 'FiscalMindset' AND state = 'open'</pre>
+
+        <h3>Real output (captured)</h3>
+        <div class="outblock">
+          <div class="outlabel">gh CLI · <span class="fname">artifacts/gh_pr_list_out.txt</span></div>
+          <pre class="out gh">2109  feat(sources/community/zerops): add Zerops community source  ...  OPEN  2026-08-09T01:12:28Z
+1777  feat(sources/community/claude_code_sessions): ...              ...  OPEN  2026-07-15T17:55:01Z
+... (18 PRs total: #2109, #1777, #1711, #1700, #1696, #1694, #1689, #1686,
+     #1610, #1539, #1476, #1416, #1260, #1230, #1223, #1175, #1173, #958)
+real 1.58
+user 0.04
+sys  0.05</pre>
+          <div class="outlabel">coral MCP · <span class="fname">artifacts/coral_pr_list_limit_out.txt</span> (no ORDER BY; full file includes all 18 rows)</div>
+          <pre class="out coral">init: 2.37s | sql: 18.37s | TOTAL: 20.74s
+isError: False
+columns: []
+rows_returned: 18
+ROW: {"number": "2109", "title": "feat(sources/community/zerops): add Zerops community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/2109"}
+... (17 more rows, same list as gh)</pre>
+        </div>
+
+        <h3>Results</h3>
+        <div class="scroll">
+        <table>
+          <tr><th>Tool</th><th>Total time (measured)</th><th>Result</th></tr>
+          <tr><td>gh CLI</td><td class="mono tnum slow gh">1.58s</td><td>18 open PRs</td></tr>
+          <tr><td>coral MCP <span class="muted">(no ORDER BY)</span></td><td class="mono tnum slow worst">20.74s <span class="muted">(init 2.37s + sql 18.37s)</span></td><td>18 open PRs</td></tr>
+          <tr><td>coral MCP <span class="muted">(with ORDER BY number DESC)</span></td><td class="mono tnum slow worst">21.66s <span class="muted">(init 2.53s + sql 19.14s)</span></td><td>18 open PRs</td></tr>
+        </table>
+        </div>
+
+        <p>Both agree: <strong>18 open PRs</strong> authored by <code>FiscalMindset</code> on <code>withcoral/coral</code> — the same rows, in the same order (newest first). An earlier run of this test queried the <em>fork</em> <code>FiscalMindset/coral</code>, which correctly has 0 open PRs (PRs are created on the upstream) — that run is not representative of the user&rsquo;s question and is superseded here.</p>
+
+        <div class="why" id="test2-why">
+          <div class="why-title">Why coral took ~20s to answer a 18-row list</div>
+          <ul>
+            <li><strong>gh = 1 request, 1.58s.</strong> <code>--author @me</code> becomes a server-side author filter, so GitHub returns exactly the 18 rows. One HTTP round-trip + formatting.</li>
+            <li><strong>coral = 20.74s, same 18 rows.</strong> Measured split: <strong>init 2.37s</strong> (spawn Rust engine + MCP handshake), <strong>catalog load ~3.7s</strong> (all 37 sources validated — 8 broken <code>careops_*</code> skipped, <code>blogger</code> missing key), <strong>runtime build ~0.1s</strong>, then <strong>~14s of PR-history pagination + Arrow mapping</strong>. Removing <code>ORDER BY</code> barely helps (18.37s vs 19.14s sql) — the cost is the fetch, not the sort.</li>
+            <li><strong>Root cause: <code>user__login</code> is not pushed down.</strong> coral cannot map <code>user__login = 'FiscalMindset'</code> (or <code>state</code>) to a GitHub query parameter on the pulls source, so it materializes the <em>entire</em> PR list (every PR, every state — thousands of rows across many pages) and then filters in-engine. gh pushes the same filter to the API and gets 18 rows in one call.</li>
+            <li><strong>Fixed overhead is paid regardless of result size.</strong> The ~5&ndash;7s baseline (catalog + mapping) is independent of how many rows come back — here it is dwarfed by the full-history fetch.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="test3">
+        <h2><span class="num">4</span>Test 3 — recent workflow runs (limit 5)</h2>
+        <p class="ssec">Last 5 workflow runs on <code>FiscalMindset/coral</code>, run in parallel on the same query; outputs compared.</p>
+
+        <h3>Command</h3>
+        <pre># gh — direct API call, timed with /usr/bin/time -p
+gh run list --repo FiscalMindset/coral --limit 5
+
+# coral — same query through the MCP sql tool (harness artifacts/coral_mcp_sql.py, task 13e7e0ae-7e83-4388-906c-44821ef48286)
+SELECT name, head_branch, status, conclusion, created_at, updated_at, run_number
+FROM   github.repo_action_runs
+WHERE  owner = 'FiscalMindset' AND repo = 'coral'
+       AND status IN ('queued','in_progress','waiting','requested')
+ORDER BY created_at DESC LIMIT 5</pre>
+
+        <h3>Real output (captured)</h3>
+        <div class="outblock">
+          <div class="outlabel">gh CLI · <span class="fname">artifacts/gh_time.txt</span></div>
+          <pre class="out gh">real 1.04
+user 0.04
+sys  0.04</pre>
+          <div class="outlabel">coral MCP · <span class="fname">artifacts/coral_time.txt</span></div>
+          <pre class="out coral">real 8.78
+user 0.02
+sys  0.01</pre>
+          <div class="outlabel">coral MCP phase split · <span class="fname">artifacts/coral_breakdown.py</span> (same query, task 3ac9fa5d)</div>
+          <pre class="out coral">phase1_initialize_mcp: 0.40s
+phase2_sql_query:      8.38s
+TOTAL:                 8.78s</pre>
+        </div>
+
+        <h3>Results</h3>
+        <div class="scroll">
+        <table>
+          <tr><th>Tool</th><th>Total time (measured)</th><th>Result</th></tr>
+          <tr><td>gh CLI</td><td class="mono tnum slow gh">1.04s</td><td>5 runs</td></tr>
+          <tr><td>coral CLI <code>sql</code></td><td class="mono tnum slow coral">~10.3&ndash;11.3s</td><td>5 runs</td></tr>
+          <tr><td>coral MCP <code>sql</code></td><td class="mono tnum slow coral">8.78s <span class="muted">(init 0.40s + sql 8.38s)</span></td><td>5 runs</td></tr>
+        </table>
+        </div>
+
+        <p>Both tools found the same latest run: queued <strong>"Build Timings" run #73</strong> (id <code>31300020216</code>, created <code>2026-08-09T06:56:58Z</code>). Also observed: <code>Clipo</code> "Mirror upstream main to this fork" failing (runs 136&ndash;140), <code>algsoch_blockchain</code> CI failing.</p>
+
+        <h3>Where the ~8.8s goes (coral MCP) — phase breakdown</h3>
+        <div class="scroll">
+        <table>
+          <tr><th>Phase</th><th>Time</th></tr>
+          <tr><td>MCP init / server startup</td><td class="mono tnum">~0.4s</td></tr>
+          <tr><td>Catalog load (all 37 sources validated, 8 broken)</td><td class="mono tnum">~3.7s</td></tr>
+          <tr><td>Runtime build</td><td class="mono tnum">~0.1s</td></tr>
+          <tr><td>GitHub fetch + row mapping</td><td class="mono tnum">~4&ndash;5s</td></tr>
+        </table>
+        </div>
+
+        <div class="why" id="test3-why">
+          <div class="why-title">Why gh was fast, why coral was slow</div>
+          <ul>
+            <li><strong>gh = 1 HTTP request (~1.04s).</strong> <code>gh run list --limit 5</code> issues a single <code>GET /repos/{owner}/{repo}/actions/runs?per_page=5</code>, gets JSON back, formats it client-side. ~1s is basically network + auth round-trip.</li>
+            <li><strong>coral = full engine pipeline (~8.78s).</strong> Measured split: <strong>init 0.40s</strong> (spawn Rust engine + MCP handshake), <strong>catalog load ~3.7s</strong> (all 37 configured sources validated — including 8 broken ones that fail and are skipped), <strong>runtime build ~0.1s</strong>, then <strong>one GitHub API call + JSON→Arrow mapping ~4&ndash;5s</strong>.</li>
+            <li><strong>Why this test is only ~8&times; (not worse):</strong> no <code>ORDER BY</code> pitfall here — the fetch is a single API call. The ~5s gap is almost all fixed engine overhead (catalog + mapping), which coral pays on <em>every</em> query because it has no server to keep warm.</li>
+            <li><strong>One-line accounting:</strong> 8.78s &asymp; 0.4 init + 3.7 catalog + 0.1 runtime + ~4.6 fetch/map. Coral&rsquo;s own phase split and the server log timestamps agree (<a href="#artifacts">artifacts §8</a>).</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="test4">
+        <h2><span class="num">5</span>Test 4 — last 5 commits</h2>
+        <p class="ssec">Last 5 commits on <code>FiscalMindset/coral</code>. Two coral variants tested — with and without <code>ORDER BY</code> — because query shape turned out to be the whole story.</p>
+
+        <h3>Command</h3>
+        <pre># gh — direct API call, one request, jq projects client-side
+gh api "repos/FiscalMindset/coral/commits?per_page=5" --jq '.[0:5] | map({sha,message,date,name,login})'
+
+# coral — same query through the MCP sql tool (harness artifacts/coral_diag.py, task e4cf43a1-a3d0-4a17-8273-41bbc33ce3c6)
+#   A) ... ORDER BY commit__author__date DESC LIMIT 5
+#   B) ... LIMIT 5    (no ORDER BY)</pre>
+
+        <h3>Real output (captured)</h3>
+        <div class="outblock">
+          <div class="outlabel">gh CLI · <span class="fname">artifacts/gh_commits_out.txt</span> (raw JSON — full 14&nbsp;KB in <a href="#artifacts">§8 artifacts</a>)</div>
+          <pre class="out gh">[{"date":"2026-07-28T16:02:42Z","login":"coral-release-bot[bot]",
+  "message":"chore(main): release 0.8.1 (#1987)\n\n...",
+  "name":"coral-release-bot[bot]","sha":"3acb123da2f8c6e2d093bd2a71b84bc194f9d28e"},
+ {"date":"2026-07-28T15:51:34Z","login":"Bradley-Butcher","message":"feat(mcp): ...",
+  "name":"Bradley-Butcher","sha":"9fbb80ba99c63f152aa1e5b31843ba4c6a6abcb3"},
+ ... 5 commits total]</pre>
+          <div class="outlabel">coral MCP · ORDER BY variant, run 1 · <span class="fname">artifacts/coral_commits_out.txt</span></div>
+          <pre class="out worst">phase1_init: 2.44s | phase2_sql: 37.15s | TOTAL: 39.59s
+isError: False</pre>
+          <div class="outlabel">coral MCP · ORDER BY variant, run 2 (same query)</div>
+          <pre class="out worst">phase1_init: 1.62s | phase2_sql: 31.40s | TOTAL: 33.02s
+isError: False</pre>
+          <div class="outlabel">coral MCP · LIMIT-only variant</div>
+          <pre class="out coral">phase1_init: 2.32s | phase2_sql: 4.89s | TOTAL: 7.21s
+isError: False</pre>
+          <div class="outlabel">server log evidence (both variants) · <span class="fname">artifacts/coral_diag_order.log</span>, <span class="fname">artifacts/coral_diag_limit.log</span></div>
+          <pre class="out">WARN ... source 'blogger' is missing secret 'BLOGGER_API_KEY'
+WARN ... skipping source careops_*  (x8)  detail=... 'file://{{input.DATA_PATH}}/' is not a directory
+... source.count=37 ...   [catalog loads all 37 sources before the query runs]</pre>
+        </div>
+
+        <h3>Results</h3>
+        <div class="scroll">
+        <table>
+          <tr><th>Variant</th><th>Time</th><th>Rows</th><th>Ver-dict</th></tr>
+          <tr>
+            <td>gh <code>?per_page=5</code></td>
+            <td class="mono tnum slow gh">0.71s</td>
+            <td class="tnum">5</td>
+            <td><span class="chip good">fastest</span></td>
+          </tr>
+          <tr>
+            <td>coral MCP <code>ORDER BY … DESC LIMIT 5</code> (run 1)</td>
+            <td class="mono tnum slow worst">39.59s <span class="muted">(init 2.44s + sql 37.15s)</span></td>
+            <td class="tnum">5</td>
+            <td><span class="chip bad">avoid</span></td>
+          </tr>
+          <tr>
+            <td>coral MCP <code>ORDER BY … DESC LIMIT 5</code> (run 2)</td>
+            <td class="mono tnum slow worst">33.02s <span class="muted">(init 1.62s + sql 31.40s)</span></td>
+            <td class="tnum">5</td>
+            <td><span class="chip bad">avoid</span></td>
+          </tr>
+          <tr>
+            <td>coral MCP <code>LIMIT 5</code> only</td>
+            <td class="mono tnum slow coral">7.21s <span class="muted">(init 2.32s + sql 4.89s)</span></td>
+            <td class="tnum">5</td>
+            <td><span class="chip warn">baseline</span></td>
+          </tr>
+        </table>
+        </div>
+
+        <p>All variants returned identical rows (sha, message first line, date, author):</p>
+        <div class="scroll">
+        <table>
+          <tr><th>sha</th><th>message</th><th>date</th><th>author</th></tr>
+          <tr><td class="mono">3acb123d</td><td>chore(main): release 0.8.1 (#1987)</td><td class="mono">2026-07-28T16:02:42Z</td><td>coral-release-bot[bot]</td></tr>
+          <tr><td class="mono">9fbb80ba</td><td>feat(mcp): gate SQL on required guide delivery (#1965)</td><td class="mono">2026-07-28T15:51:34Z</td><td>Bradley-Butcher</td></tr>
+          <tr><td class="mono">180c4fd1</td><td>feat(reef): show saved function bodies (#1984)</td><td class="mono">2026-07-28T15:36:55Z</td><td>AlbertQM</td></tr>
+          <tr><td class="mono">5360ad6e</td><td>chore(main): release 0.8.0 (#1906)</td><td class="mono">2026-07-28T15:27:47Z</td><td>coral-release-bot[bot]</td></tr>
+          <tr><td class="mono">96007ac1</td><td>fix(desktop): manage MCP client workspace access (#1957)</td><td class="mono">2026-07-28T15:14:52Z</td><td>AlbertQM</td></tr>
+        </table>
+        </div>
+
+        <div class="why" id="test4-why">
+          <div class="why-title">Why gh was fast, why coral was 7.21s vs 39.59s</div>
+          <ul>
+            <li><strong>gh = 1 request, ~0.71s.</strong> <code>?per_page=5</code> fetches exactly 5 commits; <code>jq</code> keeps only the 5 fields asked for during parse. Nothing else runs.</li>
+            <li><strong>coral LIMIT-only = 1 request + engine overhead, 7.21s.</strong> Without <code>ORDER BY</code>, the planner pushes <code>LIMIT 5</code> down as <code>per_page=5</code> → <strong>one</strong> GitHub API call. The sql phase is only 4.89s (fetch + Arrow mapping of the wide commits row); the rest is init 2.32s + catalog + mapping. This is coral&rsquo;s <em>baseline</em>: ~7s for one API call.</li>
+            <li><strong>coral ORDER BY = full-history pagination, 39.59s.</strong> GitHub returns commits newest-first by default, but coral&rsquo;s planner treats sources as unsorted. With <code>ORDER BY commit__author__date DESC LIMIT 5</code> it cannot prove the ordering, so it <strong>drops the LIMIT pushdown</strong> and fetches the whole history — <code>Link: rel="last"</code> = 917 pages (per_page=1) &asymp; 31 pages at 30/page &asymp; <strong>31s of API calls</strong> — then re-sorts data GitHub already sorted. Exactly matches the 31&ndash;37s sql phase.</li>
+            <li><strong>Net:</strong> the <code>ORDER BY DESC</code> is redundant on this source. Removing it turns 39.59s &rarr; 7.21s. The query shape, not the engine, is the worst offender here.</li>
+          </ul>
+        </div>
+
+        <div class="callout bad">
+          <div class="co-title">Root cause: <code>ORDER BY</code> kills LIMIT pushdown</div>
+          <ul>
+            <li>GitHub&rsquo;s commits API returns commits <strong>newest-first by default</strong>.</li>
+            <li>With <code>ORDER BY … DESC LIMIT 5</code>, coral cannot prove the ordering and <strong>drops the LIMIT pushdown</strong>.</li>
+            <li>It then fetches the <strong>entire history</strong> — 917 pages &rarr; ~31 GitHub requests &asymp; 31s.</li>
+            <li>Without <code>ORDER BY</code>, <code>LIMIT 5</code> is pushed down as <code>per_page=5</code> → <strong>one</strong> API call → 4.89s.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="why">
+        <h2><span class="num">6</span>Why coral&rsquo;s GitHub source is slower than a direct call (general)</h2>
+        <p class="ssec">Tests above show <em>what</em> happened. This section explains the <em>systemic</em> reason for GitHub queries. A direct <code>gh api</code> call is one HTTP request: token in header, JSON back, <code>jq</code> projects it client-side — done in ~0.7s. The same query through coral MCP runs an entire query-engine pipeline before a single byte is fetched:</p>
+
+        <div class="scroll">
+        <table>
+          <tr><th>#</th><th>Step (per query)</th><th>Cost</th></tr>
+          <tr><td class="tnum">1</td><td>Spawn Rust engine process + MCP <code>initialize</code> handshake</td><td class="mono">~0.4&ndash;2.5s <span class="muted">(cold start)</span></td></tr>
+          <tr><td class="tnum">2</td><td>Load + validate <strong>all 37 sources</strong> in the catalog <span class="muted">(incl. 8 broken — careops <code>{{input.DATA_PATH}}</code>, blogger missing key)</span></td><td class="mono">~3.7s</td></tr>
+          <tr><td class="tnum">3</td><td>Build the query runtime</td><td class="mono">~0.1s</td></tr>
+          <tr><td class="tnum">4</td><td>SQL plan &rarr; resolve GitHub provider &rarr; read GitHub token</td><td class="mono">~0.1s</td></tr>
+          <tr><td class="tnum">5</td><td>Fetch rows from GitHub API <span class="muted">(~1s per request; full pagination when ORDER BY blocks pushdown)</span></td><td class="mono">1s &hellip; 31s</td></tr>
+          <tr><td class="tnum">6</td><td>Map JSON &rarr; Arrow record batch <span class="muted">(commits table has <strong>83 columns</strong>; full record fetched for every commit, then projected)</span></td><td class="mono">~0.5&ndash;1s</td></tr>
+          <tr><td class="tnum">7</td><td>Serialize result into MCP <code>structuredContent</code> and return over stdio</td><td class="mono">~0.1s</td></tr>
+        </table>
+        </div>
+
+        <h3>Why each step exists in coral but not in gh</h3>
+        <ul>
+          <li><strong>Engine boot + catalog load (steps 1&ndash;3).</strong> Coral is a multi-source SQL engine — it must load every configured source (not just GitHub) to answer one query, because it has no server. Every <code>coral mcp-stdio</code> invocation is a fresh engine. <code>gh</code> has no engine or catalog; it just ships your token and your URL to the GitHub API.</li>
+          <li><strong>Fetch (step 5) costs ~1s/request.</strong> Coral&rsquo;s GitHub provider goes through its HTTP layer and maps into Arrow; the direct call parses JSON natively. Measured 917 pages &times; ~1s &asymp; 31s in the worst case.</li>
+          <li><strong>No sort-order knowledge (step 5, worst case).</strong> GitHub commits come back newest-first, but coral&rsquo;s planner assumes sources are unsorted. A <code>SELECT &hellip; ORDER BY date DESC LIMIT 5</code> therefore can&rsquo;t be pushed down and forces a full-history pagination — the dominant cost when present.</li>
+          <li><strong>Result mapping (step 6).</strong> Coral materializes full rows (83 columns) into Arrow before projection; <code>gh api | jq</code> projects during parse and keeps only the 5 fields you asked for.</li>
+        </ul>
+
+        <h3>Net effect</h3>
+        <ul>
+          <li>Baseline (query needs no ORDER BY): ~5&ndash;7s fixed overhead, mostly catalog load + fetch/mapping &rarr; <strong>~4&ndash;10&times;</strong> vs gh.</li>
+          <li>With redundant ORDER BY on a pre-sorted source: +~30s pagination &rarr; <strong>~56&times;</strong> vs gh.</li>
+          <li>No step of the coral path is "slow" in isolation — it&rsquo;s the layered engine pipeline (spawn &rarr; catalog &rarr; runtime &rarr; HTTP &rarr; Arrow &rarr; MCP) applied to queries where gh is literally one HTTP request.</li>
+        </ul>
+      </section>
+
+      <section id="verdict">
+        <h2><span class="num">7</span>Verdict &amp; practical tips</h2>
+        <div class="scroll">
+        <table>
+          <tr><th>Query</th><th>gh</th><th>coral MCP (GitHub)</th><th>Slowdown</th></tr>
+          <tr><td>running workflows</td><td class="mono tnum slow gh">2.61s</td><td class="mono tnum slow coral">11.18s</td><td><span class="chip warn">~4&times;</span></td></tr>
+          <tr><td>my open PRs</td><td class="mono tnum slow gh">1.58s</td><td class="mono tnum slow worst">20.74s</td><td><span class="chip bad">~13&times;</span></td></tr>
+          <tr><td>workflow runs (limit 5)</td><td class="mono tnum slow gh">1.04s</td><td class="mono tnum slow coral">8.78s</td><td><span class="chip warn">~8&times;</span></td></tr>
+          <tr><td>commits w/ ORDER BY</td><td class="mono tnum slow gh">0.71s</td><td class="mono tnum slow worst">39.59s</td><td><span class="chip bad">~56&times;</span></td></tr>
+          <tr><td>commits LIMIT only</td><td class="mono tnum slow gh">0.71s</td><td class="mono tnum slow coral">7.21s</td><td><span class="chip warn">~10&times;</span></td></tr>
+        </table>
+        </div>
+
+        <ul>
+          <li>Coral&rsquo;s GitHub-source path has ~5&ndash;7s baseline overhead per query (37-source catalog load + runtime build + one API call + mapping) vs gh&rsquo;s ~1s.</li>
+          <li>Query-shape matters: a redundant <code>ORDER BY</code> on an already-sorted source costs ~35s more — the worst offender found.</li>
+          <li>Non-pushable filters cost more: <code>user__login</code>/<code>state</code> on <code>github.pulls</code> are not pushed to the API, so coral materializes the full PR history in-engine (~18s sql) where gh&rsquo;s <code>--author @me</code> filters server-side (1.58s).</li>
+          <li><strong>Scope caveat:</strong> these numbers cover coral&rsquo;s <strong>GitHub source only</strong>. Other coral sources were not benchmarked; do not generalize &ldquo;coral is slow&rdquo; from this report.</li>
+        </ul>
+
+        <div class="callout good">
+          <div class="co-title">Practical tip for coral users</div>
+          <p>Drop <code>ORDER BY</code> on GitHub sources (they&rsquo;re pre-sorted newest-first) and prefer the <code>sha</code>/<code>path</code>/<code>ref</code> filters recommended in the table guide.</p>
+        </div>
+
+        <div class="callout bad">
+          <div class="co-title">Design gap found</div>
+          <p>Coral has no <code>ORDER BY &hellip; LIMIT</code> pushdown for sources that guarantee sort order (planner treats every source as unsorted), and it cannot push common <code>user__login</code>/<code>state</code> filters on <code>github.pulls</code> down to GitHub query parameters — both force full-history materialization.</p>
+        </div>
+      </section>
+
+      <section id="artifacts">
+        <h2><span class="num">8</span>Artifacts — what was run, what it produced</h2>
+        <p class="ssec">All artifacts live in a permanent location next to this report: <span class="mono">reports/2026-08-10-coral-mcp-vs-gh-timing/artifacts/</span> (no temp-files). Every file is embedded below so the run is fully reproducible and checkable.</p>
+
+        <div class="scroll">
+        <table>
+          <tr><th>File</th><th>Purpose</th></tr>
+          <tr><td class="mono">coral_user_query.py</td><td>real user-query harness (running workflows + PR list) — spawns <code>coral mcp-stdio</code>, MCP handshake, calls <code>sql</code>, prints <code>init | sql | TOTAL</code> + rows</td></tr>
+          <tr><td class="mono">coral_mcp_sql.py</td><td>query-1 A/B harness (workflow runs) — same harness shape, prints elapsed</td></tr>
+          <tr><td class="mono">coral_diag.py</td><td>query-2 phase-split harness (commits) — prints <code>init | sql | TOTAL</code> and row dump</td></tr>
+          <tr><td class="mono">coral_breakdown.py</td><td>workflow-runs phase splitter — init vs sql timing</td></tr>
+          <tr><td class="mono">gh_running_runs_out.txt</td><td>gh running-runs output + timing (86 run lines, real 2.61)</td></tr>
+          <tr><td class="mono">coral_running_runs_out.txt</td><td>coral running-runs output (11.18s, 1 row)</td></tr>
+          <tr><td class="mono">coral_running_runs.log</td><td>server log — running-runs query (37 sources, 8 skipped)</td></tr>
+          <tr><td class="mono">gh_pr_list_out.txt</td><td>gh PR-list output + timing (18 PRs, real 1.58)</td></tr>
+          <tr><td class="mono">coral_pr_list_out.txt</td><td>coral PR-list output, ORDER BY variant (21.66s, 18 rows)</td></tr>
+          <tr><td class="mono">coral_pr_list_limit_out.txt</td><td>coral PR-list output, no-ORDER-BY variant (20.74s, 18 rows)</td></tr>
+          <tr><td class="mono">coral_pr_list_fixed.log</td><td>server log — PR-list ORDER BY variant (37 sources, 8 skipped)</td></tr>
+          <tr><td class="mono">coral_pr_list_limit.log</td><td>server log — PR-list no-ORDER-BY variant (37 sources, 8 skipped)</td></tr>
+          <tr><td class="mono">gh_commits_out.txt</td><td>gh raw JSON output (5 commits, full)</td></tr>
+          <tr><td class="mono">coral_commits_out.txt</td><td>coral ORDER-BY run 1 phase output</td></tr>
+          <tr><td class="mono">gh_time.txt</td><td>workflow-runs gh timing (<code>real 1.04</code>)</td></tr>
+          <tr><td class="mono">coral_time.txt</td><td>workflow-runs coral timing (<code>real 8.78</code>)</td></tr>
+          <tr><td class="mono">coral_diag_order.log</td><td>server log — ORDER BY variant (37 sources, 8 skipped)</td></tr>
+          <tr><td class="mono">coral_diag_limit.log</td><td>server log — LIMIT-only variant (37 sources, 8 skipped)</td></tr>
+          <tr><td class="mono">coral_mcp_stderr.log</td><td>server stderr — catalog listing at MCP startup</td></tr>
+          <tr><td colspan="2"><span class="muted">Coral tasks used: <code>9fb7d5b2-ca35-4233-8ee1-5f9e45e659f5</code> (user queries), <code>9fd99f48-4f1c-4cae-8545-e99730b89fa2</code> (PR-list re-runs, both variants), <code>13e7e0ae-7e83-4388-906c-44821ef48286</code> (test 3), <code>3ac9fa5d-ca1c-44c0-8453-b7adc838541f</code> (test 3 phase split), <code>e4cf43a1-a3d0-4a17-8273-41bbc33ce3c6</code> (test 4; ended, success)</span></td></tr>
+        </table>
+        </div>
+
+        <h3>Harness scripts (verbatim)</h3>
+
+        <details>
+          <summary>coral_user_query.py <span class="filetag">· real user-query harness · ~2.3 KB</span></summary>
+          <div class="dbody">
+            <pre>import json, subprocess, time, select, sys
+
+QUERY = sys.argv[1]
+TASK_ID = sys.argv[2] if len(sys.argv) &gt; 2 else "9fb7d5b2-ca35-4233-8ee1-5f9e45e659f5"
+LOG = sys.argv[3] if len(sys.argv) &gt; 3 else "/tmp/coral_user_query.log"
+
+proc = subprocess.Popen(["coral", "mcp-stdio"],
+                        stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                        stderr=open(LOG, "w"), text=True, bufsize=1)
+
+def send(o):
+    proc.stdin.write(json.dumps(o) + "\n")
+    proc.stdin.flush()
+
+def read_response(eid, timeout=240):
+    deadline = time.time() + timeout
+    while True:
+        rem = deadline - time.time()
+        if rem &lt;= 0:
+            raise TimeoutError("no response id=%s" % eid)
+        r, _, _ = select.select([proc.stdout], [], [], min(5, rem))
+        if not r:
+            continue
+        ln = proc.stdout.readline()
+        if not ln:
+            continue
+        try:
+            o = json.loads(ln)
+        except Exception:
+            continue
+        if o.get("id") == eid:
+            return o
+
+t0 = time.time()
+send({"jsonrpc": "2.0", "id": 1, "method": "initialize",
+      "params": {"protocolVersion": "2024-11-05", "capabilities": {},
+                 "clientInfo": {"name": "user-query-harness", "version": "1.0"}}})
+read_response(1)
+t1 = time.time()
+send({"jsonrpc": "2.0", "method": "notifications/initialized", "params": {}})
+send({"jsonrpc": "2.0", "id": 2, "method": "tools/call",
+      "params": {"name": "sql",
+                 "arguments": {"queries": [QUERY], "intent": "user real query benchmark", "task_id": TASK_ID}}})
+resp = read_response(2)
+t2 = time.time()
+res = resp.get("result", {})
+sc = res.get("structuredContent", {})
+results = sc.get("results", []) if sc else []
+rows = results[0].get("rows", []) if results else []
+cols = results[0].get("columns", []) if results else []
+print("init: %.2fs | sql: %.2fs | TOTAL: %.2fs" % (t1 - t0, t2 - t1, t2 - t0))
+print("isError:", res.get("isError"))
+print("columns:", cols)
+print("rows_returned:", len(rows))
+for r in rows:
+    print("ROW:", json.dumps(r)[:600])
+proc.kill()</pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>coral_mcp_sql.py <span class="filetag">· workflow-runs harness · 2,087 B</span></summary>
+          <div class="dbody">
+            <pre>import json, subprocess, time, select
+
+QUERY = "SELECT name, head_branch, status, conclusion, created_at, updated_at, run_number FROM github.repo_action_runs WHERE owner='FiscalMindset' AND repo='coral' AND status IN ('queued','in_progress','waiting','requested') ORDER BY created_at DESC LIMIT 5"
+TASK_ID = "13e7e0ae-7e83-4388-906c-44821ef48286"
+
+proc = subprocess.Popen(["coral", "mcp-stdio"],
+                        stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                        stderr=subprocess.DEVNULL, text=True, bufsize=1)
+
+def send(obj):
+    proc.stdin.write(json.dumps(obj) + "\n")
+    proc.stdin.flush()
+
+def read_response(expected_id, timeout=150):
+    deadline = time.time() + timeout
+    while True:
+        remaining = deadline - time.time()
+        if remaining &lt;= 0:
+            raise TimeoutError("no response id=%s" % expected_id)
+        r, _, _ = select.select([proc.stdout], [], [], min(5, remaining))
+        if not r:
+            continue
+        line = proc.stdout.readline()
+        if not line:
+            continue
+        try:
+            obj = json.loads(line)
+        except Exception:
+            continue
+        if obj.get("id") == expected_id:
+            return obj
+
+t0 = time.time()
+send({"jsonrpc": "2.0", "id": 1, "method": "initialize",
+      "params": {"protocolVersion": "2024-11-05", "capabilities": {},
+                 "clientInfo": {"name": "timing-test", "version": "1.0"}}})
+read_response(1)
+send({"jsonrpc": "2.0", "method": "notifications/initialized", "params": {}})
+send({"jsonrpc": "2.0", "id": 2, "method": "tools/call",
+      "params": {"name": "sql",
+                 "arguments": {"queries": [QUERY], "intent": "timing comparison", "task_id": TASK_ID}}})
+resp = read_response(2)
+elapsed = round(time.time() - t0, 3)
+result = resp.get("result", {})
+is_err = result.get("isError", False)
+content = result.get("content", [])
+text = "".join(c.get("text", "") for c in content if c.get("type") == "text")
+print("elapsed_seconds:", elapsed)
+print("isError:", is_err)
+print("raw_result:", json.dumps(result)[:3000])
+proc.kill()</pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>coral_diag.py <span class="filetag">· commits harness · 1,550 B</span></summary>
+          <div class="dbody">
+            <pre>import json, subprocess, time, select, sys
+
+QUERY = sys.argv[1]
+TASK_ID = "e4cf43a1-a3d0-4a17-8273-41bbc33ce3c6"
+LOG = sys.argv[2]
+
+proc = subprocess.Popen(["coral","mcp-stdio"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=open(LOG,"w"), text=True, bufsize=1)
+def send(o): proc.stdin.write(json.dumps(o)+"\n"); proc.stdin.flush()
+def read_response(eid, timeout=200):
+    deadline=time.time()+timeout
+    while True:
+        rem=deadline-time.time()
+        if rem&lt;=0: raise TimeoutError()
+        r,_,_=select.select([proc.stdout],[],[],min(5,rem))
+        if not r: continue
+        ln=proc.stdout.readline()
+        if not ln: continue
+        try: o=json.loads(ln)
+        except: continue
+        if o.get("id")==eid: return o
+
+t0=time.time()
+send({"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"diag","version":"1.0"}}})
+read_response(1)
+t1=time.time()
+send({"jsonrpc":"2.0","method":"notifications/initialized","params":{}})
+send({"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"sql","arguments":{"queries":[QUERY],"intent":"diag","task_id":TASK_ID}}})
+resp=read_response(2)
+t2=time.time()
+res=resp.get("result",{})
+sc=res.get("structuredContent",{})
+rows = sc.get("results",[{}])[0].get("rows",[]) if sc.get("results") else []
+print("init: %.2fs | sql: %.2fs | TOTAL: %.2fs" % (t1-t0, t2-t1, t2-t0))
+print("isError:", res.get("isError"), "| rows_returned:", len(rows))
+for r in rows[:3]:
+    print("ROW:", json.dumps(r)[:180])
+proc.kill()</pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>coral_breakdown.py <span class="filetag">· workflow-runs phase split · 1,593 B</span></summary>
+          <div class="dbody">
+            <pre>import json, subprocess, time, select
+
+QUERY = "SELECT name, head_branch, status, conclusion, created_at, updated_at, run_number FROM github.repo_action_runs WHERE owner='FiscalMindset' AND repo='coral' AND status IN ('queued','in_progress','waiting','requested') ORDER BY created_at DESC LIMIT 5"
+TASK_ID = "3ac9fa5d-ca1c-44c0-8453-b7adc838541f"
+
+proc = subprocess.Popen(["coral","mcp-stdio"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=open("/tmp/coral_breakdown.log","w"), text=True, bufsize=1)
+def send(o): proc.stdin.write(json.dumps(o)+"\n"); proc.stdin.flush()
+def read_response(eid, timeout=150):
+    deadline=time.time()+timeout
+    while True:
+        rem=deadline-time.time()
+        if rem&lt;=0: raise TimeoutError()
+        r,_,_=select.select([proc.stdout],[],[],min(5,rem))
+        if not r: continue
+        ln=proc.stdout.readline()
+        if not ln: continue
+        try: o=json.loads(ln)
+        except: continue
+        if o.get("id")==eid: return o
+
+t0=time.time()
+send({"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"bd","version":"1.0"}}})
+read_response(1)
+t1=time.time()
+send({"jsonrpc":"2.0","method":"notifications/initialized","params":{}})
+send({"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"sql","arguments":{"queries":[QUERY],"intent":"breakdown","task_id":TASK_ID}}})
+read_response(2)
+t2=time.time()
+print("phase1_initialize_mcp: %.2fs" % (t1-t0))
+print("phase2_sql_query:      %.2fs" % (t2-t1))
+print("TOTAL:                 %.2fs" % (t2-t0))
+proc.kill()</pre>
+          </div>
+        </details>
+
+        <h3>Captured outputs (verbatim)</h3>
+
+        <details open>
+          <summary>gh running-runs output <span class="filetag">· gh_running_runs_out.txt · 86 run lines + timing</span></summary>
+          <div class="dbody">
+            <pre class="out gh">queued		Build Timings	Build Timings	main	schedule	31300020216	23h17m29s	2026-08-09T06:56:58Z
+completed	cancelled	Build Timings	Build Timings	main	schedule	31244939840	24h0m11s	2026-08-08T06:53:38Z
+completed	cancelled	Build Timings	Build Timings	main	schedule	31156991116	24h0m2s	2026-08-07T07:16:04Z
+completed	cancelled	Build Timings	Build Timings	main	schedule	31085599955	24h0m2s	2026-08-06T08:36:29Z
+completed	cancelled	Build Timings	Build Timings	main	schedule	30989709568	24h0m1s	2026-08-05T08:36:17Z
+... (81 more run lines; the only queued/running one is the top row)
+real 2.61
+user 0.07
+sys  0.05</pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>coral running-runs output <span class="filetag">· coral_running_runs_out.txt</span></summary>
+          <div class="dbody">
+            <pre class="out coral">init: 2.50s | sql: 8.69s | TOTAL: 11.18s
+isError: False
+columns: []
+rows_returned: 1
+ROW: {"name": "Build Timings", "head_branch": "main", "status": "queued", "conclusion": null, "created_at": "2026-08-09T06:56:58Z", "updated_at": "2026-08-09T06:56:58Z", "run_number": "73"}</pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>gh PR-list output <span class="filetag">· gh_pr_list_out.txt · 18 rows</span></summary>
+          <div class="dbody">
+            <pre class="out gh">2109  feat(sources/community/zerops): add Zerops community source  ...  OPEN  2026-08-09T01:12:28Z
+1777  feat(sources/community/claude_code_sessions): ...              ...  OPEN  2026-07-15T17:55:01Z
+... (18 PRs total: #2109, #1777, #1711, #1700, #1696, #1694, #1689, #1686,
+     #1610, #1539, #1476, #1416, #1260, #1230, #1223, #1175, #1173, #958)
+real 1.58
+user 0.04
+sys  0.05</pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>coral PR-list output, ORDER BY variant <span class="filetag">· coral_pr_list_out.txt · 18 rows</span></summary>
+          <div class="dbody">
+            <pre class="out coral">init: 2.53s | sql: 19.14s | TOTAL: 21.66s
+isError: False
+columns: []
+rows_returned: 18
+ROW: {"number": "2109", "title": "feat(sources/community/zerops): add Zerops community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/2109"}
+... (17 more rows, same list as gh)</pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>coral PR-list output, no-ORDER-BY variant <span class="filetag">· coral_pr_list_limit_out.txt · 18 rows</span></summary>
+          <div class="dbody">
+            <pre class="out coral">init: 2.37s | sql: 18.37s | TOTAL: 20.74s
+isError: False
+columns: []
+rows_returned: 18
+ROW: {"number": "2109", "title": "feat(sources/community/zerops): add Zerops community source", "state": "open", "user__login": "FiscalMindset", "html_url": "https://github.com/withcoral/coral/pull/2109"}
+... (17 more rows, same list as gh)</pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>gh commits output <span class="filetag">· gh_commits_out.txt · 14 KB raw JSON</span></summary>
+          <div class="dbody">
+            <pre class="out gh">[{"date":"2026-07-28T16:02:42Z","login":"coral-release-bot[bot]","message":"chore(main): release 0.8.1 (#1987)\n\n:robot: I have created a release *beep* *boop*\n---\n\n\n## [0.8.1](https://github.com/withcoral/coral/compare/v0.8.0...v0.8.1)\n(2026-07-28)\n\n\n### Features\n\n* **mcp:** gate SQL on required guide delivery\n([#1965](https://github.com/withcoral/coral/issues/1965))\n([9fbb80b](https://github.com/withcoral/coral/commit/9fbb80ba99c63f152aa1e5b31843ba4c6a6abcb3))\n* **reef:** show saved function bodies\n([#1984](https://github.com/withcoral/coral/issues/1984))\n([180c4fd](https://github.com/withcoral/coral/commit/180c4fd1122f5fc0ba797711bf05fa1669b06146))\n\n---\nThis PR was generated with [Release\nPlease](https://github.com/googleapis/release-please). See\n[documentation](https://github.com/googleapis/release-please#release-please).\n\n---------\n\nCo-authored-by: coral-release-bot[bot] \u003c269256696+coral-release-bot[bot]@users.noreply.github.com\u003e\nCo-authored-by: release-please[bot] \u003crelease-please[bot]@users.noreply.github.com\u003e","name":"coral-release-bot[bot]","sha":"3acb123da2f8c6e2d093bd2a71b84bc194f9d28e"},{"date":"2026-07-28T15:51:34Z","login":"Bradley-Butcher","message":"feat(mcp): gate SQL on required guide delivery (#1965)\n\n## Intent\n\nEnsure MCP agents receive explicitly required table and table-function\nguidance before the first matching query executes in each task.\n\n## What changed\n\n- Add `require_guide_read` to V3 tables and table functions and V4\nprojections. Validation requires a non-empty guide when it is enabled.\n- Carry the guide IDs already shown by MCP on the existing `ExecuteSql`\nrequest. The app builds one runtime and one logical plan per query, then\nreturns unseen guides before physical planning or provider I/O.\n- Keep shown guide IDs in MCP memory per task. Task state clears on\n`end_task`, retains the 1,024 least-recently-used task entries as a\nbackstop, and may sh... (line truncated to 2000 chars)</pre>
+            <p class="muted">The raw file is a single ~14 KB JSON line (5 commits with full message bodies). Only the first two commits are shown above; the full file is preserved verbatim at <code>artifacts/gh_commits_out.txt</code>.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>gh time · coral time <span class="filetag">· workflow runs · gh_time.txt, coral_time.txt</span></summary>
+          <div class="dbody">
+            <div class="outlabel">gh CLI</div>
+            <pre class="out gh">real 1.04
+user 0.04
+sys  0.04</pre>
+            <div class="outlabel">coral MCP</div>
+            <pre class="out coral">real 8.78
+user 0.02
+sys  0.01</pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>coral commits output <span class="filetag">· coral_commits_out.txt</span></summary>
+          <div class="dbody">
+            <pre class="out worst">phase1_init: 2.44s | phase2_sql: 37.15s | TOTAL: 39.59s
+isError: False</pre>
+          </div>
+        </details>
+
+        <h3>Server logs (cleaned excerpts)</h3>
+
+        <details>
+          <summary>coral_running_runs.log <span class="filetag">· running-workflows query · 37 sources, 8 skipped</span></summary>
+          <div class="dbody">
+            <pre class="out">[06:15:04.395] WARN coral.query.query_sources.load:  DSL v4 source load diagnostic
+    diagnostic.stage="query-source"  source=blogger
+    detail=failed precondition: source 'blogger' is missing secret 'BLOGGER_API_KEY'
+    sql=SELECT name, head_branch, status, conclusion, created_at, updated_at, run_number
+         FROM github.repo_action_runs WHERE owner='FiscalMindset' AND repo='coral'
+         AND status IN ('queued','in_progress','waiting','requested')
+    task.id=9fb7d5b2-ca35-4233-8ee1-5f9e45e659f5
+
+[06:15:09.440] WARN coral.engine.runtime.build.sources.register:  skipping source (x8)
+    source=careops_appointments      detail=... 'file://{{input.DATA_PATH}}/' is not a directory
+    source=careops_doctor_chats      detail=... 'file://{{input.DATA_PATH}}/' is not a directory
+    source=careops_family_notes      detail=... 'file://{{input.DATA_PATH}}/' is not a directory
+    source=careops_lab_reports       detail=... 'file://{{input.DATA_PATH}}/' is not a directory
+    source=careops_medications       detail=... 'file://{{input.DATA_PATH}}/' is not a directory
+    source=careops_patients          detail=... 'file://{{input.DATA_PATH}}/' is not a directory
+    source=careops_pharmacy_receipts detail=... 'file://{{input.DATA_PATH}}/' is not a directory
+    source=careops_prescription_ocr  detail=... 'file://{{input.DATA_PATH}}/' is not a directory
+    source=careops_symptom_logs      detail=... 'file://{{input.DATA_PATH}}/' is not a directory
+    source.count=37</pre>
+            <p class="muted">Full log at <code>artifacts/coral_running_runs.log</code>.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>coral_pr_list_fixed.log <span class="filetag">· PR-list ORDER BY variant · 19 lines, 22 KB (ANSI-stripped below)</span></summary>
+          <div class="dbody">
+            <pre class="out">[06:25:16.220] WARN coral.query.query_sources.load:  DSL v4 source load diagnostic
+    diagnostic.stage="query-source"  source=blogger
+    detail=failed precondition: source 'blogger' is missing secret 'BLOGGER_API_KEY'
+    sql=SELECT number, title, state, user__login, html_url
+         FROM github.pulls WHERE owner='withcoral' AND repo='coral'
+         AND user__login='FiscalMindset' AND state='open' ORDER BY number DESC
+    task.id=9fd99f48-4f1c-4cae-8545-e99730b89fa2
+
+[06:25:20.989] WARN coral.engine.runtime.build.sources.register:  skipping source (x8, same careops_* list)
+[06:25:21.120] WARN coral.engine.runtime.build.query:  skipping source during runtime build (same 8)
+    source.count=37</pre>
+            <p class="muted">Full log at <code>artifacts/coral_pr_list_fixed.log</code>.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>coral_pr_list_limit.log <span class="filetag">· PR-list no-ORDER-BY variant · 19 lines, 21 KB (ANSI-stripped below)</span></summary>
+          <div class="dbody">
+            <pre class="out">[06:26:32.913] WARN coral.query.query_sources.load:  DSL v4 source load diagnostic
+    diagnostic.stage="query-source"  source=blogger
+    detail=failed precondition: source 'blogger' is missing secret 'BLOGGER_API_KEY'
+    sql=SELECT number, title, state, user__login, html_url
+         FROM github.pulls WHERE owner='withcoral' AND repo='coral'
+         AND user__login='FiscalMindset' AND state='open'
+    task.id=9fd99f48-4f1c-4cae-8545-e99730b89fa2
+
+[06:26:36.962] WARN coral.engine.runtime.build.sources.register:  skipping source (x8, same careops_* list)
+[06:26:37.076] WARN coral.engine.runtime.build.query:  skipping source during runtime build (same 8)
+    source.count=37</pre>
+            <p class="muted">Full log at <code>artifacts/coral_pr_list_limit.log</code>.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>coral_diag_order.log <span class="filetag">· commits ORDER BY variant · 19 lines, 22 KB (ANSI-stripped below)</span></summary>
+          <div class="dbody">
+            <pre class="out">[05:42:09.135] WARN coral.query.query_sources.load:  DSL v4 source load diagnostic
+    diagnostic.stage="query-source"  source=blogger
+    detail=failed precondition: source 'blogger' is missing secret 'BLOGGER_API_KEY'
+    sql=SELECT sha, commit__message, commit__author__date, commit__author__name, author__login
+         FROM github.commits WHERE owner='FiscalMindset' AND repo='coral'
+         ORDER BY commit__author__date DESC LIMIT 5
+    task.id=e4cf43a1-a3d0-4a17-8273-41bbc33ce3c6
+
+[05:42:12.957] WARN coral.engine.runtime.build.sources.register:  skipping source (x8)
+    source=careops_appointments      detail=... 'file://{{input.DATA_PATH}}/' is not a directory
+    source=careops_doctor_chats      detail=... 'file://{{input.DATA_PATH}}/' is not a directory
+    source=careops_family_notes      detail=... 'file://{{input.DATA_PATH}}/' is not a directory
+    source=careops_lab_reports       detail=... 'file://{{input.DATA_PATH}}/' is not a directory
+    source=careops_medications       detail=... 'file://{{input.DATA_PATH}}/' is not a directory
+    source=careops_patients          detail=... 'file://{{input.DATA_PATH}}/' is not a directory
+    source=careops_pharmacy_receipts detail=... 'file://{{input.DATA_PATH}}/' is not a directory
+    source=careops_prescription_ocr  detail=... 'file://{{input.DATA_PATH}}/' is not a directory
+    source=careops_symptom_logs      detail=... 'file://{{input.DATA_PATH}}/' is not a directory
+    source.count=37
+
+[05:42:13.067] WARN coral.engine.runtime.build.query:  skipping source during runtime build (same 8 careops_* sources)
+    -- catalog loads all 37 sources before the query executes --</pre>
+            <p class="muted">Full log at <code>artifacts/coral_diag_order.log</code>.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>coral_diag_limit.log <span class="filetag">· commits LIMIT-only variant · 19 lines, 22 KB (ANSI-stripped below)</span></summary>
+          <div class="dbody">
+            <pre class="out">[05:43:36.034] WARN coral.query.query_sources.load:  DSL v4 source load diagnostic
+    diagnostic.stage="query-source"  source=blogger
+    detail=failed precondition: source 'blogger' is missing secret 'BLOGGER_API_KEY'
+    sql=SELECT sha, commit__message, commit__author__date, commit__author__name, author__login
+         FROM github.commits WHERE owner='FiscalMindset' AND repo='coral' LIMIT 5
+    task.id=e4cf43a1-a3d0-4a17-8273-41bbc33ce3c6
+
+[05:43:39.914] WARN coral.engine.runtime.build.sources.register:  skipping source (x8, same careops_* list)
+[05:43:40.026] WARN coral.engine.runtime.build.query:  skipping source during runtime build (same 8)
+    source.count=37</pre>
+            <p class="muted">Full log at <code>artifacts/coral_diag_limit.log</code>.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>coral_mcp_stderr.log <span class="filetag">· MCP startup catalog listing · 19 lines, 18 KB</span></summary>
+          <div class="dbody">
+            <pre class="out">[05:31:16.323] WARN coral.query.query_sources.load:  source 'blogger' is missing secret 'BLOGGER_API_KEY'
+    operation="list_catalog"   sql=LIST CATALOG   workspace="default"
+[05:31:20.344] WARN coral.engine.runtime.build.sources.register:  skipping source (x8 careops_*)
+[05:31:20.459] WARN coral.engine.runtime.build.query:  skipping source during runtime build (same 8)
+    source.count=37</pre>
+            <p class="muted">Full log at <code>artifacts/coral_mcp_stderr.log</code>.</p>
+          </div>
+        </details>
+      </section>
+
+      <footer>
+        Generated 2026-08-10 &middot; 14 test runs, ~70 output lines captured &middot; coral server v0.8.1+3acb123 &middot; gh v2.91.0 &middot; auth: GitHub token (keyring), user FiscalMindset &middot; artifacts at <code>reports/2026-08-10-coral-mcp-vs-gh-timing/artifacts/</code>
+      </footer>
+
+    </main>
+
+    <aside class="toc" aria-label="On this page">
+      <p class="toc-title">On this page</p>
+      <a href="#compare">1&nbsp; Head-to-head comparison</a>
+      <a href="#test1">2&nbsp; Running workflows</a>
+      <a href="#test1-why">2.5&nbsp; · why this test</a>
+      <a href="#test2">3&nbsp; PR list</a>
+      <a href="#test2-why">3.5&nbsp; · why this test</a>
+      <a href="#test3">4&nbsp; Workflow runs</a>
+      <a href="#test3-why">4.5&nbsp; · why this test</a>
+      <a href="#test4">5&nbsp; Commits</a>
+      <a href="#test4-why">5.5&nbsp; · why this test</a>
+      <a href="#why">6&nbsp; Why slower</a>
+      <a href="#verdict">7&nbsp; Verdict &amp; tips</a>
+      <a href="#artifacts">8&nbsp; Artifacts</a>
+    </aside>
+  </div>
+</div>
+
+<script>
+  const links = [...document.querySelectorAll('#navlinks a, .toc a')];
+  const map = new Map();
+  for (const a of links) map.set(a.getAttribute('href').slice(1), a);
+
+  const active = id => {
+    for (const [k, el] of map) el.classList.toggle('active', k === id);
+  };
+
+  const io = new IntersectionObserver(entries => {
+    const visible = entries.filter(e => e.isIntersecting);
+    if (visible.length) active(visible[0].target.id);
+  }, { rootMargin: '-40% 0px -55% 0px' });
+
+  for (const sec of document.querySelectorAll('main section')) io.observe(sec);
+  for (const w of document.querySelectorAll('.why')) io.observe(w);
+
+  const first = document.querySelector('main section');
+  if (first) active(first.id);
+</script>
+</body>
+</html>

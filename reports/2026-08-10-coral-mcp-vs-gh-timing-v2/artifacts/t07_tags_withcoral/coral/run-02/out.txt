@@ -1,0 +1,5 @@
+init: 5.89s | sql: 13.95s | TOTAL: 19.84s
+isError: False | rows_returned: 10
+ROW: {"name": "v0.9.0", "commit__sha": "c258d993f4f105265bdd7fd1858c4a8af293f887"}
+ROW: {"name": "v0.8.3", "commit__sha": "cb8a0a659db37f3e9289e3722e063e1d270afe4f"}
+ROW: {"name": "v0.8.2", "commit__sha": "fde129253455eac424b65ada92479832babf6521"}

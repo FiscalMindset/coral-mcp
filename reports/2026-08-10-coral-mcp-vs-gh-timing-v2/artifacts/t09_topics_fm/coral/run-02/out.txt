@@ -1,0 +1,3 @@
+init: 7.02s | sql: 17.78s | TOTAL: 24.80s
+isError: False | rows_returned: 1
+ROW: {"names": "[]", "owner": "FiscalMindset", "repo": "coral"}

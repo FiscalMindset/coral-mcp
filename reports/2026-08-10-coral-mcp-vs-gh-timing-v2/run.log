@@ -1,0 +1,402 @@
+
+=== t01_open_prs_withcoral (withcoral/coral open PRs (top 20)) ===
+gh run 01/04  {"real": 1.020757041987963}
+gh run 02/04  {"real": 0.7311932499869727}
+gh run 03/04  {"real": 0.673866833007196}
+gh run 04/04  {"real": 0.6018367079959717}
+gh summary: {"real": {"min": 0.6, "median": 0.67, "max": 0.73}, "runs": 3}
+coral run 01/04  {"init": 2.8196299076080322, "sql": 21.62215518951416, "total": 24.441785097122192, "rows": 20}
+coral run 02/04  {"init": 1.7124979496002197, "sql": 21.6661639213562, "total": 23.37866187095642, "rows": 20}
+coral run 03/04  {"init": 1.6904950141906738, "sql": 22.690217971801758, "total": 24.38071298599243, "rows": 20}
+coral run 04/04  {"init": 1.9442150592803955, "sql": 19.88303828239441, "total": 21.827253341674805, "rows": 20}
+coral summary: {"init": {"min": 1.69, "median": 1.71, "max": 1.94}, "sql": {"min": 19.88, "median": 21.67, "max": 22.69}, "total": {"min": 21.83, "median": 23.38, "max": 24.38}, "rows": {"min": 20, "median": 20, "max": 20}, "runs": 3}
+
+## t01_open_prs_withcoral (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 0.67 (min 0.6, max 0.73)
+
+**coral:** init: 1.71 (min 1.69, max 1.94) | sql: 21.67 (min 19.88, max 22.69) | total: 23.38 (min 21.83, max 24.38) | rows: 20 (min 20, max 20)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t01_open_prs_withcoral
+
+=== t02_recent_runs_fm (FiscalMindset/coral recent workflow runs (last 5)) ===
+gh run 01/04  {"real": 0.1551990830048453}
+gh run 02/04  {"real": 0.04246237501502037}
+gh run 03/04  {"real": 0.042296792002161965}
+gh run 04/04  {"real": 0.039650749997235835}
+gh summary: {"real": {"min": 0.04, "median": 0.04, "max": 0.04}, "runs": 3}
+coral run 01/04  {"init": 1.6228041648864746, "sql": 12.60984206199646, "total": 14.232646226882935, "rows": 5}
+coral run 02/04  {"init": 1.694180965423584, "sql": 11.03919005393982, "total": 12.733371019363403, "rows": 5}
+coral run 03/04  {"init": 1.4911549091339111, "sql": 10.468768119812012, "total": 11.959923028945923, "rows": 5}
+coral run 04/04  {"init": 1.6284029483795166, "sql": 19.176586866378784, "total": 20.8049898147583, "rows": 5}
+coral summary: {"init": {"min": 1.49, "median": 1.63, "max": 1.69}, "sql": {"min": 10.47, "median": 11.04, "max": 19.18}, "total": {"min": 11.96, "median": 12.73, "max": 20.8}, "rows": {"min": 5, "median": 5, "max": 5}, "runs": 3}
+
+## t02_recent_runs_fm (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 0.04 (min 0.04, max 0.04)
+
+**coral:** init: 1.63 (min 1.49, max 1.69) | sql: 11.04 (min 10.47, max 19.18) | total: 12.73 (min 11.96, max 20.8) | rows: 5 (min 5, max 5)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t02_recent_runs_fm
+
+=== t03_commits_fm (FiscalMindset/coral latest 5 commits) ===
+gh run 01/04  {"real": 0.8374863750068471}
+gh run 02/04  {"real": 0.9631529580219649}
+gh run 03/04  {"real": 0.8362556250067428}
+gh run 04/04  {"real": 0.944715499994345}
+gh summary: {"real": {"min": 0.84, "median": 0.94, "max": 0.96}, "runs": 3}
+coral run 01/04  {"init": 4.167425870895386, "sql": 37.80580115318298, "total": 41.97322702407837, "rows": 5}
+coral run 02/04  {"init": 2.6495277881622314, "sql": 30.62355399131775, "total": 33.27308177947998, "rows": 5}
+coral run 03/04  {"init": 2.7741990089416504, "sql": 35.58636999130249, "total": 38.36056900024414, "rows": 5}
+coral run 04/04  {"init": 2.68333101272583, "sql": 37.377249002456665, "total": 40.060580015182495, "rows": 5}
+coral summary: {"init": {"min": 2.65, "median": 2.68, "max": 2.77}, "sql": {"min": 30.62, "median": 35.59, "max": 37.38}, "total": {"min": 33.27, "median": 38.36, "max": 40.06}, "rows": {"min": 5, "median": 5, "max": 5}, "runs": 3}
+
+## t03_commits_fm (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 0.94 (min 0.84, max 0.96)
+
+**coral:** init: 2.68 (min 2.65, max 2.77) | sql: 35.59 (min 30.62, max 37.38) | total: 38.36 (min 33.27, max 40.06) | rows: 5 (min 5, max 5)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t03_commits_fm
+
+=== t04_branches_fm (FiscalMindset/coral branches (top 10)) ===
+gh run 01/04  {"real": 0.6844867079926189}
+gh run 02/04  {"real": 0.5337605419917963}
+gh run 03/04  {"real": 0.5574415419832803}
+gh run 04/04  {"real": 0.5538959590194281}
+gh summary: {"real": {"min": 0.53, "median": 0.55, "max": 0.56}, "runs": 3}
+coral run 01/04  {"init": 2.6694538593292236, "sql": 7.498828887939453, "total": 10.168282747268677, "rows": 10}
+coral run 02/04  {"init": 1.6900217533111572, "sql": 7.570475101470947, "total": 9.260496854782104, "rows": 10}
+coral run 03/04  {"init": 1.7020070552825928, "sql": 7.357648849487305, "total": 9.059655904769897, "rows": 10}
+coral run 04/04  {"init": 1.5052170753479004, "sql": 7.220878839492798, "total": 8.726095914840698, "rows": 10}
+coral summary: {"init": {"min": 1.51, "median": 1.69, "max": 1.7}, "sql": {"min": 7.22, "median": 7.36, "max": 7.57}, "total": {"min": 8.73, "median": 9.06, "max": 9.26}, "rows": {"min": 10, "median": 10, "max": 10}, "runs": 3}
+
+## t04_branches_fm (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 0.55 (min 0.53, max 0.56)
+
+**coral:** init: 1.69 (min 1.51, max 1.7) | sql: 7.36 (min 7.22, max 7.57) | total: 9.06 (min 8.73, max 9.26) | rows: 10 (min 10, max 10)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t04_branches_fm
+
+=== t05_releases_withcoral (withcoral/coral recent releases (last 5)) ===
+gh run 01/04  {"real": 1.4130906670179684}
+gh run 02/04  {"real": 0.5759534999961033}
+gh run 03/04  {"real": 0.6545739170105662}
+gh run 04/04  {"real": 0.6016538749972824}
+gh summary: {"real": {"min": 0.58, "median": 0.6, "max": 0.65}, "runs": 3}
+coral run 01/04  {"init": 1.5035629272460938, "sql": 8.414478063583374, "total": 9.918040990829468, "rows": 5}
+coral run 02/04  {"init": 1.4984381198883057, "sql": 7.972553014755249, "total": 9.470991134643555, "rows": 5}
+coral run 03/04  {"init": 1.387718915939331, "sql": 7.6411309242248535, "total": 9.028849840164185, "rows": 5}
+coral run 04/04  {"init": 1.3909950256347656, "sql": 8.272032976150513, "total": 9.663028001785278, "rows": 5}
+coral summary: {"init": {"min": 1.39, "median": 1.39, "max": 1.5}, "sql": {"min": 7.64, "median": 7.97, "max": 8.27}, "total": {"min": 9.03, "median": 9.47, "max": 9.66}, "rows": {"min": 5, "median": 5, "max": 5}, "runs": 3}
+
+## t05_releases_withcoral (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 0.6 (min 0.58, max 0.65)
+
+**coral:** init: 1.39 (min 1.39, max 1.5) | sql: 7.97 (min 7.64, max 8.27) | total: 9.47 (min 9.03, max 9.66) | rows: 5 (min 5, max 5)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t05_releases_withcoral
+
+=== t06_open_issues_withcoral (withcoral/coral open issues (last 10)) ===
+gh run 01/04  {"real": 0.7927319169975817}
+gh run 02/04  {"real": 0.6134254170174245}
+gh run 03/04  {"real": 0.5131307920091785}
+gh run 04/04  {"real": 0.6453015409933869}
+gh summary: {"real": {"min": 0.51, "median": 0.61, "max": 0.65}, "runs": 3}
+coral run 01/04  {"init": 2.0822880268096924, "sql": 25.939624071121216, "total": 28.021912097930908, "rows": 10}
+coral run 02/04  {"init": 6.071831941604614, "sql": 41.14417004585266, "total": 47.216001987457275, "rows": 10}
+coral run 03/04  {"init": 4.522090196609497, "sql": 30.878650903701782, "total": 35.40074110031128, "rows": 10}
+coral run 04/04  {"init": 8.93199896812439, "sql": 36.517234086990356, "total": 45.449233055114746, "rows": 10}
+coral summary: {"init": {"min": 4.52, "median": 6.07, "max": 8.93}, "sql": {"min": 30.88, "median": 36.52, "max": 41.14}, "total": {"min": 35.4, "median": 45.45, "max": 47.22}, "rows": {"min": 10, "median": 10, "max": 10}, "runs": 3}
+
+## t06_open_issues_withcoral (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 0.61 (min 0.51, max 0.65)
+
+**coral:** init: 6.07 (min 4.52, max 8.93) | sql: 36.52 (min 30.88, max 41.14) | total: 45.45 (min 35.4, max 47.22) | rows: 10 (min 10, max 10)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t06_open_issues_withcoral
+
+=== t07_tags_withcoral (withcoral/coral recent tags (last 10)) ===
+gh run 01/04  {"real": 0.855146916990634}
+gh run 02/04  {"real": 0.8345878330001142}
+gh run 03/04  {"real": 0.6434096670127474}
+gh run 04/04  {"real": 0.8148587500036228}
+gh summary: {"real": {"min": 0.64, "median": 0.81, "max": 0.83}, "runs": 3}
+coral run 01/04  {"init": 4.744334936141968, "sql": 16.569526195526123, "total": 21.31386113166809, "rows": 10}
+coral run 02/04  {"init": 5.894660949707031, "sql": 13.947165250778198, "total": 19.84182620048523, "rows": 10}
+coral run 03/04  {"init": 5.265142917633057, "sql": 15.230926036834717, "total": 20.496068954467773, "rows": 10}
+coral run 04/04  {"init": 3.5509097576141357, "sql": 11.181538105010986, "total": 14.732447862625122, "rows": 10}
+coral summary: {"init": {"min": 3.55, "median": 5.27, "max": 5.89}, "sql": {"min": 11.18, "median": 13.95, "max": 15.23}, "total": {"min": 14.73, "median": 19.84, "max": 20.5}, "rows": {"min": 10, "median": 10, "max": 10}, "runs": 3}
+
+## t07_tags_withcoral (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 0.81 (min 0.64, max 0.83)
+
+**coral:** init: 5.27 (min 3.55, max 5.89) | sql: 13.95 (min 11.18, max 15.23) | total: 19.84 (min 14.73, max 20.5) | rows: 10 (min 10, max 10)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t07_tags_withcoral
+
+=== t08_languages_fm (FiscalMindset/coral languages) ===
+gh run 01/04  {"real": 0.6533859590126667}
+gh run 02/04  {"real": 0.5320297500002198}
+gh run 03/04  {"real": 0.5448363330215216}
+gh run 04/04  {"real": 0.5906401669781189}
+gh summary: {"real": {"min": 0.53, "median": 0.54, "max": 0.59}, "runs": 3}
+coral run 01/04  {"init": 3.3596200942993164, "sql": 17.78228497505188, "total": 21.141905069351196, "rows": 1}
+coral run 02/04  {"init": 3.7266087532043457, "sql": 14.574037075042725, "total": 18.30064582824707, "rows": 1}
+coral run 03/04  {"init": 5.318928956985474, "sql": 19.27200984954834, "total": 24.590938806533813, "rows": 1}
+coral run 04/04  {"init": 5.436473846435547, "sql": 12.266347169876099, "total": 17.702821016311646, "rows": 1}
+coral summary: {"init": {"min": 3.73, "median": 5.32, "max": 5.44}, "sql": {"min": 12.27, "median": 14.57, "max": 19.27}, "total": {"min": 17.7, "median": 18.3, "max": 24.59}, "rows": {"min": 1, "median": 1, "max": 1}, "runs": 3}
+
+## t08_languages_fm (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 0.54 (min 0.53, max 0.59)
+
+**coral:** init: 5.32 (min 3.73, max 5.44) | sql: 14.57 (min 12.27, max 19.27) | total: 18.3 (min 17.7, max 24.59) | rows: 1 (min 1, max 1)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t08_languages_fm
+
+=== t09_topics_fm (FiscalMindset/coral topics) ===
+gh run 01/04  {"real": 1.038221374998102}
+gh run 02/04  {"real": 0.6930651669972576}
+gh run 03/04  {"real": 0.6840454169723671}
+gh run 04/04  {"real": 0.7215478330035694}
+gh summary: {"real": {"min": 0.68, "median": 0.69, "max": 0.72}, "runs": 3}
+coral run 01/04  {"init": 1.6175651550292969, "sql": 15.000861883163452, "total": 16.61842703819275, "rows": 1}
+coral run 02/04  {"init": 7.019947052001953, "sql": 17.77929711341858, "total": 24.799244165420532, "rows": 1}
+coral run 03/04  {"init": 5.327838897705078, "sql": 18.59941601753235, "total": 23.927254915237427, "rows": 1}
+coral run 04/04  {"init": 4.968152046203613, "sql": 15.2605619430542, "total": 20.228713989257812, "rows": 1}
+coral summary: {"init": {"min": 4.97, "median": 5.33, "max": 7.02}, "sql": {"min": 15.26, "median": 17.78, "max": 18.6}, "total": {"min": 20.23, "median": 23.93, "max": 24.8}, "rows": {"min": 1, "median": 1, "max": 1}, "runs": 3}
+
+## t09_topics_fm (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 0.69 (min 0.68, max 0.72)
+
+**coral:** init: 5.33 (min 4.97, max 7.02) | sql: 17.78 (min 15.26, max 18.6) | total: 23.93 (min 20.23, max 24.8) | rows: 1 (min 1, max 1)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t09_topics_fm
+
+=== t10_collaborators_fm (FiscalMindset/coral collaborators (top 10)) ===
+gh run 01/04  {"real": 0.872814083006233}
+gh run 02/04  {"real": 0.6226812920067459}
+gh run 03/04  {"real": 0.6035234590235632}
+gh run 04/04  {"real": 0.8506237919791602}
+gh summary: {"real": {"min": 0.6, "median": 0.62, "max": 0.85}, "runs": 3}
+coral run 01/04  {"init": 4.800378084182739, "sql": 12.133091926574707, "total": 16.933470010757446, "rows": 0}
+coral run 02/04  {"init": 3.92057204246521, "sql": 25.911082983016968, "total": 29.831655025482178, "rows": 0}
+coral run 03/04  {"init": 3.9815030097961426, "sql": 19.67530107498169, "total": 23.656804084777832, "rows": 0}
+coral run 04/04  {"init": 3.526515007019043, "sql": 13.221225261688232, "total": 16.747740268707275, "rows": 0}
+coral summary: {"init": {"min": 3.53, "median": 3.92, "max": 3.98}, "sql": {"min": 13.22, "median": 19.68, "max": 25.91}, "total": {"min": 16.75, "median": 23.66, "max": 29.83}, "rows": {"min": 0, "median": 0, "max": 0}, "runs": 3}
+
+## t10_collaborators_fm (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 0.62 (min 0.6, max 0.85)
+
+**coral:** init: 3.92 (min 3.53, max 3.98) | sql: 19.68 (min 13.22, max 25.91) | total: 23.66 (min 16.75, max 29.83) | rows: 0 (min 0, max 0)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t10_collaborators_fm
+
+=== t11_contributors_fm (FiscalMindset/coral contributors (top 5)) ===
+gh run 01/04  {"real": 1.038076083001215}
+gh run 02/04  {"real": 0.6529455829877406}
+gh run 03/04  {"real": 0.6970637920021545}
+gh run 04/04  {"real": 0.8196806670166552}
+gh summary: {"real": {"min": 0.65, "median": 0.7, "max": 0.82}, "runs": 3}
+coral run 01/04  {"init": 4.373377799987793, "sql": 12.70217227935791, "total": 17.075550079345703, "rows": 5}
+coral run 02/04  {"init": 4.917394161224365, "sql": 14.205749988555908, "total": 19.123144149780273, "rows": 5}
+coral run 03/04  {"init": 3.9292030334472656, "sql": 16.233105182647705, "total": 20.16230821609497, "rows": 5}
+coral run 04/04  {"init": 5.597563743591309, "sql": 16.186931371688843, "total": 21.78449511528015, "rows": 5}
+coral summary: {"init": {"min": 3.93, "median": 4.92, "max": 5.6}, "sql": {"min": 14.21, "median": 16.19, "max": 16.23}, "total": {"min": 19.12, "median": 20.16, "max": 21.78}, "rows": {"min": 5, "median": 5, "max": 5}, "runs": 3}
+
+## t11_contributors_fm (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 0.7 (min 0.65, max 0.82)
+
+**coral:** init: 4.92 (min 3.93, max 5.6) | sql: 16.19 (min 14.21, max 16.23) | total: 20.16 (min 19.12, max 21.78) | rows: 5 (min 5, max 5)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t11_contributors_fm
+
+=== t12_issue_comments_withcoral (withcoral/coral issue #1 comments) ===
+gh run 01/04  {"real": 0.9091391669935547}
+gh run 02/04  {"real": 0.7093352920201141}
+gh run 03/04  {"real": 0.6281601249938831}
+gh run 04/04  {"real": 0.6928607079898939}
+gh summary: {"real": {"min": 0.63, "median": 0.69, "max": 0.71}, "runs": 3}
+coral run 01/04  {"init": 5.483402252197266, "sql": 14.72758674621582, "total": 20.210988998413086, "rows": 0}
+coral run 02/04  {"init": 3.810227155685425, "sql": 12.312026023864746, "total": 16.12225317955017, "rows": 0}
+coral run 03/04  {"init": 3.648259162902832, "sql": 12.357573986053467, "total": 16.0058331489563, "rows": 0}
+coral run 04/04  {"init": 3.2533929347991943, "sql": 11.880188226699829, "total": 15.133581161499023, "rows": 0}
+coral summary: {"init": {"min": 3.25, "median": 3.65, "max": 3.81}, "sql": {"min": 11.88, "median": 12.31, "max": 12.36}, "total": {"min": 15.13, "median": 16.01, "max": 16.12}, "rows": {"min": 0, "median": 0, "max": 0}, "runs": 3}
+
+## t12_issue_comments_withcoral (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 0.69 (min 0.63, max 0.71)
+
+**coral:** init: 3.65 (min 3.25, max 3.81) | sql: 12.31 (min 11.88, max 12.36) | total: 16.01 (min 15.13, max 16.12) | rows: 0 (min 0, max 0)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t12_issue_comments_withcoral
+
+=== t13_search_issues_withcoral (Search issues: 'release' (withcoral/coral)) ===
+gh run 01/04  {"real": 1.2932773750217166}
+gh run 02/04  {"real": 1.0050268750055693}
+gh run 03/04  {"real": 1.4596430420060642}
+gh run 04/04  {"real": 1.1525488329934888}
+gh summary: {"real": {"min": 1.01, "median": 1.15, "max": 1.46}, "runs": 3}
+coral run 01/04  {"init": 4.196552038192749, "sql": 13.760676145553589, "total": 17.957228183746338, "rows": 0}
+coral run 02/04  {"init": 3.5721521377563477, "sql": 10.616101741790771, "total": 14.18825387954712, "rows": 0}
+coral run 03/04  {"init": 3.219446897506714, "sql": 12.55526614189148, "total": 15.774713039398193, "rows": 0}
+coral run 04/04  {"init": 4.2834367752075195, "sql": 13.414304971694946, "total": 17.697741746902466, "rows": 0}
+coral summary: {"init": {"min": 3.22, "median": 3.57, "max": 4.28}, "sql": {"min": 10.62, "median": 12.56, "max": 13.41}, "total": {"min": 14.19, "median": 15.77, "max": 17.7}, "rows": {"min": 0, "median": 0, "max": 0}, "runs": 3}
+
+## t13_search_issues_withcoral (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 1.15 (min 1.01, max 1.46)
+
+**coral:** init: 3.57 (min 3.22, max 4.28) | sql: 12.56 (min 10.62, max 13.41) | total: 15.77 (min 14.19, max 17.7) | rows: 0 (min 0, max 0)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t13_search_issues_withcoral
+
+=== t14_search_prs_withcoral (Search PRs: 'fix' (withcoral/coral)) ===
+gh run 01/04  {"real": 1.6633672089956235}
+gh run 02/04  {"real": 1.0525295829866081}
+gh run 03/04  {"real": 1.3280630829976872}
+gh run 04/04  {"real": 1.3297285409935284}
+gh summary: {"real": {"min": 1.05, "median": 1.33, "max": 1.33}, "runs": 3}
+coral run 01/04  {"init": 4.251985311508179, "sql": 13.7497079372406, "total": 18.00169324874878, "rows": 0}
+coral run 02/04  {"init": 4.786042213439941, "sql": 15.549401760101318, "total": 20.33544397354126, "rows": 0}
+coral run 03/04  {"init": 4.249563217163086, "sql": 13.307782888412476, "total": 17.55734610557556, "rows": 0}
+coral run 04/04  {"init": 3.986989736557007, "sql": 12.906853199005127, "total": 16.893842935562134, "rows": 0}
+coral summary: {"init": {"min": 3.99, "median": 4.25, "max": 4.79}, "sql": {"min": 12.91, "median": 13.31, "max": 15.55}, "total": {"min": 16.89, "median": 17.56, "max": 20.34}, "rows": {"min": 0, "median": 0, "max": 0}, "runs": 3}
+
+## t14_search_prs_withcoral (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 1.33 (min 1.05, max 1.33)
+
+**coral:** init: 4.25 (min 3.99, max 4.79) | sql: 13.31 (min 12.91, max 15.55) | total: 17.56 (min 16.89, max 20.34) | rows: 0 (min 0, max 0)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t14_search_prs_withcoral
+
+=== t15_search_repos_coral (Search repos: 'coral') ===
+gh run 01/04  {"real": 1.2173157089855522}
+gh run 02/04  {"real": 0.8602952919900417}
+gh run 03/04  {"real": 0.8122265830170363}
+gh run 04/04  {"real": 1.0380503330088686}
+gh summary: {"real": {"min": 0.81, "median": 0.86, "max": 1.04}, "runs": 3}
+coral run 01/04  {"init": 3.530917167663574, "sql": 12.545040845870972, "total": 16.075958013534546, "rows": 0}
+coral run 02/04  {"init": 3.269024133682251, "sql": 10.52479887008667, "total": 13.793823003768921, "rows": 0}
+coral run 03/04  {"init": 2.8912360668182373, "sql": 12.328908920288086, "total": 15.220144987106323, "rows": 0}
+coral run 04/04  {"init": 3.543748140335083, "sql": 13.646415948867798, "total": 17.19016408920288, "rows": 0}
+coral summary: {"init": {"min": 2.89, "median": 3.27, "max": 3.54}, "sql": {"min": 10.52, "median": 12.33, "max": 13.65}, "total": {"min": 13.79, "median": 15.22, "max": 17.19}, "rows": {"min": 0, "median": 0, "max": 0}, "runs": 3}
+
+## t15_search_repos_coral (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 0.86 (min 0.81, max 1.04)
+
+**coral:** init: 3.27 (min 2.89, max 3.54) | sql: 12.33 (min 10.52, max 13.65) | total: 15.22 (min 13.79, max 17.19) | rows: 0 (min 0, max 0)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t15_search_repos_coral
+
+=== t16_gists_fm (FiscalMindset public gists (top 5)) ===
+gh run 01/04  {"real": 0.8440503749880008}
+gh run 02/04  {"real": 0.5825994579936378}
+gh run 03/04  {"real": 0.5492487089941278}
+gh run 04/04  {"real": 0.5861393329978455}
+gh summary: {"real": {"min": 0.55, "median": 0.58, "max": 0.59}, "runs": 3}
+coral run 01/04  {"init": 4.352086067199707, "sql": 17.02192783355713, "total": 21.374013900756836, "rows": 0}
+coral run 02/04  {"init": 5.057241916656494, "sql": 15.135926246643066, "total": 20.19316816329956, "rows": 0}
+coral run 03/04  {"init": 3.837261199951172, "sql": 14.344827890396118, "total": 18.18208909034729, "rows": 0}
+coral run 04/04  {"init": 2.055371046066284, "sql": 11.532108783721924, "total": 13.587479829788208, "rows": 0}
+coral summary: {"init": {"min": 2.06, "median": 3.84, "max": 5.06}, "sql": {"min": 11.53, "median": 14.34, "max": 15.14}, "total": {"min": 13.59, "median": 18.18, "max": 20.19}, "rows": {"min": 0, "median": 0, "max": 0}, "runs": 3}
+
+## t16_gists_fm (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 0.58 (min 0.55, max 0.59)
+
+**coral:** init: 3.84 (min 2.06, max 5.06) | sql: 14.34 (min 11.53, max 15.14) | total: 18.18 (min 13.59, max 20.19) | rows: 0 (min 0, max 0)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t16_gists_fm
+
+=== t17_pr_commits_withcoral (withcoral/coral PR #1 commits (top 5)) ===
+gh run 01/04  {"real": 1.292030667013023}
+gh run 02/04  {"real": 0.8239595420018304}
+gh run 03/04  {"real": 0.6644773340085521}
+gh run 04/04  {"real": 0.6104615410149563}
+gh summary: {"real": {"min": 0.61, "median": 0.66, "max": 0.82}, "runs": 3}
+coral run 01/04  {"init": 1.2551820278167725, "sql": 50.7222580909729, "total": 51.97744011878967, "rows": 0}
+coral run 02/04  {"init": 7.860439777374268, "sql": 48.04757308959961, "total": 55.90801286697388, "rows": 0}
+coral run 03/04  {"init": 4.307254791259766, "sql": 55.2821261882782, "total": 59.589380979537964, "rows": 0}
+coral run 04/04  {"init": 11.262123823165894, "sql": 46.80599904060364, "total": 58.06812286376953, "rows": 0}
+coral summary: {"init": {"min": 4.31, "median": 7.86, "max": 11.26}, "sql": {"min": 46.81, "median": 48.05, "max": 55.28}, "total": {"min": 55.91, "median": 58.07, "max": 59.59}, "rows": {"min": 0, "median": 0, "max": 0}, "runs": 3}
+
+## t17_pr_commits_withcoral (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 0.66 (min 0.61, max 0.82)
+
+**coral:** init: 7.86 (min 4.31, max 11.26) | sql: 48.05 (min 46.81, max 55.28) | total: 58.07 (min 55.91, max 59.59) | rows: 0 (min 0, max 0)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t17_pr_commits_withcoral
+
+=== t18_pr_files_withcoral (withcoral/coral PR #1 files) ===
+gh run 01/04  {"real": 1.5469619999930728}
+gh run 02/04  {"real": 1.0437497079838067}
+gh run 03/04  {"real": 0.7251517080003396}
+gh run 04/04  {"real": 1.0626869580009952}
+gh summary: {"real": {"min": 0.73, "median": 1.04, "max": 1.06}, "runs": 3}
+coral run 01/04  {"init": 5.682673931121826, "sql": 17.48550033569336, "total": 23.168174266815186, "rows": 0}
+coral run 02/04  {"init": 6.2947680950164795, "sql": 13.44464111328125, "total": 19.73940920829773, "rows": 0}
+coral run 03/04  {"init": 3.4727628231048584, "sql": 10.4622163772583, "total": 13.93497920036316, "rows": 0}
+coral run 04/04  {"init": 5.273849010467529, "sql": 13.157307863235474, "total": 18.431156873703003, "rows": 0}
+coral summary: {"init": {"min": 3.47, "median": 5.27, "max": 6.29}, "sql": {"min": 10.46, "median": 13.16, "max": 13.44}, "total": {"min": 13.93, "median": 18.43, "max": 19.74}, "rows": {"min": 0, "median": 0, "max": 0}, "runs": 3}
+
+## t18_pr_files_withcoral (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 1.04 (min 0.73, max 1.06)
+
+**coral:** init: 5.27 (min 3.47, max 6.29) | sql: 13.16 (min 10.46, max 13.44) | total: 18.43 (min 13.93, max 19.74) | rows: 0 (min 0, max 0)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t18_pr_files_withcoral
+
+=== t19_workflow_jobs_fm (FiscalMindset/coral most-recent workflow run jobs) ===
+gh run 01/04  {"real": 2.2766518330026884}
+gh run 02/04  {"real": 1.694273625005735}
+gh run 03/04  {"real": 1.7962262080109213}
+gh run 04/04  {"real": 1.7735552089870907}
+gh summary: {"real": {"min": 1.69, "median": 1.77, "max": 1.8}, "runs": 3}
+coral run 01/04  {"init": 3.82578182220459, "sql": 13.348300218582153, "total": 17.174082040786743, "rows": 0}
+coral run 02/04  {"init": 5.9929749965667725, "sql": 13.383966207504272, "total": 19.376941204071045, "rows": 0}
+coral run 03/04  {"init": 4.299321889877319, "sql": 15.42796802520752, "total": 19.72728991508484, "rows": 0}
+coral run 04/04  {"init": 3.8571999073028564, "sql": 15.69927716255188, "total": 19.556477069854736, "rows": 0}
+coral summary: {"init": {"min": 3.86, "median": 4.3, "max": 5.99}, "sql": {"min": 13.38, "median": 15.43, "max": 15.7}, "total": {"min": 19.38, "median": 19.56, "max": 19.73}, "rows": {"min": 0, "median": 0, "max": 0}, "runs": 3}
+
+## t19_workflow_jobs_fm (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 1.77 (min 1.69, max 1.8)
+
+**coral:** init: 4.3 (min 3.86, max 5.99) | sql: 15.43 (min 13.38, max 15.7) | total: 19.56 (min 19.38, max 19.73) | rows: 0 (min 0, max 0)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t19_workflow_jobs_fm
+
+=== t20_actions_workflows_fm (FiscalMindset/coral workflow files) ===
+gh run 01/04  {"real": 0.8434225000091828}
+gh run 02/04  {"real": 0.5798623329901602}
+gh run 03/04  {"real": 0.6357727919821627}
+gh run 04/04  {"real": 0.5876696670020465}
+gh summary: {"real": {"min": 0.58, "median": 0.59, "max": 0.64}, "runs": 3}
+coral run 01/04  {"init": 5.027397871017456, "sql": 11.650876998901367, "total": 16.678274869918823, "rows": 0}
+coral run 02/04  {"init": 3.2500481605529785, "sql": 12.259580850601196, "total": 15.509629011154175, "rows": 0}
+coral run 03/04  {"init": 3.6570889949798584, "sql": 12.09441876411438, "total": 15.751507759094238, "rows": 0}
+coral run 04/04  {"init": 3.807718276977539, "sql": 15.336243867874146, "total": 19.143962144851685, "rows": 0}
+coral summary: {"init": {"min": 3.25, "median": 3.66, "max": 3.81}, "sql": {"min": 12.09, "median": 12.26, "max": 15.34}, "total": {"min": 15.51, "median": 15.75, "max": 19.14}, "rows": {"min": 0, "median": 0, "max": 0}, "runs": 3}
+
+## t20_actions_workflows_fm (median of 3 runs, 1 warm-up discarded)
+
+**gh:** real: 0.59 (min 0.58, max 0.64)
+
+**coral:** init: 3.66 (min 3.25, max 3.81) | sql: 12.26 (min 12.09, max 15.34) | total: 15.75 (min 15.51, max 19.14) | rows: 0 (min 0, max 0)
+
+artifacts -> /Users/viclkykumar/code/coral-mcp-benchmark/reports/2026-08-10-coral-mcp-vs-gh-timing-v2/artifacts/t20_actions_workflows_fm
+
+ALL 20 DONE

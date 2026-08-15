@@ -1,0 +1,19 @@
+to re-probe: 105
+filters for 104 tables
+[1/105] accepted_assignments                               NO_FIX req=['assignment_id']
+[2/105] activity_list_repos_watched_by_user                ❌ other_error err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[3/105] alerts                                             ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[4/105] approvals                                          ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[5/105] apps                                               ✅ data rows=1 t=6.6s
+  [saved checkpoint]
+[6/105] assignments                                        NO_FIX req=['assignment_id']
+[7/105] attempts                                           ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[8/105] attestations                                       ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[9/105] authors                                            ❌ not_found err=Error: One or more SQL queries failed
+Detail: Inspect `data.results` for per-que
+[10/105] autofix                                            NO_FIX req=['alert_number', 'owner', 'repo']

@@ -1,0 +1,16 @@
+{
+  "gh": {
+    "real_min": 0.77,
+    "real_median": 0.834,
+    "real_max": 0.986,
+    "user": 0.282,
+    "sys": 0.184
+  },
+  "coral_warm": {
+    "sql_min": 21.475,
+    "sql_median": 23.167,
+    "sql_max": 23.507,
+    "rows": 18
+  },
+  "runs": 5
+}

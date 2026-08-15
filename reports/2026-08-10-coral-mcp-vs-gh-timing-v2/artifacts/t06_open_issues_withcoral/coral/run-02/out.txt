@@ -1,0 +1,5 @@
+init: 6.07s | sql: 41.14s | TOTAL: 47.22s
+isError: False | rows_returned: 10
+ROW: {"number": "2112", "title": "feat(reef): enable web MCP client installation", "state": "open", "created_at": "2026-08-10T07:13:29Z"}
+ROW: {"number": "2111", "title": "feat(reef): add Windows MCP installer", "state": "open", "created_at": "2026-08-10T05:14:42Z"}
+ROW: {"number": "2110", "title": "refactor(reef): separate Settings loader and view", "state": "open", "created_at": "2026-08-10T04:35:16Z"}

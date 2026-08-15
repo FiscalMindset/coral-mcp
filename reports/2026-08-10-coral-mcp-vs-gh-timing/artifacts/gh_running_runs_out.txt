@@ -1,0 +1,89 @@
+queued		Build Timings	Build Timings	main	schedule	31300020216	23h17m29s	2026-08-09T06:56:58Z
+completed	cancelled	Build Timings	Build Timings	main	schedule	31244939840	24h0m11s	2026-08-08T06:53:38Z
+completed	cancelled	Build Timings	Build Timings	main	schedule	31156991116	24h0m2s	2026-08-07T07:16:04Z
+completed	cancelled	Build Timings	Build Timings	main	schedule	31085599955	24h0m2s	2026-08-06T08:36:29Z
+completed	cancelled	Build Timings	Build Timings	main	schedule	30989709568	24h0m1s	2026-08-05T08:36:17Z
+completed	cancelled	Build Timings	Build Timings	main	schedule	30892695305	24h0m8s	2026-08-04T08:36:50Z
+completed	cancelled	Build Timings	Build Timings	main	schedule	30802832781	24h0m8s	2026-08-03T09:46:25Z
+completed	cancelled	Build Timings	Build Timings	main	schedule	30739719274	24h0m2s	2026-08-02T08:24:39Z
+completed	cancelled	Build Timings	Build Timings	main	schedule	30691603411	24h0m2s	2026-08-01T08:21:24Z
+completed	cancelled	Build Timings	Build Timings	main	schedule	30617697628	24h0m2s	2026-07-31T08:50:02Z
+completed	cancelled	Build Timings	Build Timings	main	schedule	30526752371	24h0m2s	2026-07-30T08:27:18Z
+completed	cancelled	Build Timings	Build Timings	main	schedule	30436499887	24h0m2s	2026-07-29T08:41:10Z
+completed	cancelled	chore(main): release 0.8.1 (#1987)	Chromatic	main	push	30424881762	27h25m56s	2026-07-29T05:22:29Z
+completed	cancelled	chore(main): release 0.8.1 (#1987)	release-please	main	push	30424881753	27h25m56s	2026-07-29T05:22:29Z
+completed	cancelled	chore(main): release 0.8.1 (#1987)	Validate	main	push	30424881727	75h25m55s	2026-07-29T05:22:29Z
+completed	cancelled	feat(reef): add shared code block (#1978)	Chromatic	main	push	30343880522	24h0m2s	2026-07-28T08:48:22Z
+completed	cancelled	feat(reef): add shared code block (#1978)	release-please	main	push	30343880374	24h0m2s	2026-07-28T08:48:22Z
+completed	cancelled	feat(reef): add shared code block (#1978)	Sync skills distribution	main	push	30343878010	24h0m2s	2026-07-28T08:48:20Z
+completed	cancelled	feat(reef): add shared code block (#1978)	Validate	main	push	30343877759	48h0m2s	2026-07-28T08:48:20Z
+completed	success	Build Timings	Build Timings	main	schedule	30342922919	1m43s	2026-07-28T08:34:19Z
+completed	success	Build Timings	Build Timings	main	schedule	30255782333	1m53s	2026-07-27T09:52:56Z
+completed	success	Build Timings	Build Timings	main	schedule	30194636279	1m44s	2026-07-26T08:26:47Z
+completed	success	Build Timings	Build Timings	main	schedule	30150523706	1m34s	2026-07-25T08:06:47Z
+completed	success	Build Timings	Build Timings	main	schedule	30079018680	5m16s	2026-07-24T08:27:59Z
+completed	success	Build Timings	Build Timings	main	schedule	29991429235	1m43s	2026-07-23T08:31:17Z
+completed	success	Build Timings	Build Timings	main	schedule	29904230654	1m45s	2026-07-22T08:30:03Z
+completed	success	Build Timings	Build Timings	main	schedule	29814515258	1m55s	2026-07-21T08:29:56Z
+completed	success	Build Timings	Build Timings	main	schedule	29730701377	1m33s	2026-07-20T09:14:53Z
+completed	success	Build Timings	Build Timings	main	schedule	29679645122	1m44s	2026-07-19T08:20:13Z
+completed	success	Build Timings	Build Timings	main	schedule	29636457999	1m35s	2026-07-18T07:51:25Z
+completed	success	Build Timings	Build Timings	main	schedule	29565530409	1m36s	2026-07-17T08:10:41Z
+completed	success	Build Timings	Build Timings	main	schedule	29482776616	5m25s	2026-07-16T08:14:46Z
+completed	success	Build Timings	Build Timings	main	schedule	29399915054	1m46s	2026-07-15T08:11:34Z
+completed	success	Build Timings	Build Timings	main	schedule	29316836102	1m46s	2026-07-14T08:06:16Z
+completed	success	Build Timings	Build Timings	main	schedule	29239246884	1m32s	2026-07-13T09:28:36Z
+completed	success	Build Timings	Build Timings	main	schedule	29185663219	1m33s	2026-07-12T08:19:35Z
+completed	success	Build Timings	Build Timings	main	schedule	29145344833	1m48s	2026-07-11T07:57:22Z
+completed	success	Build Timings	Build Timings	main	schedule	29083619776	5m11s	2026-07-10T09:36:36Z
+completed	failure	Build Timings	Build Timings	main	schedule	29009008752	15m5s	2026-07-09T09:40:31Z
+completed	success	Build Timings	Build Timings	main	schedule	28928818518	1m36s	2026-07-08T08:29:49Z
+completed	success	Build Timings	Build Timings	main	schedule	28856815021	1m39s	2026-07-07T09:42:42Z
+completed	success	Build Timings	Build Timings	main	schedule	28784764079	1m45s	2026-07-06T10:23:58Z
+completed	success	Build Timings	Build Timings	main	schedule	28735399706	1m32s	2026-07-05T08:53:48Z
+completed	success	Build Timings	Build Timings	main	schedule	28700757928	1m53s	2026-07-04T08:37:56Z
+completed	success	Build Timings	Build Timings	main	schedule	28651082801	1m35s	2026-07-03T09:19:18Z
+completed	success	Build Timings	Build Timings	main	schedule	28578012973	1m32s	2026-07-02T08:57:36Z
+completed	success	Build Timings	Build Timings	main	schedule	28508810008	1m37s	2026-07-01T09:49:07Z
+completed	success	Build Timings	Build Timings	main	schedule	28434857397	1m38s	2026-06-30T09:37:29Z
+completed	success	Build Timings	Build Timings	main	schedule	28367279440	1m37s	2026-06-29T11:01:41Z
+completed	success	Build Timings	Build Timings	main	schedule	28317077756	1m43s	2026-06-28T08:53:23Z
+completed	success	Build Timings	Build Timings	main	schedule	28284067000	1m45s	2026-06-27T08:36:49Z
+completed	success	Build Timings	Build Timings	main	schedule	28229567330	1m46s	2026-06-26T09:29:18Z
+completed	success	Build Timings	Build Timings	main	schedule	28160286225	1m43s	2026-06-25T09:23:37Z
+completed	success	Build Timings	Build Timings	main	schedule	28089070017	1m33s	2026-06-24T09:31:57Z
+completed	success	Build Timings	Build Timings	main	schedule	28017100972	1m35s	2026-06-23T09:41:17Z
+completed	success	Build Timings	Build Timings	main	schedule	27950854454	1m37s	2026-06-22T11:57:01Z
+completed	success	Build Timings	Build Timings	main	schedule	27900616124	1m43s	2026-06-21T09:51:40Z
+completed	success	Build Timings	Build Timings	main	schedule	27866737024	1m46s	2026-06-20T09:16:29Z
+completed	success	Build Timings	Build Timings	main	schedule	27820276576	1m47s	2026-06-19T10:27:55Z
+completed	success	Build Timings	Build Timings	main	schedule	27752948265	1m43s	2026-06-18T10:22:09Z
+completed	success	Build Timings	Build Timings	main	schedule	27684083526	1m43s	2026-06-17T10:58:28Z
+completed	success	Build Timings	Build Timings	main	schedule	27613456678	1m40s	2026-06-16T11:12:21Z
+completed	success	pages build and deployment	pages-build-deployment	gh-pages	dynamic	27553526419	1m42s	2026-06-15T14:30:42Z
+completed	success	pages build and deployment	pages-build-deployment	gh-pages	dynamic	27553061277	1m2s	2026-06-15T14:23:31Z
+completed	success	pages build and deployment	pages-build-deployment	gh-pages	dynamic	27552593390	1m2s	2026-06-15T14:16:13Z
+completed	success	Build Timings	Build Timings	main	schedule	27545633837	1m42s	2026-06-15T12:17:05Z
+completed	success	Build Timings	Build Timings	main	schedule	27494833146	1m35s	2026-06-14T09:36:35Z
+completed	success	Build Timings	Build Timings	main	schedule	27462692724	1m36s	2026-06-13T09:17:55Z
+completed	success	Build Timings	Build Timings	main	schedule	27409462160	5m24s	2026-06-12T10:15:27Z
+completed	success	Build Timings	Build Timings	main	schedule	27340505673	1m41s	2026-06-11T10:27:32Z
+completed	success	Build Timings	Build Timings	main	schedule	27268676948	1m34s	2026-06-10T10:02:45Z
+completed	success	Build Timings	Build Timings	main	schedule	27197872187	1m50s	2026-06-09T09:46:31Z
+completed	success	Build Timings	Build Timings	main	schedule	27133048541	1m41s	2026-06-08T10:58:32Z
+completed	success	Build Timings	Build Timings	main	schedule	27087988814	1m34s	2026-06-07T08:57:32Z
+completed	success	Build Timings	Build Timings	main	schedule	27057574998	1m42s	2026-06-06T08:34:47Z
+completed	success	Build Timings	Build Timings	main	schedule	27008104377	1m32s	2026-06-05T09:52:52Z
+completed	success	Build Timings	Build Timings	main	schedule	26944677478	1m40s	2026-06-04T09:57:33Z
+completed	success	Build Timings	Build Timings	main	schedule	26880528941	1m57s	2026-06-03T11:01:59Z
+completed	success	Build Timings	Build Timings	main	schedule	26813790917	1m32s	2026-06-02T10:26:00Z
+completed	success	Build Timings	Build Timings	main	schedule	26752512198	1m52s	2026-06-01T11:37:28Z
+completed	success	Build Timings	Build Timings	main	schedule	26708084020	1m41s	2026-05-31T08:46:59Z
+completed	success	Build Timings	Build Timings	main	schedule	26679262765	1m33s	2026-05-30T08:29:28Z
+completed	success	Build Timings	Build Timings	main	schedule	26630747469	5m1s	2026-05-29T09:55:56Z
+completed	failure	perf(ui/traces): Make UI feel snappy (#822)	release-please	main	push	26593821579	10s	2026-05-28T18:22:08Z
+completed	failure	perf(ui/traces): Make UI feel snappy (#822)	Sync skills distribution	main	push	26593821480	49s	2026-05-28T18:22:08Z
+completed	success	perf(ui/traces): Make UI feel snappy (#822)	Validate	main	push	26593821477	10m45s	2026-05-28T18:22:08Z
+real 2.61
+user 0.07
+sys 0.05

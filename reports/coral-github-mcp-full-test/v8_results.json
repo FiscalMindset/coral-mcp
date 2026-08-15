@@ -1,0 +1,33 @@
+{
+  "fixed": [
+    [
+      "apps",
+      "data",
+      1,
+      6.643213625007775,
+      {
+        "app_slug": "github-actions"
+      }
+    ]
+  ],
+  "rate_limited": [],
+  "auth_required": [],
+  "bad_request": [
+    [
+      "activity_list_repos_watched_by_user",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source response decode failed\n  Detail: source API response decoding failed: EOF while parsing a value at line 1 column 0 [GET] https://api.github.com/users/FiscalMindset/subscriptions\n  Hint: The upstream API returned a response that does not match the source manifest."
+    ],
+    [
+      "alerts",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/dependabot/alerts#list-dependabot-alerts-for-an-organization\",\"status\":\"404\"} [GET] https://api.github.com/orgs/withcoral/dependabot/alerts\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ],
+    [
+      "approvals",
+      "Error: One or more SQL queries failed\nDetail: Inspect `data.results` for per-query successes and errors.\nQuery [0]: Source resource was not found (404)\n  Detail: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/actions/workflow-runs#get-the-review-history-for-a-workflow-run\",\"status\":\"404\"} [GET] https://api.github.com/repos/withcoral/coral/actions/runs/31300020216/approvals\n  Hint: Verify the identifier or filter values you passed; the upstream resource was not found."
+    ]
+  ],
+  "no_fix": [
+    "accepted_assignments"
+  ],
+  "no_column": []
+}

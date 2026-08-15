@@ -1,0 +1,1094 @@
+{
+  "accepted_assignments": {
+    "status": "works_with_real_id"
+  },
+  "access": {
+    "status": "rate_limited"
+  },
+  "accounts": {
+    "status": "auth_required"
+  },
+  "activity": {
+    "status": "data"
+  },
+  "activity_list_repos_starred_by_user": {
+    "status": "data"
+  },
+  "activity_list_repos_watched_by_user": {
+    "status": "works_with_real_id"
+  },
+  "advisories": {
+    "status": "data"
+  },
+  "alerts": {
+    "status": "my_fault"
+  },
+  "analyses": {
+    "status": "rate_limited"
+  },
+  "annotations": {
+    "status": "empty"
+  },
+  "app": {
+    "status": "auth_required"
+  },
+  "app_hook_config": {
+    "status": "auth_required"
+  },
+  "app_hook_deliveries": {
+    "status": "auth_required"
+  },
+  "app_installations": {
+    "status": "auth_required"
+  },
+  "approvals": {
+    "status": "my_fault"
+  },
+  "apps": {
+    "status": "works_with_real_id"
+  },
+  "artifact_and_log_retention": {
+    "status": "rate_limited"
+  },
+  "assignees": {
+    "status": "data"
+  },
+  "assignments": {
+    "status": "my_fault"
+  },
+  "attempts": {
+    "status": "my_fault"
+  },
+  "attestations": {
+    "status": "my_fault"
+  },
+  "authenticated_user": {
+    "status": "data"
+  },
+  "authors": {
+    "status": "works_with_real_id"
+  },
+  "autofix": {
+    "status": "my_fault"
+  },
+  "autolinks": {
+    "status": "rate_limited"
+  },
+  "automated_security_fixes": {
+    "status": "rate_limited"
+  },
+  "billing": {
+    "status": "my_fault"
+  },
+  "blobs": {
+    "status": "my_fault"
+  },
+  "blocked_by": {
+    "status": "empty"
+  },
+  "blocking": {
+    "status": "empty"
+  },
+  "branches_where_head": {
+    "status": "empty"
+  },
+  "budgets": {
+    "status": "my_fault"
+  },
+  "builds": {
+    "status": "my_fault"
+  },
+  "caches": {
+    "status": "empty"
+  },
+  "campaigns": {
+    "status": "my_fault"
+  },
+  "check_runs": {
+    "status": "data"
+  },
+  "classroom_assignments": {
+    "status": "empty"
+  },
+  "classrooms": {
+    "status": "empty"
+  },
+  "clones": {
+    "status": "rate_limited"
+  },
+  "code_frequency": {
+    "status": "data"
+  },
+  "code_security_configuration": {
+    "status": "rate_limited"
+  },
+  "codes_of_conduct": {
+    "status": "data"
+  },
+  "codespaces": {
+    "status": "my_fault"
+  },
+  "collaborators": {
+    "status": "rate_limited"
+  },
+  "comments": {
+    "status": "empty"
+  },
+  "commit_activity": {
+    "status": "data"
+  },
+  "commits": {
+    "status": "data"
+  },
+  "config": {
+    "status": "my_fault"
+  },
+  "configurations": {
+    "status": "rate_limited"
+  },
+  "conflicts": {
+    "status": "my_fault"
+  },
+  "content_exclusion": {
+    "status": "rate_limited"
+  },
+  "contents": {
+    "status": "data"
+  },
+  "contexts": {
+    "status": "rate_limited"
+  },
+  "copilot": {
+    "status": "my_fault"
+  },
+  "custom": {
+    "status": "rate_limited"
+  },
+  "databases": {
+    "status": "empty"
+  },
+  "default_setup": {
+    "status": "rate_limited"
+  },
+  "defaults": {
+    "status": "rate_limited"
+  },
+  "deliveries": {
+    "status": "my_fault"
+  },
+  "deployment_branch_policies": {
+    "status": "my_fault"
+  },
+  "deployment_protection_rules": {
+    "status": "my_fault"
+  },
+  "deployment_records": {
+    "status": "my_fault"
+  },
+  "devcontainers": {
+    "status": "empty"
+  },
+  "downloads": {
+    "status": "rate_limited"
+  },
+  "emails": {
+    "status": "data"
+  },
+  "emojis": {
+    "status": "data"
+  },
+  "enforce_admins": {
+    "status": "auth_required"
+  },
+  "enterprise_1_day": {
+    "status": "my_fault"
+  },
+  "enterprise_code_security_configuration_repositories": {
+    "status": "rate_limited"
+  },
+  "enterprise_copilot_metric_report_enterprise_28_day_latest": {
+    "status": "rate_limited"
+  },
+  "enterprise_team_memberships": {
+    "status": "my_fault"
+  },
+  "enterprise_teams": {
+    "status": "my_fault"
+  },
+  "environments": {
+    "status": "data"
+  },
+  "errors": {
+    "status": "empty"
+  },
+  "events": {
+    "status": "data"
+  },
+  "exports": {
+    "status": "my_fault"
+  },
+  "failed_invitations": {
+    "status": "rate_limited"
+  },
+  "feeds": {
+    "status": "data"
+  },
+  "fields": {
+    "status": "my_fault"
+  },
+  "files": {
+    "status": "data"
+  },
+  "fork_pr_contributor_approval": {
+    "status": "rate_limited"
+  },
+  "fork_pr_workflows_private_repos": {
+    "status": "rate_limited"
+  },
+  "gist": {
+    "status": "no_real_id"
+  },
+  "gist_comments": {
+    "status": "data"
+  },
+  "gist_commits": {
+    "status": "data"
+  },
+  "gist_forks": {
+    "status": "data"
+  },
+  "gist_public": {
+    "status": "data"
+  },
+  "gist_starred": {
+    "status": "empty"
+  },
+  "gists": {
+    "status": "empty"
+  },
+  "github_owned": {
+    "status": "rate_limited"
+  },
+  "grades": {
+    "status": "my_fault"
+  },
+  "health": {
+    "status": "rate_limited"
+  },
+  "history": {
+    "status": "my_fault"
+  },
+  "hovercard": {
+    "status": "rate_limited"
+  },
+  "import": {
+    "status": "works_with_real_id"
+  },
+  "installation": {
+    "status": "auth_required"
+  },
+  "installation_repositories": {
+    "status": "rate_limited"
+  },
+  "installation_requests": {
+    "status": "auth_required"
+  },
+  "instances": {
+    "status": "my_fault"
+  },
+  "interaction_limits": {
+    "status": "rate_limited"
+  },
+  "invitations": {
+    "status": "rate_limited"
+  },
+  "issue_field_values": {
+    "status": "empty"
+  },
+  "issue_fields": {
+    "status": "my_fault"
+  },
+  "issue_types": {
+    "status": "my_fault"
+  },
+  "issues": {
+    "status": "data"
+  },
+  "issues_list_comments": {
+    "status": "empty"
+  },
+  "issues_list_events": {
+    "status": "data"
+  },
+  "items": {
+    "status": "my_fault"
+  },
+  "jobs": {
+    "status": "my_fault"
+  },
+  "labels": {
+    "status": "rate_limited"
+  },
+  "languages": {
+    "status": "data"
+  },
+  "large_files": {
+    "status": "works_with_real_id"
+  },
+  "latest": {
+    "status": "rate_limited"
+  },
+  "license": {
+    "status": "data"
+  },
+  "licenses": {
+    "status": "data"
+  },
+  "limits": {
+    "status": "rate_limited"
+  },
+  "locations": {
+    "status": "rate_limited"
+  },
+  "machine_sizes": {
+    "status": "rate_limited"
+  },
+  "marketplace_listing_accounts": {
+    "status": "auth_required"
+  },
+  "marketplace_listing_plans": {
+    "status": "auth_required"
+  },
+  "marketplace_listing_stubbed_plans": {
+    "status": "auth_required"
+  },
+  "marketplace_purchases": {
+    "status": "empty"
+  },
+  "matching_refs": {
+    "status": "empty"
+  },
+  "members": {
+    "status": "empty"
+  },
+  "memberships": {
+    "status": "my_fault"
+  },
+  "meta": {
+    "status": "data"
+  },
+  "meta_get_all_versions": {
+    "status": "data"
+  },
+  "metrics": {
+    "status": "my_fault"
+  },
+  "milestones": {
+    "status": "data"
+  },
+  "network_configurations": {
+    "status": "rate_limited"
+  },
+  "network_settings": {
+    "status": "rate_limited"
+  },
+  "new": {
+    "status": "rate_limited"
+  },
+  "notification_thread_subscription": {
+    "status": "rate_limited"
+  },
+  "notifications": {
+    "status": "rate_limited"
+  },
+  "org_action_cache_usage": {
+    "status": "rate_limited"
+  },
+  "org_action_hosted_runner_image_custom_versions": {
+    "status": "rate_limited"
+  },
+  "org_action_hosted_runners": {
+    "status": "rate_limited"
+  },
+  "org_action_oidc_customization_sub": {
+    "status": "rate_limited"
+  },
+  "org_action_permission_repositories": {
+    "status": "rate_limited"
+  },
+  "org_action_permission_self_hosted_runner_repositories": {
+    "status": "rate_limited"
+  },
+  "org_action_permissions": {
+    "status": "rate_limited"
+  },
+  "org_action_runner_group_hosted_runners": {
+    "status": "rate_limited"
+  },
+  "org_action_runner_group_runners": {
+    "status": "rate_limited"
+  },
+  "org_action_secret_public_key": {
+    "status": "rate_limited"
+  },
+  "org_action_secrets": {
+    "status": "rate_limited"
+  },
+  "org_action_variables": {
+    "status": "rate_limited"
+  },
+  "org_attestation_repositories": {
+    "status": "my_fault"
+  },
+  "org_attestations": {
+    "status": "my_fault"
+  },
+  "org_blocks": {
+    "status": "my_fault"
+  },
+  "org_code_scanning_alerts": {
+    "status": "my_fault"
+  },
+  "org_codespace_secrets": {
+    "status": "rate_limited"
+  },
+  "org_copilot_coding_agent_permission_repositories": {
+    "status": "my_fault"
+  },
+  "org_copilot_coding_agent_permissions": {
+    "status": "my_fault"
+  },
+  "org_copilot_metric_report_organization_28_day_latest": {
+    "status": "rate_limited"
+  },
+  "org_dependabot_secret_public_key": {
+    "status": "rate_limited"
+  },
+  "org_dependabot_secrets": {
+    "status": "rate_limited"
+  },
+  "org_hooks": {
+    "status": "my_fault"
+  },
+  "org_insight_summary_stat_users": {
+    "status": "my_fault"
+  },
+  "org_insight_summary_stats": {
+    "status": "my_fault"
+  },
+  "org_insight_time_stat_users": {
+    "status": "my_fault"
+  },
+  "org_insight_time_stats": {
+    "status": "my_fault"
+  },
+  "org_insights_summary_stat": {
+    "status": "my_fault"
+  },
+  "org_insights_time_stat": {
+    "status": "my_fault"
+  },
+  "org_installations": {
+    "status": "crash"
+  },
+  "org_memberships": {
+    "status": "rate_limited"
+  },
+  "org_migrations": {
+    "status": "rate_limited"
+  },
+  "org_organization_role_teams": {
+    "status": "my_fault"
+  },
+  "org_organization_role_users": {
+    "status": "my_fault"
+  },
+  "org_private_registry_public_key": {
+    "status": "rate_limited"
+  },
+  "org_property_values": {
+    "status": "my_fault"
+  },
+  "org_repos": {
+    "status": "data"
+  },
+  "org_secret_scanning_alerts": {
+    "status": "my_fault"
+  },
+  "org_setting_immutable_release_repositories": {
+    "status": "my_fault"
+  },
+  "org_setting_immutable_releases": {
+    "status": "my_fault"
+  },
+  "org_team_memberships": {
+    "status": "empty"
+  },
+  "organization_1_day": {
+    "status": "rate_limited"
+  },
+  "organization_roles": {
+    "status": "my_fault"
+  },
+  "organization_secrets": {
+    "status": "rate_limited"
+  },
+  "organization_setting_billing_usage": {
+    "status": "my_fault"
+  },
+  "organization_variables": {
+    "status": "rate_limited"
+  },
+  "organizations": {
+    "status": "data"
+  },
+  "orgs": {
+    "status": "data"
+  },
+  "orgs_list_for_user": {
+    "status": "empty"
+  },
+  "outside_collaborators": {
+    "status": "rate_limited"
+  },
+  "packages": {
+    "status": "rate_limited"
+  },
+  "packages_list_packages_for_authenticated_user": {
+    "status": "rate_limited"
+  },
+  "pages": {
+    "status": "my_fault"
+  },
+  "parent": {
+    "status": "my_fault"
+  },
+  "participation": {
+    "status": "data"
+  },
+  "partner": {
+    "status": "crash"
+  },
+  "paths": {
+    "status": "rate_limited"
+  },
+  "pattern_configurations": {
+    "status": "rate_limited"
+  },
+  "pending_deployments": {
+    "status": "my_fault"
+  },
+  "permission": {
+    "status": "rate_limited"
+  },
+  "permissions_check": {
+    "status": "rate_limited"
+  },
+  "personal_access_token_requests": {
+    "status": "my_fault"
+  },
+  "personal_access_tokens": {
+    "status": "my_fault"
+  },
+  "platforms": {
+    "status": "rate_limited"
+  },
+  "private_registries": {
+    "status": "rate_limited"
+  },
+  "private_vulnerability_reporting": {
+    "status": "data"
+  },
+  "profile": {
+    "status": "data"
+  },
+  "projects_v2": {
+    "status": "my_fault"
+  },
+  "protection": {
+    "status": "rate_limited"
+  },
+  "public_emails": {
+    "status": "data"
+  },
+  "public_key": {
+    "status": "rate_limited"
+  },
+  "public_members": {
+    "status": "empty"
+  },
+  "pulls": {
+    "status": "data"
+  },
+  "pulls_list_review_comments": {
+    "status": "empty"
+  },
+  "punch_card": {
+    "status": "data"
+  },
+  "rate_limit": {
+    "status": "data"
+  },
+  "reactions": {
+    "status": "data"
+  },
+  "readme": {
+    "status": "data"
+  },
+  "received_events": {
+    "status": "data"
+  },
+  "ref": {
+    "status": "my_fault"
+  },
+  "referrers": {
+    "status": "rate_limited"
+  },
+  "releases": {
+    "status": "data"
+  },
+  "repo": {
+    "status": "rate_limited"
+  },
+  "repo_action_artifacts": {
+    "status": "data"
+  },
+  "repo_action_cache_usage": {
+    "status": "data"
+  },
+  "repo_action_jobs": {
+    "status": "my_fault"
+  },
+  "repo_action_oidc_customization_sub": {
+    "status": "data"
+  },
+  "repo_action_permissions": {
+    "status": "rate_limited"
+  },
+  "repo_action_run_artifacts": {
+    "status": "my_fault"
+  },
+  "repo_action_run_timing": {
+    "status": "my_fault"
+  },
+  "repo_action_runs": {
+    "status": "data"
+  },
+  "repo_action_secrets": {
+    "status": "rate_limited"
+  },
+  "repo_action_variables": {
+    "status": "rate_limited"
+  },
+  "repo_action_workflow_runs": {
+    "status": "no_real_id"
+  },
+  "repo_action_workflow_timing": {
+    "status": "no_real_id"
+  },
+  "repo_branch_protection_restriction_apps": {
+    "status": "rate_limited"
+  },
+  "repo_branch_protection_restriction_teams": {
+    "status": "rate_limited"
+  },
+  "repo_branch_protection_restriction_users": {
+    "status": "rate_limited"
+  },
+  "repo_branches": {
+    "status": "data"
+  },
+  "repo_check_runs": {
+    "status": "empty"
+  },
+  "repo_check_suites": {
+    "status": "data"
+  },
+  "repo_code_scanning_alerts": {
+    "status": "rate_limited"
+  },
+  "repo_code_scanning_codeql_variant_analyse_repos": {
+    "status": "no_real_id"
+  },
+  "repo_codespace_machines": {
+    "status": "data"
+  },
+  "repo_codespace_secrets": {
+    "status": "rate_limited"
+  },
+  "repo_commit_check_suites": {
+    "status": "data"
+  },
+  "repo_commit_statuses": {
+    "status": "data"
+  },
+  "repo_compare": {
+    "status": "data"
+  },
+  "repo_contributors": {
+    "status": "data"
+  },
+  "repo_dependabot_alerts": {
+    "status": "rate_limited"
+  },
+  "repo_dependabot_secrets": {
+    "status": "rate_limited"
+  },
+  "repo_dependency_graph_compare": {
+    "status": "empty"
+  },
+  "repo_deployment_statuses": {
+    "status": "data"
+  },
+  "repo_deployments": {
+    "status": "data"
+  },
+  "repo_environment_deployment_protection_rule_apps": {
+    "status": "rate_limited"
+  },
+  "repo_environment_secret_public_key": {
+    "status": "my_fault"
+  },
+  "repo_environment_secrets": {
+    "status": "my_fault"
+  },
+  "repo_environment_variables": {
+    "status": "my_fault"
+  },
+  "repo_forks": {
+    "status": "data"
+  },
+  "repo_git_commits": {
+    "status": "data"
+  },
+  "repo_git_tags": {
+    "status": "my_fault"
+  },
+  "repo_hooks": {
+    "status": "rate_limited"
+  },
+  "repo_immutable_releases": {
+    "status": "rate_limited"
+  },
+  "repo_invitations": {
+    "status": "rate_limited"
+  },
+  "repo_issue_comments": {
+    "status": "data"
+  },
+  "repo_issue_events": {
+    "status": "data"
+  },
+  "repo_keys": {
+    "status": "rate_limited"
+  },
+  "repo_labels": {
+    "status": "data"
+  },
+  "repo_page_build_latest": {
+    "status": "my_fault"
+  },
+  "repo_page_deployments": {
+    "status": "my_fault"
+  },
+  "repo_property_values": {
+    "status": "empty"
+  },
+  "repo_pull_comments": {
+    "status": "data"
+  },
+  "repo_pull_review_comments": {
+    "status": "my_fault"
+  },
+  "repo_release_assets": {
+    "status": "data"
+  },
+  "repo_release_latest": {
+    "status": "data"
+  },
+  "repo_release_tags": {
+    "status": "data"
+  },
+  "repo_rule_branches": {
+    "status": "data"
+  },
+  "repo_secret_scanning_alerts": {
+    "status": "rate_limited"
+  },
+  "repo_stat_contributors": {
+    "status": "data"
+  },
+  "repo_subscription": {
+    "status": "rate_limited"
+  },
+  "repo_tags": {
+    "status": "data"
+  },
+  "repo_topics": {
+    "status": "data"
+  },
+  "repos": {
+    "status": "my_fault"
+  },
+  "repos_get": {
+    "status": "data"
+  },
+  "repos_list_release_assets": {
+    "status": "data"
+  },
+  "repositories": {
+    "status": "data"
+  },
+  "repository_access": {
+    "status": "my_fault"
+  },
+  "repository_invitations": {
+    "status": "empty"
+  },
+  "requested_reviewers": {
+    "status": "data"
+  },
+  "required_pull_request_reviews": {
+    "status": "rate_limited"
+  },
+  "required_signatures": {
+    "status": "rate_limited"
+  },
+  "required_status_checks": {
+    "status": "rate_limited"
+  },
+  "restrictions": {
+    "status": "rate_limited"
+  },
+  "retention_limit": {
+    "status": "my_fault"
+  },
+  "reviews": {
+    "status": "empty"
+  },
+  "route_stats": {
+    "status": "my_fault"
+  },
+  "rows": {
+    "status": "data"
+  },
+  "rule_suites": {
+    "status": "my_fault"
+  },
+  "rulesets": {
+    "status": "my_fault"
+  },
+  "runner_groups": {
+    "status": "rate_limited"
+  },
+  "runners": {
+    "status": "rate_limited"
+  },
+  "sarifs": {
+    "status": "rate_limited"
+  },
+  "sbom": {
+    "status": "data"
+  },
+  "scan_history": {
+    "status": "rate_limited"
+  },
+  "schema": {
+    "status": "my_fault"
+  },
+  "seats": {
+    "status": "my_fault"
+  },
+  "security_advisories": {
+    "status": "my_fault"
+  },
+  "security_managers": {
+    "status": "my_fault"
+  },
+  "selected_actions": {
+    "status": "rate_limited"
+  },
+  "self_hosted_runners": {
+    "status": "rate_limited"
+  },
+  "stargazers": {
+    "status": "rate_limited"
+  },
+  "status": {
+    "status": "data"
+  },
+  "storage_limit": {
+    "status": "my_fault"
+  },
+  "storage_records": {
+    "status": "my_fault"
+  },
+  "stubbed": {
+    "status": "data"
+  },
+  "sub_issues": {
+    "status": "empty"
+  },
+  "subject_stats": {
+    "status": "my_fault"
+  },
+  "subscribers": {
+    "status": "rate_limited"
+  },
+  "summary": {
+    "status": "my_fault"
+  },
+  "team": {
+    "status": "my_fault"
+  },
+  "teams": {
+    "status": "rate_limited"
+  },
+  "templates": {
+    "status": "data"
+  },
+  "threads": {
+    "status": "rate_limited"
+  },
+  "timeline": {
+    "status": "data"
+  },
+  "trees": {
+    "status": "data"
+  },
+  "usage": {
+    "status": "my_fault"
+  },
+  "usage_by_repository": {
+    "status": "rate_limited"
+  },
+  "user": {
+    "status": "data"
+  },
+  "user_blocks": {
+    "status": "rate_limited"
+  },
+  "user_codespace_machines": {
+    "status": "my_fault"
+  },
+  "user_codespace_secret_public_key": {
+    "status": "rate_limited"
+  },
+  "user_codespace_secrets": {
+    "status": "rate_limited"
+  },
+  "user_codespaces": {
+    "status": "empty"
+  },
+  "user_docker_conflicts": {
+    "status": "my_fault"
+  },
+  "user_event_orgs": {
+    "status": "rate_limited"
+  },
+  "user_event_public": {
+    "status": "data"
+  },
+  "user_followers": {
+    "status": "rate_limited"
+  },
+  "user_following": {
+    "status": "rate_limited"
+  },
+  "user_gpg_keys": {
+    "status": "crash"
+  },
+  "user_installation_repositories": {
+    "status": "my_fault"
+  },
+  "user_installations": {
+    "status": "empty"
+  },
+  "user_interaction_limits": {
+    "status": "rate_limited"
+  },
+  "user_issues": {
+    "status": "data"
+  },
+  "user_keys": {
+    "status": "crash"
+  },
+  "user_membership_orgs": {
+    "status": "empty"
+  },
+  "user_migrations": {
+    "status": "rate_limited"
+  },
+  "user_orgs": {
+    "status": "empty"
+  },
+  "user_packages": {
+    "status": "my_fault"
+  },
+  "user_received_event_public": {
+    "status": "data"
+  },
+  "user_repos": {
+    "status": "data"
+  },
+  "user_setting_billing_usage": {
+    "status": "rate_limited"
+  },
+  "user_social_accounts": {
+    "status": "data"
+  },
+  "user_ssh_signing_keys": {
+    "status": "rate_limited"
+  },
+  "user_starred": {
+    "status": "data"
+  },
+  "user_stats": {
+    "status": "my_fault"
+  },
+  "user_subscriptions": {
+    "status": "empty"
+  },
+  "user_teams": {
+    "status": "empty"
+  },
+  "users": {
+    "status": "data"
+  },
+  "users_1_day": {
+    "status": "my_fault"
+  },
+  "users_list_followers_for_user": {
+    "status": "data"
+  },
+  "users_list_following_for_user": {
+    "status": "data"
+  },
+  "users_list_gpg_keys_for_user": {
+    "status": "empty"
+  },
+  "users_list_public_keys_for_user": {
+    "status": "data"
+  },
+  "users_list_social_accounts_for_user": {
+    "status": "data"
+  },
+  "users_list_ssh_signing_keys_for_user": {
+    "status": "empty"
+  },
+  "variant_analyses": {
+    "status": "my_fault"
+  },
+  "versions": {
+    "status": "my_fault"
+  },
+  "views": {
+    "status": "rate_limited"
+  },
+  "workflow": {
+    "status": "rate_limited"
+  },
+  "workflows": {
+    "status": "data"
+  }
+}
